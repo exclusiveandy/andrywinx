@@ -32,16 +32,19 @@ validate();
   <!-- FILE INPUT -->
   <link href="../plugins/file_input/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed dark-mode">
 
 <div class="wrapper">
 
   <!-- Preloader -->
- <!--  <div class="preloader flex-column justify-content-center align-items-center dark-mode">
+<!--   <div class="preloader flex-column justify-content-center align-items-center dark-mode">
     <img class="animation__shake" src="../images/andrywinxico.png" alt="andrywinxlogo" height="120" width="120">
-  </div> -->
-
+  </div>
+ -->
   <input type="hidden" id="user_id" value="<?php echo $_SESSION['id'];?>">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-light navbar-dark">

@@ -354,16 +354,28 @@ echo $error_message;
 
 
 
-function display_journal()
-{
-    $query = query("SELECT * from journal_table");
-    confirm($query);
-    while($row = fetch_assoc($query))
-    {
-        $journal_option =<<<END
-        <option value="{$row['journal_id']}">{$row['journal_name']}</option>
+function display_all_blogs($user_id)
+{     
+    $user = $user_id;
+    $select_blogs = query("SELECT blog_id, blog_title, create_date FROM user_blog WHERE user_id = '{$user}'");
+    confirm($select_blogs);
+    while($row = fetch_assoc($select_blogs))
+    {   
+        
+        $created_blogs =<<<END
+            <tr>
+                <td>{$row['blog_title']}</td>
+                <td>{$row['create_date']}</td>
+                <td class="text-right py-0 align-middle">
+                    <div class="btn-group btn-group-sm">
+                        <button href="blog_view?id={$row['blog_id']}" class="btn btn-info"><i class="fas fa-eye"></i></button>
+                        <button href="download.php?path={$row['blog_id']}" id="{$row['blog_id']}" class="btn btn-danger" onclick="deleteFunction(this.id)"><i class="fas fa-trash"></i></button>
+
+                    </div>
+                </td>
+            </tr>     
 END;
-    echo $journal_option;
+    echo $created_blogs;
     }
 }
 

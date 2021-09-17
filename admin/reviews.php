@@ -69,7 +69,7 @@
 
                   <p>This area-based location guide will help you prepare for every enemy encounter, while locating all Items, Secrets, and <a class="mw-redirect" title="Characters" href="/wikis/shadows-die-twice/Characters">Characters</a> along the way - with no stone unturned. Please note that certain sections of the game allow you to progress in different regions at your leisure, and this <a class="mw-redirect" title="Sekiro" href="/wikis/shadows-die-twice/Sekiro">Sekiro</a> walkthrough will guide you through a recommended path between areas.
 
-                  <p class="text-center"><img alt="" class="aligncenter size-large w-75 h-25 text-center" src="https://assets.vg247.com/current//2019/03/Sekiro_30-1152x648.jpg" width="1152"></p>
+                  <p class="text-center"><img alt="" class="aligncenter size-large w-75 h-25 text-center" src="https://c4.wallpaperflare.com/wallpaper/905/666/494/background-render-fon-bitcoin-bitcoin-hd-wallpaper-preview.jpg"></p>
                   <h2>Sekiro - what is Unseen Aid?</h2>
                   <p><strong>Unseen Aid</strong> isn&rsquo;t actually as important as the game makes it sound. Basically, occasionally the game sees fit to give you the Unseen Aid buff, which stops you losing half of your Sen (money) and skill points upon death. It can still happen when <strong>Dragonrot</strong> is affecting characters, but it&rsquo;s less likely. Either way, it&rsquo;s still good to get that Dragonrot cured because you won&rsquo;t be able to talk normally with many NPCs and that hacking cough really gets to you after a while. </p>
                   <p>
@@ -87,28 +87,39 @@
                       </dd>
                     </dl>
                   </p>
-                  <br><br>
-                  <h4 class="text-center"><span class="mw-headline" id="Before_the_Timeskip">Rating</span></h4>
+                  <br>
+                  <hr>
+                  <h1 class="text-center"><span class="mw-headline" id="Before_the_Timeskip">AndrywinX Rating</span></h1>
                   <div class="d-flex justify-content-center">
                     <div class="content text-center">
-                      <span class="product-rating">8/</span><span>10</span>
-                            <div class="stars"> 
-                              <i class="fa fa-star" style="color: orange"></i>
-                              <i class="fa fa-star" style="color: orange"></i> 
-                              <i class="fa fa-star" style="color: orange"></i>
-                              <i class="fa fa-star" style="color: orange"></i>
-                              <i class="fa fa-star" style="color: orange"></i>
-                              <i class="fa fa-star" ></i> 
-                              <i class="fa fa-star"></i> 
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                            </div>
-                            <div class="rating-text"> <span>Version 5.6</span> </div>
+                      <h2>5/10</h2>
+                        <div class="stars"> 
+                          <i class="fa fa-star fa-2x" style="color: orange"></i>
+                          <i class="fa fa-star fa-2x" style="color: orange"></i> 
+                          <i class="fa fa-star fa-2x" style="color: orange"></i>
+                          <i class="fa fa-star fa-2x" style="color: orange"></i>
+                          <i class="fa fa-star fa-2x" style="color: orange"></i>
+                          <i class="fa fa-star fa-2x" ></i> 
+                          <i class="fa fa-star fa-2x"></i> 
+                          <i class="fa fa-star fa-2x"></i>
+                          <i class="fa fa-star fa-2x"></i>
+                          <i class="fa fa-star fa-2x"></i>
                         </div>
+                        <div class="rating-text"> <p>as of Version 5.6</p> </div>
                     </div>
+                  </div>
+                  <hr>
+                  <br>
+                  <h2>Ano ang kalamangan nito?</h2>
+                  <p><strong>Unseen Aid</strong> isn&rsquo;t actually as important as the game makes it sound. Basically, occasionally the game sees fit to give you the Unseen Aid buff, which stops you losing half of your Sen (money) and skill points upon death. It can still happen when <strong>Dragonrot</strong> is affecting characters, but it&rsquo;s less likely. Either way, it&rsquo;s still good to get that Dragonrot cured because you won&rsquo;t be able to talk normally with many NPCs and that hacking cough really gets to you after a while. </p>
 
+                  <h2>Ano ang kahinaan nito?</h2>
+                  <p><strong>Unseen Aid</strong> isn&rsquo;t actually as important as the game makes it sound. Basically, occasionally the game sees fit to give you the Unseen Aid buff, which stops you losing half of your Sen (money) and skill points upon death. It can still happen when <strong>Dragonrot</strong> is affecting characters, but it&rsquo;s less likely. Either way, it&rsquo;s still good to get that Dragonrot cured because you won&rsquo;t be able to talk normally with many NPCs and that hacking cough really gets to you after a while. </p>
 
+                  <br>
+                  <hr><br>
+                  <h2 class="text-center">KONKLUSYON</h2>
+                  <p class="text-center"><strong>Unseen Aid</strong> y gets tlly as important as the game makes it sound. Basically, occasionally the game sees fit to give you the Unseen Aid buff, which stops you losing half of your Sen (money) and skill points upon death. It can still happen when <strong>Dragonrot</strong> is affecting characters, but it&rsquo;s less likely. Either wao you after a while. </p>
 
 
 

@@ -2,7 +2,7 @@
   <?php include("navigation.php");
 
   ?>
-  <title>Profile - AndrywinX</title>
+  <title>Blogs - AndrywinX</title>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -31,24 +31,48 @@
         <div class="col-md-8">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Create Blog</h3>
+              <h2 class="card-title">Create Blog</h2>     
             </div>
+            <form role="form" id="create_blog_form">
             <div class="card-body">
+              
+              <div class="form-group">
+                <label for="exampleInputFile">Main Image</label>
+                <h6 style="color: grey;" for="exampleInputFile">Recommended to upload a 1120x630 resolution landscape style for a better view of the page </h6>
+                <div class="input-group">
+                  <div class="custom-file">
+                    <!-- <input type="file"  > -->
+                    <input type="file" class="custom-file-input" id="image_file" name="image_file" onchange="loadFile(event)">
+                    <label class="custom-file-label" for="input_file">Choose File</label>
+                  </div>
+                </div>
+              </div>
+
+    
+              <div class="text=center justify-content-center">
+                <p class="text-center">
+                <img id="output_image" class="w-75 h-50"/>
+              </p>
+              </div>
+
+
               <div class="form-group">
                 <label for="inputEstimatedBudget">Title</label>
-                <input type="text" id="title" class="form-control">
+                <input type="text" id="title" name="title" class="form-control">
               </div>
               <br>
               <hr/>
+              
 
               <div class="form-group text-center">
                 <label for="inputEstimatedBudget">Details</label>
               </div>
-              <button id="save" class="btn btn-primary float-right" onclick="save()" type="button">Preview</button>
-              <button id="edit" class="btn btn-primary pull-left" onclick="edit()" type="button">Open</button>
-
+              
+              <button id="btnOpen" class="btn btn-primary w-100" type="button">Open Blog Details</button>
+              <button id="btnPreview" class="btn btn-primary w-100" type="button" hidden="true">Preview Blog Details</button>
+             
               <div class="form-group"> 
-                <div class="click2edit">
+                <div class="details" name="details">
                   <br><br>
                   
                   <h3 id="h-what-exactly-are-creator-coins">What Exactly Are Creator Coins?</h3>       
@@ -62,7 +86,6 @@
                   <p>A creator coin is also a way for your fans to simply support you for the free value you provide with content. And that’s where the “spend” option comes in as a tip or form of patronage where coins are purchased and sent back to you. Eventually, you can charge for all sorts of valuable stuff with your currency, which brings it back home to you without being sold to a third-party.</p>
 
 
-
                   <br><br>
                   <figure class="text-center">
                     <blockquote class="blockquote">
@@ -73,18 +96,31 @@
                     </figcaption>
                   </figure>
                 </div>
+
               </div>
 
-
-              
-             
-
-            
             </div>
+            
             <!-- /.card-body -->
+            <div class="card-footer">
+              <button type="submit" class="btn btn-primary w-100" id="create_blogs">Submit</button>
+            </div>
+            <div id="loader" style="display: none; text-align: center;">
+              <br><br>
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+              <br><br>
+              <h5><i>Please wait for a moment! Your blogs is being created!</i></h5>
+              <br>
+            </div> 
+          </form>
           </div>
           <!-- /.card -->
         </div>
+
+
+
         <div class="col-md-4">
           <div class="card">
             <div class="card-header">
@@ -112,64 +148,11 @@
               <h3 class="card-title">List of Blogs</h3>
             </div>
             <div class="card-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>File Name</th>
-                    <th>File Size</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
+              <div id="blog_table">
+                    
+              </div>
 
-                  <tr>
-                    <td>Functional-requirements.docx</td>
-                    <td>49.8005 kb</td>
-                    <td class="text-right py-0 align-middle">
-                      <div class="btn-group btn-group-sm">
-                        <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                        <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
-                      </div>
-                    </td>
-                  <tr>
-                    <td>UAT.pdf</td>
-                    <td>28.4883 kb</td>
-                    <td class="text-right py-0 align-middle">
-                      <div class="btn-group btn-group-sm">
-                        <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                        <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
-                      </div>
-                    </td>
-                  <tr>
-                    <td>Email-from-flatbal.mln</td>
-                    <td>57.9003 kb</td>
-                    <td class="text-right py-0 align-middle">
-                      <div class="btn-group btn-group-sm">
-                        <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                        <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
-                      </div>
-                    </td>
-                  <tr>
-                    <td>Logo.png</td>
-                    <td>50.5190 kb</td>
-                    <td class="text-right py-0 align-middle">
-                      <div class="btn-group btn-group-sm">
-                        <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                        <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
-                      </div>
-                    </td>
-                  <tr>
-                    <td>Contract-10_12_2014.docx</td>
-                    <td>44.9715 kb</td>
-                    <td class="text-right py-0 align-middle">
-                      <div class="btn-group btn-group-sm">
-                        <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                        <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
-                      </div>
-                    </td>
-
-                </tbody>
-              </table>
+    
             </div>
             <!-- /.card-body -->
           </div>
@@ -192,17 +175,214 @@
 
 <script>
 
-  var edit = function() {
-    $('.click2edit').summernote({
-      focus: true,
-      height: 1000,
+
+  $( document ).ready(function() {
+
+     $('#blog_table_id').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
     });
+
+
+
+    // SHOW BLOG TABLE ONLOAD
+    $("#blog_table").load("functions/blog_list.php",{});
+
+
+
+    // EDIT AND SAVE FUNCTION FOR EDITOR
+    $("#btnOpen").click(function(){
+        $('.details').summernote({
+          focus: true,
+          height: 1000,
+        });
+
+        $("#btnPreview").removeAttr("hidden", "true");
+        $("#btnOpen").attr("hidden", "true");
+
+    }); 
+    $("#btnPreview").click(function(){
+        var markup = $('.details').summernote('code');
+        $('.details').summernote('destroy');
+
+        $("#btnPreview").attr("hidden", "true");
+        $("#btnOpen").removeAttr("hidden", "true");
+    }); 
+
+
+
+  });
+
+
+
+  // TO DISPLAY IMAGE UPON UPLOAD
+  var loadFile = function(event) {
+    var output_image = document.getElementById('output_image');
+    output_image.src = URL.createObjectURL(event.target.files[0]);
+    output_image.onload = function() {
+      URL.revokeObjectURL(output_image.src) // free memory
+    }
   };
 
-  var save = function() {
-    var markup = $('.click2edit').summernote('code');
-    $('.click2edit').summernote('destroy');
-  };
+
+  // TO SHOW FILE NAME OF THE UPLOADED IMAGE
+  $('#image_file').on('change',function(){
+      //get the file name
+      var fileName = $(this).val();
+      var cleanFileName = fileName.replace('C:\\fakepath\\', " ");
+      $(this).next('.custom-file-label').html(cleanFileName);
+  })
 
 
+  
+
+  $('#create_blog_form').validate({
+    rules: {
+      image_file: {
+        required: true,
+      },
+      title: {
+        required: true
+      },
+    },
+    messages: {
+      image_file: {
+        required: "Please upload a main image",
+      },
+      title: {
+        required: "Please enter blog title"
+      },
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    },
+
+      submitHandler: function () {
+
+        event.preventDefault();
+        var myFormData = new FormData();
+
+        var title = $("#title").val();
+        var details = $(".details").summernote("code");
+        var image_file = $('#image_file').prop('files')[0];
+
+        myFormData.append('title', title);
+        myFormData.append('details', details);
+        myFormData.append('image_file', image_file);
+        
+                $.ajax({
+                  url: 'functions/blog_create.php',
+                  data: myFormData,
+                  processData: false, // important
+                  contentType: false, // important
+                  type: 'POST',  
+                  beforeSend:function(data)
+                    {
+                      $("#create_blogs").attr("hidden", "true")
+                      
+                      $("#loader").show();
+                      
+                    },
+                  success: function(data)
+                    {
+                      if(data == "Success")
+                      {
+                        Swal.fire({
+                          title: "Blog is Created!", 
+                          text: "It can now be seen in the list of your Blogs!", 
+                          icon: "success"}).then(function(){ 
+                            $(window).attr('location', 'dashboard');                      
+                          }
+                        );
+
+                           
+                      }
+                       
+                    }
+
+
+
+
+                })
+     
+  
+
+
+    }
+
+  });
+
+
+
+
+  // DELETE FUNCTION
+
+  function deleteFunction(id) {
+  event.preventDefault();
+  var blog_id = id;
+  Swal.fire({
+    title: 'Are you sure you want to delete this blog?',
+    text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#d33',
+    cancelButtonColor: '#3085d6',
+    confirmButtonText: 'Yes, delete it!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      $.ajax({
+        method: 'POST',
+        data: {'delete': true, 'blog_id' : blog_id },
+        url: 'functions/blog_delete.php',
+        success: function(data) {
+          $("#blog_table").load("functions/blog_list.php",{
+
+          });
+
+
+
+        }
+      });
+    
+      Swal.fire(
+        'Deleted!',
+        'Your blog has been deleted.',
+        'success'
+      )
+
+
+    }
+  })
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    
+    
+  
 </script>  
+
