@@ -25,7 +25,7 @@ if((!empty($fname) && !empty($lname)) && !ctype_space($fname) && !ctype_space($a
     confirm($query); 
 
     // INSERT SESSION AGAIN
-    $update_query = query("Select * from user_profile WHERE user_id = '{$_SESSION['id']}'");
+    $update_query = query("SELECT * FROM user_profile WHERE user_id = '{$_SESSION['id']}'");
     confirm($update_query);
     while($row = fetch_assoc($update_query))
     {
