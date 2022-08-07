@@ -2,218 +2,163 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>AndrywinX - Lumikha at Maglaro</title>
+	<title>AndrywinX - Lumikha at Maglaro</title>
 
-  <link rel="icon" href="images/andrywinxico.png">
-  <link rel="stylesheet" href="css/adminlte.css">  
+	<link rel="icon" href="images/andrywinxico.png">
+	<link rel="stylesheet" href="css/adminlte.css">  
+	<link rel="stylesheet" href="css/andystyle.css">  
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+  <!-- jQuery -->
+	<script src="plugins/jquery/jquery.min.js"></script>
+	<!-- Bootstrap 4 -->
+	<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- FastClick -->
+	<script src="plugins/fastclick/fastclick.js"></script>
+	<!-- AdminLTE App -->
+	<script src="js/adminlte.min.js"></script>
+	<!-- AOS -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
 
 </head>
+<style>
+ 
+body::-webkit-scrollbar {
+  width: 7px;               /* width of the entire scrollbar */
+}
 
-<body class="hold-transition layout-top-nav dark-mode">
-<div class="wrapper">
+body::-webkit-scrollbar-track {
+  background: gray;        /* color of the tracking area */
+}
 
-<nav class="main-header navbar navbar-expand-md navbar-light navbar-dark">
-	<div class="container">
-	  <a href="index.php" class="navbar-brand" style="width: 50%;">
-		<img src="images/andrywinxico.png" alt="andrywinxlogo" class="brand-image img-circle elevation-3"
-			 style="opacity: .8">
-		<span class="brand-text font-weight-bold" style="letter-spacing: 3px;">AndrywinX</span>
-	  </a>
+body::-webkit-scrollbar-thumb {
+  background-color: black;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid dimgray;  /* creates padding around scroll thumb */
+}
 
-	  <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	  </button>
-	  
-	  <div class="collapse navbar-collapse order-3" id="navbarCollapse">
-		<!-- Left navbar links -->
-		<ul class="navbar-nav">
-		 
-		  <li class="nav-item">
-				<a href="index" class="nav-link">Home</a>
-		  </li>
-		  <li class="nav-item">
-				<a href="blogs" class="nav-link">Blogs</a>
-		  </li>
-		  <li class="nav-item">
-				<a href="reviews" class="nav-link">Reviews</a>
-		  </li>
-		  <li class="nav-item">
-				<a href="inquire" class="nav-link">Inquire</a>
-		  </li>
-		  <li class="nav-item">
-				<a href="gallery" class="nav-link">Gallery</a>
-		  </li>
-		  <li class="nav-item">
-				<a href="events" class="nav-link">Events</a>
-		  </li>
+</style>
 
-		</ul>
+<body class="hold-transition layout-top-nav dark-mode" >
 
-		<!-- SEARCH FORM -->
-		<form class="form-inline ml-0 ml-md-3">
-		  <div class="input-group input-group-sm">
-			<input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-			<div class="input-group-append">
-			  <button class="btn btn-navbar" type="submit">
-				<i class="fas fa-search"></i>
-			  </button>
+	<section class="container-fluid vh-100 login-page" style="background-color:#343a40">
+		<div data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500" data-aos="fade-up" data-aos-duration="3000" style="margin-top: -150px;">
+			<h2 class="andymainfont">Andrywin Maquinto</h2>
+			<h5 class="andysecondfont">Mukhang Pwet Mabantot si Aldwin</h5>
+			<div class="">
+				<a href="https://www.facebook.com/w3schoolscom/" target="_blank" title="Facebook"><span class="fa fa-facebook-square fa-2x"></span></a>
+				<a href="https://www.instagram.com/w3schools.com_official/" target="_blank" title="Instagram"><span class="fa-brands fa-square-github fa-2x"></span></a>
+				<a href="https://www.linkedin.com/company/w3schools.com/" target="_blank" title="LinkedIn"><span class="fa fa-linkedin-square fa-2x"></span></a>
+				<a href="https://discord.gg/6Z7UaRbUQM" target="_blank" title="Join the W3schools community on Discord"><span class="fa fa-discord fa-2x"></span></a>
 			</div>
-		  </div>
-		</form>
-	  </div>
-
-	</div>
-  </nav>
-  <!-- /.navbar -->
-
-  
-<?php include "function.php";?>
 	
-
-<div class="content-wrapper">
-	<!-- Content Header (Page header) -->
-	<div class="content-header">
-		
-	</div>
-
-	<!-- Main content -->
-	<div class="content">
-		<div class="container">
-
-			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-				<ol class="carousel-indicators">
-					<?php 
-			$image_carrousel = query("SELECT MIN(picture_id) as min, picture_name from ojs_home_page_picture");
-			  $row_first = fetch_assoc($image_carrousel);
-			  ?>
-
-				</ol>
-
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img class="d-block w-100 rounded" src="images/<?php echo $row_first['picture_name'];?>" alt="First slide">
-					</div>
-
-					<?php
-				 $all_image_query = query("SELECT picture_id, picture_name from ojs_home_page_picture where
-				  picture_id <> (SELECT MIN(picture_id) as min from ojs_home_page_picture)");
-
-				 while($row_image = fetch_assoc($all_image_query))
-				 {
-			  ?>
-						<div class="carousel-item">
-							<img class="d-block w-100" src="images/<?php echo $row_image['picture_name'];?>" alt="First slide">
-						</div>
-						<?php
-			}
-
-			?>
-				</div>
-				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
-			</div>
-
-			<br>
-			<div class="row">
-				<div class="col-md-8">
-				
-						
-					<h3>Featured Post</h3>
-					
-
-					<div class="card">
-						<img src="images/1.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h4>Card title</h4>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
-					</div>
-
-
-				</div>
-
-
-				<!-- GAMING REVIEWS SECTION -->
-				<div class="col-md-4">
-				   
-					<h3>Gaming Reviews</h3>
-
-					<div class="card bg-dark text-white">
-					  <img src="images/1.png" class="card-img" alt="...">
-					  <div class="card-img-overlay">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						<a class="card-text" href="#">Last updated 3 mins ago</a>
-					  </div>
-					</div>
-			   
-
-	
-
-				</div>
-
-			</div>
-
 		</div>
-		<!-- /.container-fluid -->
-	</div>
-	<!-- /.content -->
-	<br><br>
-</div>
+
+	</section>
+	<section class="container-fluid vh-100 style="background-color:#454d55">
+		<!-- <div data-aos="fade-up" data-aos-duration="3000"> -->
+			<div class="row">
+				<div class="col-md-8 text-center" >
+					<h1>You can call me Andy / Drew!</h1>
+					<p>I love coding I love coding I love coding I love coding I love coding I love coding I love coding I love coding I love coding I love coding I love coding </p>
+				</div>
+				<div class="col-md-3 text-center">
+					<img class="m-50 h-100" src="images/andy1.png" style="width: 80%; padding: 0;">
+				</div>	
+
+			</div>
+		<!-- </div> -->
+	</section>
+	<section class="section3 vh-100 " id="section3" style="background-color:dimgray">
+		<div id="target">
+			<img id="plane" src="images/example_bezier.png" style="margin-left: -90px;">
+		</div>
+		
 	
-<aside class="control-sidebar control-sidebar-dark">
-	<!-- Control sidebar content goes here -->
-	<div class="p-3">
-	  <h5>Title</h5>
-	  <p>Sidebar content</p>
-	</div>
-  </aside>
-  <!-- /.control-sidebar -->
 
-  <!-- Main Footer -->
-  <footer class="main-footer">
-	<!-- To the right -->
-	<div class="float-right d-none d-sm-inline">
-	  Version 1.0
-	</div>
-	<!-- Default to the left -->
-	<strong>Copyright &copy; 2019-2020 <a href="https://pup.edu.ph">Polytechnic University of the Philippines</a>.</strong> All rights reserved.
-  </footer>
+	</section>
+	<section class="container-fluid vh-100" style="background-color:#454d55">
+		<div data-aos="fade-up" data-aos-duration="3000">
+			<h5 class="andysecondfont">Mukhang Pwet Mabantot si Aldwin</h5>
+		</div>
+	</section>
+
+	
 
 
-   <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-	<!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
 
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="js/demo.js"></script>
+
+
 </body>
+
+
+
+
+<script>
+  AOS.init();
+</script>
+
+<script>
+	$(function () { // wait for document ready
+		var flightpath = {
+			entry : {
+				curviness: 1.25,
+				autoRotate: true,
+				values: [
+						{x: 100,	y: -20},
+						{x: 300,	y: 10}
+					]
+			},
+			looping : {
+				curviness: 1.25,
+				autoRotate: true,
+				values: [
+						{x: 510,	y: 60},
+						{x: 620,	y: -60},
+						{x: 500,	y: -100},
+						{x: 380,	y: 20},
+						{x: 500,	y: 60},
+						{x: 580,	y: 20},
+						{x: window.innerWidth+100,	y: 0}
+					]
+			},
+
+		};
+		// init controller
+		var controller = new ScrollMagic.Controller();
+
+		// create tween
+		var tween = new TimelineMax()
+			.add(TweenMax.to($("#plane"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
+			.add(TweenMax.to($("#plane"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
+
+		// build scene
+		var scene = new ScrollMagic.Scene({triggerElement: "#section3", duration: 1000,})
+						.setPin("#target")
+						.setTween(tween)
+						// .addIndicators() // ajaxdd indicators (requires plugin)
+						.addTo(controller);
+	})
+</script>
 </html>

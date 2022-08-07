@@ -45,6 +45,7 @@
 							<th style="width:400px;">Title</th>
 							<th>Date Created</th>
 							<th># of Views</th>
+							<th>Featured</th>
 							<th class="text-center">Actions</th>
 						</tr>
 					</thead>
@@ -73,20 +74,23 @@
 <script>
 
 
-  $( document ).ready(function() {
+var blogDataTable; // FOR DELETE FUNCTION
 
-	var blogDataTable = $('#blog_table_id').DataTable({
+$( document ).ready(function() {
+
+	blogDataTable = $('#blog_table_id').DataTable({
 		'processing': false,
 		'serverSide': false,
 		'responsive': true,
 		'serverMethod': 'post',
 		'ajax': {
-			'url':'functions/blog_list.php',
+			'url':'functions/blog/blog_list.php',
 		},
 		'columns': [
 			{ data: 'title' },
 			{ data: 'date' },
 			{ data: 'views' },
+			{ data: 'is_featured' },
 			{ data: 'action' },
 		 ]
 	  });
@@ -126,113 +130,6 @@
 
 
 
-  // TO DISPLAY IMAGE UPON UPLOAD
-  var loadFile = function(event) {
-	var output_image = document.getElementById('output_image');
-	output_image.src = URL.createObjectURL(event.target.files[0]);
-	output_image.onload = function() {
-	  URL.revokeObjectURL(output_image.src) // free memory
-	}
-  };
-
-
-  // TO SHOW FILE NAME OF THE UPLOADED IMAGE
-  $('#image_file').on('change',function(){
-	  //get the file name
-	  var fileName = $(this).val();
-	  var cleanFileName = fileName.replace('C:\\fakepath\\', " ");
-	  $(this).next('.custom-file-label').html(cleanFileName);
-  })
-
-
-  
-
-  $('#create_blog_form').validate({
-	rules: {
-	  image_file: {
-		required: true,
-	  },
-	  title: {
-		required: true
-	  },
-	},
-	messages: {
-	  image_file: {
-		required: "Please upload a main image",
-	  },
-	  title: {
-		required: "Please enter blog title"
-	  },
-	},
-	errorElement: 'span',
-	errorPlacement: function (error, element) {
-	  error.addClass('invalid-feedback');
-	  element.closest('.form-group').append(error);
-	},
-	highlight: function (element, errorClass, validClass) {
-	  $(element).addClass('is-invalid');
-	},
-	unhighlight: function (element, errorClass, validClass) {
-	  $(element).removeClass('is-invalid');
-	},
-
-	  submitHandler: function () {
-
-		event.preventDefault();
-		var myFormData = new FormData();
-
-		var title = $("#title").val();
-		var details = $(".details").summernote("code");
-		var image_file = $('#image_file').prop('files')[0];
-
-		myFormData.append('title', title);
-		myFormData.append('details', details);
-		myFormData.append('image_file', image_file);
-		
-				$.ajax({
-				  url: 'functions/blog_create.php',
-				  data: myFormData,
-				  processData: false, // important
-				  contentType: false, // important
-				  type: 'POST',  
-				  beforeSend:function(data)
-					{
-					  $("#create_blogs").attr("hidden", "true")
-					  
-					  $("#loader").show();
-					  
-					},
-				  success: function(data)
-					{
-					  if(data == "Success")
-					  {
-						Swal.fire({
-						  title: "Blog is Created!", 
-						  text: "It can now be seen in the list of your Blogs!", 
-						  icon: "success"}).then(function(){ 
-							$(window).attr('location', 'dashboard');                      
-						  }
-						);
-
-						   
-					  }
-					   
-					}
-
-
-
-
-				})
-	 
-  
-
-
-	}
-
-  });
-
-
-
 
   // DELETE FUNCTION
 
@@ -252,11 +149,9 @@
 	  $.ajax({
 		method: 'POST',
 		data: {'delete': true, 'blog_id' : blog_id },
-		url: 'functions/blog_delete.php',
+		url: 'functions/blog/blog_delete.php',
 		success: function(data) {
-		  $("#blog_table").load("functions/blog_list.php",{
-
-		  });
+		  blogDataTable.ajax.reload( null, false );
 
 
 

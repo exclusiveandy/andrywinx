@@ -95,7 +95,7 @@
 			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 				<ol class="carousel-indicators">
 					<?php 
-			$image_carrousel = query("SELECT MIN(picture_id) as min, picture_name from ojs_home_page_picture");
+			$image_carrousel = query("SELECT MIN(picture_id) as min, picture_name from res_picture");
 			  $row_first = fetch_assoc($image_carrousel);
 			  ?>
 
@@ -107,8 +107,8 @@
 					</div>
 
 					<?php
-				 $all_image_query = query("SELECT picture_id, picture_name from ojs_home_page_picture where
-				  picture_id <> (SELECT MIN(picture_id) as min from ojs_home_page_picture)");
+				 $all_image_query = query("SELECT picture_id, picture_name from res_picture where
+				  picture_id <> (SELECT MIN(picture_id) as min from res_picture)");
 
 				 while($row_image = fetch_assoc($all_image_query))
 				 {

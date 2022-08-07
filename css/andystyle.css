@@ -1,0 +1,48 @@
+
+.andymainfont {
+	font-size: 42pt;
+	font-style: 'Fredoka One', cursive;
+	color: white;
+}
+
+.andysecondfont {
+	font-size: 19pt;
+	font-style: 'Raleway', cursive;
+	color: #a8a8a8;
+}
+
+
+@media all and (min-width: 425px) {
+  /* For tablets: */
+	.andymainfont { margin-left: 0%; margin-top: -15%}
+	/*.andysecondfont { margin-left: 0%; }*/
+
+}
+
+@media all and (min-width: 768px) {
+  /* For tablets: */
+	.andymainfont { margin-left: -10%; margin-top: -15%}
+	/*.andysecondfont { margin-left: -10%; }*/
+
+}
+
+@media all and (min-width: 1280px) {
+  /* For tablets: */
+	.andymainfont {margin-left: -30%; margin-top: -15%}
+	/*.andysecondfont {margin-left: -30%; }*/
+
+@media all and (min-width: 1440px) {
+  /* For tablets: */
+	.andymainfont { margin-left: -60%; margin-top: -18%;}
+	/*.andysecondfont { margin-left: -60%; }*/
+
+}
+
+@media all and (min-width: 1920px) {
+  /* For tablets: */
+	.andymainfont { margin-left: -70%; margin-top: -20%; font-size: 54pt;}
+	/*.andysecondfont { margin-left: -70%; font-size: 24pt;}*/
+
+
+}
+

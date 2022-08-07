@@ -63,5 +63,7 @@
 <script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="https://unpkg.com/cropperjs/dist/cropper.js" crossorigin="anonymous"></script>
+<script src="https://fengyuanchen.github.io/jquery-cropper/js/jquery-cropper.js"></script>
 </body>
 </html>

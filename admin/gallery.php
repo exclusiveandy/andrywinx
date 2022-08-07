@@ -197,7 +197,7 @@
         myFormData.append('image_file', image_file);
         
                 $.ajax({
-                  url: 'functions/blog_create.php',
+                  url: 'functions/blog/blog_create.php',
                   data: myFormData,
                   processData: false, // important
                   contentType: false, // important

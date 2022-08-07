@@ -100,11 +100,12 @@
 			  <div class="form-group">
 				<label for="inputEstimatedBudget">Title</label>
 				<input type="text" id="title" name="title" class="form-control" value="<?php echo $row['blog_title']; ?>">
+				<input type="text" id="blog_id" name="blog_id" class="form-control" value="<?php echo $row['blog_id']; ?>" hidden>
 			  </div>
 			</div>
 			<!-- /.card-body -->
 			<div class="card-footer">
-			  <button type="submit" class="btn btn-primary w-100" id="create_blogs">Update</button>
+			  <button type="submit" class="btn btn-primary w-100" id="update_blogs">Update</button>
 			</div>
 			<div id="loader" style="display: none; text-align: center;">
 			  <br><br>
@@ -191,7 +192,7 @@
 
   
 
-  $('#create_blog_form').validate({
+  $('#update_blog_form').validate({
 	rules: {
 	  image_file: {
 		required: true,
@@ -225,16 +226,18 @@
 		event.preventDefault();
 		var myFormData = new FormData();
 
+		var blog_id = $("#blog_id").val();
 		var title = $("#title").val();
 		var details = $(".details").summernote("code");
 		var image_file = $('#image_file').prop('files')[0];
 
+		myFormData.append('blog_id', blog_id);
 		myFormData.append('title', title);
 		myFormData.append('details', details);
 		myFormData.append('image_file', image_file);
 		
 				$.ajax({
-				  url: 'functions/blog_create.php',
+				  url: 'functions/blog/blog_update.php',
 				  data: myFormData,
 				  processData: false, // important
 				  contentType: false, // important
@@ -248,13 +251,13 @@
 					},
 				  success: function(data)
 					{
-					  if(data == "Success")
+					  if(data == "success")
 					  {
 						Swal.fire({
-						  title: "Blog is Created!", 
-						  text: "It can now be seen in the list of your Blogs!", 
+						  title: "Blog is Updated!", 
+						  text: "Check it to view the updates!", 						  
 						  icon: "success"}).then(function(){ 
-							$(window).attr('location', 'dashboard');                      
+							$(window).attr('location', 'blogs');                      
 						  }
 						);
 

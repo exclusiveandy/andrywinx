@@ -93,22 +93,24 @@
 				<h3 class="card-title">Title and Main Image</h3>
 		  	</div>
 		  	<div class="card-body">
+
 				<div class="form-group">
 					<label for="exampleInputFile">Main Image</label>
 					<h6 style="color: grey;" for="exampleInputFile">Recommended to upload a 1120x630 resolution landscape style for a better view of the page </h6>
 					<div class="input-group">
 					  	<div class="custom-file">
 							<!-- <input type="file"  > -->
-							<input type="file" class="custom-file-input" id="image_file" name="image_file" onchange="loadFile(event)">
+							<input type="file" class="custom-file-input" id="image_file" name="image_file" onchange="loadFile(event)" style="max-width: 100%;">
 							<label class="custom-file-label" for="input_file">Choose File</label>
 					  	</div>
 					</div>
 				</div>
 
 	
-			  	<div class="text=center justify-content-center">
+			  	<div class="text=center">
 					<p class="text-center">
-					<img id="output_image" class="w-75 h-50"/>
+					<!-- <img id="output_image" class="w-75 h-50"/> -->
+                    <img id="output_image" src="../images/1.png" class="w-75 h-50"/>
 			 		</p>
 			  	</div>
 
@@ -153,12 +155,48 @@
   <?php include("footer.php");?>
   <!--  -->
 
+<!-- or even simpler -->
+
+
 <script>
 
 
-  $( document ).ready(function() {
 
-	 $('#blog_table_id').DataTable({
+$( document ).ready(function() {
+
+  	var $image = $('#output_image');
+
+	$image.cropper({
+	  aspectRatio: 16 / 9,
+	  crop: function(event) {
+	    console.log(event.detail.x);
+	    console.log(event.detail.y);
+	    console.log(event.detail.width);
+	    console.log(event.detail.height);
+	    console.log(event.detail.rotate);
+	    console.log(event.detail.scaleX);
+	    console.log(event.detail.scaleY);
+	  }
+	});
+
+	var image = document.querySelector('#output_image');
+      var cropper = new Cropper(image, {
+        dragMode: 'move',
+        aspectRatio: 16 / 9,
+        autoCropArea: 0.65,
+        restore: false,
+        guides: false,
+        center: false,
+        highlight: false,
+        cropBoxMovable: false,
+        cropBoxResizable: false,
+        toggleDragModeOnDblclick: false,
+    });
+
+	// Get the Cropper.js instance after initialized
+	var cropper = $image.data('cropper');
+
+	$('#blog_table_id').DataTable({
 	  "paging": true,
 	  "lengthChange": false,
 	  "searching": false,
@@ -212,10 +250,16 @@
   // TO SHOW FILE NAME OF THE UPLOADED IMAGE
   $('#image_file').on('change',function(){
 	  //get the file name
-	  var fileName = $(this).val();
-	  var cleanFileName = fileName.replace('C:\\fakepath\\', " ");
-	  $(this).next('.custom-file-label').html(cleanFileName);
+	  	var fileName = $(this).val();
+	  	var cleanFileName = fileName.replace('C:\\fakepath\\', " ");
+	  	$(this).next('.custom-file-label').html(cleanFileName);
+
+	  	
+
   })
+
+
+
 
 
   
@@ -253,17 +297,26 @@
 
 		event.preventDefault();
 		var myFormData = new FormData();
+		let bonakfritz;
+
+		// FOR IMAGE
+
 
 		var title = $("#title").val();
 		var details = $(".details").summernote("code");
-		var image_file = $('#image_file').prop('files')[0];
+		// var cropped_image = bonakfritz;//$('#cropped_image').prop('files')[0];
+
+
 
 		myFormData.append('title', title);
 		myFormData.append('details', details);
-		myFormData.append('image_file', image_file);
+		myFormData.append('image_file', bonakfritz);
+
+		console.log(bonakfritz);
+		console.log("bobob");
 		
 				$.ajax({
-				  url: 'functions/blog_create.php',
+				  url: 'functions/blog/blog_create.php',
 				  data: myFormData,
 				  processData: false, // important
 				  contentType: false, // important
@@ -277,7 +330,7 @@
 					},
 				  success: function(data)
 					{
-					  if(data == "Success")
+					  if(data == "success")
 					  {
 						Swal.fire({
 						  title: "Blog is Created!", 
@@ -307,46 +360,6 @@
 
 
 
-  // DELETE FUNCTION
-
-  function deleteFunction(id) {
-  event.preventDefault();
-  var blog_id = id;
-  Swal.fire({
-	title: 'Are you sure you want to delete this blog?',
-	text: "You won't be able to revert this!",
-	icon: 'warning',
-	showCancelButton: true,
-	confirmButtonColor: '#d33',
-	cancelButtonColor: '#3085d6',
-	confirmButtonText: 'Yes, delete it!'
-  }).then((result) => {
-	if (result.isConfirmed) {
-	  $.ajax({
-		method: 'POST',
-		data: {'delete': true, 'blog_id' : blog_id },
-		url: 'functions/blog_delete.php',
-		success: function(data) {
-		  $("#blog_table").load("functions/blog_list.php",{
-
-		  });
-
-
-
-		}
-	  });
-	
-	  Swal.fire(
-		'Deleted!',
-		'Your blog has been deleted.',
-		'success'
-	  )
-
-
-	}
-  })
-
-  }
 
 
 

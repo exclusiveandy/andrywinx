@@ -303,7 +303,7 @@
       var bio = $("#bio").val();
       var contact = $("#contact").val();
       $.ajax({
-        url: 'functions/profile_update.php',
+        url: 'functions/profile/profile_update.php',
         data: {
           fname:fname, 
           mname:mname, 
@@ -403,7 +403,7 @@
 
 
         $.ajax({
-          url: 'functions/profile_changepassword.php',
+          url: 'functions/profile/profile_changepassword.php',
           data: {password:password, hash:hash, cpass:cpass},
           dataType: "json",
           type: 'POST', 

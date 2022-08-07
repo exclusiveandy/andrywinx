@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>Blogs - Lumikha at Maglaro</title>
+  <title>AndrywinX - Lumikha at Maglaro</title>
 
   <link rel="icon" href="images/andrywinxico.png">
   <link rel="stylesheet" href="css/adminlte.css">  
@@ -89,37 +89,61 @@
 	<div class="content">
 		<div class="container">
 
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<?php 
+			$image_carrousel = query("SELECT MIN(picture_id) as min, picture_name from res_picture");
+			  $row_first = fetch_assoc($image_carrousel);
+			  ?>
 
+				</ol>
+
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100 rounded" src="images/<?php echo $row_first['picture_name'];?>" alt="First slide">
+					</div>
+
+					<?php
+				 $all_image_query = query("SELECT picture_id, picture_name from res_picture where
+				  picture_id <> (SELECT MIN(picture_id) as min from res_picture)");
+
+				 while($row_image = fetch_assoc($all_image_query))
+				 {
+			  ?>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="images/<?php echo $row_image['picture_name'];?>" alt="First slide">
+						</div>
+						<?php
+			}
+
+			?>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+
+			<br>
 			<div class="row">
 				<div class="col-md-8">
 				
 						
-					<h3>Featured Blogs</h3>
+					<h3>Featured Post</h3>
 					
-					<?php
-
-					$query = query("SELECT blog_id, blog_title, SUBSTRING(blog_image, 4) as blog_image, blog_details
-									FROM user_blog
-									WHERE is_featured = 1");
-					confirm($query);
-
-
-					while($row = fetch_assoc($query))
-					{ 
-					?>
 
 					<div class="card">
-						<img src="<?php echo $row['blog_image']; ?>" class="card-img-top" alt="..." width="100%" height="200px">
+						<img src="images/1.png" class="card-img-top" alt="...">
 						<div class="card-body">
-							<h4><?php echo $row['blog_title']; ?></h4>
-							<p class="card-text"></p>
-							<a href="<?php echo $row['blog_id'];?>" class="btn btn-primary">Read</a>
+							<h4>Card title</h4>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
 						  </div>
 					</div>
-
-					<?php
-					}
-					?>
 
 
 				</div>
@@ -141,36 +165,6 @@
 			   
 
 	
-						<div class="card">
-							<div class="card-header">
-								<h5 class="m-0 text-danger">F</h5>
-							</div>
-							<div class="card-body">
-								<p class="card-text " style="overflow: hidden; white-space: normal; text-overflow: ellipsis; height: 115px;">
-								   
-								</p>
-								<a href="pages/announcements.php" class="card-link">View</a>
-							</div>
-						</div>
-
-						<div class="col-md-12" style="padding-bottom: 4%; padding-top: 4%;">
-							<h1 class="m-0 text-dark " style="font-size: 20pt; font-style: italic;">  Follow us on </h1>
-						</div>
-
-						<div class="card">
-
-							<div class="card-body">
-								<ul>
-									<
-										<li>
-											<a href="" target="_blank" style="font-style: italic;">
-												<i class="fa fa-facebook"></i></a>
-										</li>
-										
-								</ul>
-							</div>
-
-						</div>
 
 				</div>
 
