@@ -13,35 +13,72 @@
 
 
 @media all and (min-width: 425px) {
-  /* For tablets: */
-	.andymainfont { margin-left: 0%; margin-top: -15%}
-	/*.andysecondfont { margin-left: 0%; }*/
+  /* For phones: */
+	.andymainfont { margin-left: 0%; margin-top: -11%}
+	.andysecondfont { margin-left: 0%; font-size: 20pt;}
+	.andylinks { margin-left: 0%; font-size: 10pt;}
+	.navbartoggler {display:initial;}
 
 }
 
 @media all and (min-width: 768px) {
-  /* For tablets: */
-	.andymainfont { margin-left: -10%; margin-top: -15%}
-	/*.andysecondfont { margin-left: -10%; }*/
+  /* For small tablets / wide phones: */
+	.andymainfont { margin-left: -10%; margin-top: -1%; font-size: 44pt;}
+	.andysecondfont { margin-left: -10%; font-size: 20pt;}
+	.andylinks { margin-left: -10%; font-size: 10pt;}
+	.navbartoggler {display:initial;}
+}
+	
 
+@media all and (min-width: 1024px) {
+  /* For tablets: */
+	.andymainfont {margin-left: -15%; margin-top: -10%; font-size: 36pt;}
+	.andysecondfont { margin-left: -15%; font-size: 20pt;}
+	.andylinks { margin-left: -15%; font-size: 10pt;}
+	.navbartoggler {display:none;}
 }
 
 @media all and (min-width: 1280px) {
-  /* For tablets: */
-	.andymainfont {margin-left: -30%; margin-top: -15%}
-	/*.andysecondfont {margin-left: -30%; }*/
+  /* For tablets or small monitor : */
+	.andymainfont {margin-left: -20%; margin-top: -10%; font-size: 48pt;}
+	.andysecondfont { margin-left: -20%; font-size: 20pt;}
+	.andylinks { margin-left: -20%; font-size: 10pt;}
+	#navbar {margin-right: -20%;}
+	.navbartoggler {display:none;}
+
+}
 
 @media all and (min-width: 1440px) {
-  /* For tablets: */
-	.andymainfont { margin-left: -60%; margin-top: -18%;}
-	/*.andysecondfont { margin-left: -60%; }*/
+  /* For laptop: */
+	.andymainfont { margin-left: -30%; margin-top: -7%;font-size: 60pt;}
+	.andysecondfont { margin-left: -30%; font-size: 24pt;}
+	.andylinks { margin-left: -30%; font-size: 14pt;}
+	.andynavs {  font-size: 19pt;}
+	#navbar {margin-right: -20%;}
+	.navbartoggler {display:none;}
 
 }
 
 @media all and (min-width: 1920px) {
-  /* For tablets: */
-	.andymainfont { margin-left: -70%; margin-top: -20%; font-size: 54pt;}
-	/*.andysecondfont { margin-left: -70%; font-size: 24pt;}*/
+  /* For Average 24inc PC: */
+	.andymainfont { margin-left: -40%; margin-top: -16%; font-size: 72pt;}
+	.andysecondfont { margin-left: -40%; font-size: 28pt;}
+	.andylinks { margin-left: -40%; font-size: 18pt;}
+	.andynavs {  font-size: 20pt;}
+	#navbar {margin-right: -40%;}
+	.navbartoggler {display:none;}
+
+
+}
+
+@media all and (min-width: 2560px) {
+  /* For Big Monitor PC: */
+	.andymainfont { margin-left: -50%; margin-top: -16%; font-size: 88pt;}
+	.andysecondfont { margin-left: -50%; font-size: 36pt;}
+	.andylinks { margin-left: -50%; font-size: 26pt;}
+	.andynavs {  font-size: 34pt;}
+	#navbar {margin-right: -53%;}
+	.navbartoggler {display:none;}
 
 
 }

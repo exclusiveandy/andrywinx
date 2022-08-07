@@ -43,7 +43,9 @@
 
 </head>
 <style>
- 
+html {
+	scroll-behavior: smooth;
+}
 body::-webkit-scrollbar {
   width: 7px;               /* width of the entire scrollbar */
 }
@@ -58,25 +60,97 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid dimgray;  /* creates padding around scroll thumb */
 }
 
+.box {
+  clip-path: circle(75%);
+  transition: clip-path 1s;
+}
+
+.box:hover {
+  clip-path: circle(40%);
+}
+
 </style>
+
+
 
 <body class="hold-transition layout-top-nav dark-mode" >
 
+	
+
+	<nav class="navbar fixed-top navbar-expand-lg scrolling-navbar" id="navbar"	style="transition: top 0.3s;"> 
+	    <div class="container">
+
+	    	<div onclick="navbar_toggler()" id="navbartoggler" class="navbartoggler" style="background-color:RGB(177,0,0); transition: all .2s linear; position: absolute">
+	    		<span class="fa fa-facebook-square fa-2x"></span>
+	      	</div>
+
+
+	      <!-- Collapse -->
+	<!--       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+	        aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-icon"></span>
+	      </button>
+ -->
+	      
+
+	      <!-- Links -->
+	      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+	        <!-- Left -->
+	        <ul class="navbar-nav mr-auto">
+	      
+	        </ul>
+
+	        <!-- Right -->
+	        <div class="andynavs">
+		        <ul class="navbar-nav nav-flex-icons" >
+		          <li class="nav-item">
+		            <a href="#skillsection" class="nav-link" style="color:white">
+		              Skills
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a href="#experiencesection" class="nav-link" style="color:white">
+		              Experience
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a href="#contactsection" class="nav-link" style="color:white">
+		              Contact
+		            </a>
+		          </li>
+		        </ul>
+	        </div>
+
+	      </div>
+
+	    </div>
+	  </nav>
+
 	<section class="container-fluid vh-100 login-page" style="background-color:#343a40">
-		<div data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500" data-aos="fade-up" data-aos-duration="3000" style="margin-top: -150px;">
+		<!-- data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500" data-aos="fade-up" data-aos-duration="3000"  -->
+		<div style="margin-top: -150px;">
 			<h2 class="andymainfont">Andrywin Maquinto</h2>
-			<h5 class="andysecondfont">Mukhang Pwet Mabantot si Aldwin</h5>
-			<div class="">
-				<a href="https://www.facebook.com/w3schoolscom/" target="_blank" title="Facebook"><span class="fa fa-facebook-square fa-2x"></span></a>
-				<a href="https://www.instagram.com/w3schools.com_official/" target="_blank" title="Instagram"><span class="fa-brands fa-square-github fa-2x"></span></a>
-				<a href="https://www.linkedin.com/company/w3schools.com/" target="_blank" title="LinkedIn"><span class="fa fa-linkedin-square fa-2x"></span></a>
-				<a href="https://discord.gg/6Z7UaRbUQM" target="_blank" title="Join the W3schools community on Discord"><span class="fa fa-discord fa-2x"></span></a>
+			<h5 class="andysecondfont">Developer / Musician / Gaming Enthusiast</h5>
+			<div class="andylinks" style="padding-top:10px;">
+				<a href="https://www.facebook.com/w3schoolscom/" target="_blank" title="Facebook" style="color:blue;">
+					<span class="fa fa-facebook-square fa-2x"></span>
+				</a>
+				<a href="https://www.instagram.com/w3schools.com_official/" target="_blank" title="Github" style="color:black;">
+					<span class="fa-brands fa-square-github fa-2x"></span>
+				</a>
+				<a href="https://www.linkedin.com/company/w3schools.com/" target="_blank" title="LinkedIn" style="color:#006599;">
+					<span class="fa fa-linkedin-square fa-2x"></span>
+				</a>
+				<a href="https://discord.gg/6Z7UaRbUQM" target="_blank" title="Join the W3schools community on Discord" style="color:#6e85d2;">
+					<span class="fa fa-discord fa-2x"></span>
+				</a>
 			</div>
 	
 		</div>
 
 	</section>
-	<section class="container-fluid vh-100 style="background-color:#454d55">
+	<section class="container-fluid vh-100" style="background-color:#454d55" id="skillsection">
 		<!-- <div data-aos="fade-up" data-aos-duration="3000"> -->
 			<div class="row">
 				<div class="col-md-8 text-center" >
@@ -90,15 +164,15 @@ body::-webkit-scrollbar-thumb {
 			</div>
 		<!-- </div> -->
 	</section>
-	<section class="section3 vh-100 " id="section3" style="background-color:dimgray">
-		<div id="target">
+	<section class="section3 vh-100" style="background-color:dimgray" id="experiencesection">
+		<div id="target" >
 			<img id="plane" src="images/example_bezier.png" style="margin-left: -90px;">
 		</div>
 		
 	
 
 	</section>
-	<section class="container-fluid vh-100" style="background-color:#454d55">
+	<section class="container-fluid vh-100" style="background-color:#454d55" id="contactsection">
 		<div data-aos="fade-up" data-aos-duration="3000">
 			<h5 class="andysecondfont">Mukhang Pwet Mabantot si Aldwin</h5>
 		</div>
@@ -113,10 +187,35 @@ body::-webkit-scrollbar-thumb {
 </body>
 
 
+<script type="text/javascript">
+	
+	$('#navbartoggler').click(function() {
+	    $(this).toggleClass('vh-100');
+	    $(this).toggleClass('vw-100');
+	});
 
+
+</script>
 
 <script>
   AOS.init();
+</script>
+
+<script type="text/javascript">
+	var lastScrollTop;
+	navbar = document.getElementById('navbar');
+	window.addEventListener('scroll',function(){
+	var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	if(scrollTop > lastScrollTop){
+		
+		navbar.style.top= '-80px';
+		
+	}
+	else{
+	navbar.style.top='0';
+	}
+	lastScrollTop = scrollTop;
+	});
 </script>
 
 <script>
@@ -127,20 +226,12 @@ body::-webkit-scrollbar-thumb {
 				autoRotate: true,
 				values: [
 						{x: 100,	y: -20},
-						{x: 300,	y: 10}
-					]
-			},
-			looping : {
-				curviness: 1.25,
-				autoRotate: true,
-				values: [
-						{x: 510,	y: 60},
-						{x: 620,	y: -60},
+						{x: 300,	y: 10},
 						{x: 500,	y: -100},
 						{x: 380,	y: 20},
 						{x: 500,	y: 60},
 						{x: 580,	y: 20},
-						{x: window.innerWidth+100,	y: 0}
+						{x: window.innerWidth,	y: 0}
 					]
 			},
 
@@ -154,7 +245,7 @@ body::-webkit-scrollbar-thumb {
 			.add(TweenMax.to($("#plane"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
 
 		// build scene
-		var scene = new ScrollMagic.Scene({triggerElement: "#section3", duration: 1000,})
+		var scene = new ScrollMagic.Scene({triggerElement: "#experiencesection", duration: 1000,})
 						.setPin("#target")
 						.setTween(tween)
 						// .addIndicators() // ajaxdd indicators (requires plugin)
