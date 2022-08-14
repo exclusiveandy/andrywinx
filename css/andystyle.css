@@ -12,6 +12,15 @@
 }
 
 
+.typed-cursor{
+        opacity: 1;
+        font-weight: 100;
+        -webkit-animation: blink 0.7s infinite;
+        -moz-animation: blink 0.7s infinite;
+        -ms-animation: blink 0.7s infinite;
+        -o-animation: blink 0.7s infinite;
+    }
+
 @media all and (min-width: 425px) {
   /* For phones: */
 	.andymainfont { margin-left: 0%; margin-top: -11%}
@@ -79,6 +88,7 @@
 	.andynavs {  font-size: 34pt;}
 	#navbar {margin-right: -53%;}
 	.navbartoggler {display:none;}
+	.andymainimage { width: 140%;}
 
 
 }

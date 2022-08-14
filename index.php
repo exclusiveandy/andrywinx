@@ -17,6 +17,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"/>
 
   <!-- jQuery -->
 	<script src="plugins/jquery/jquery.min.js"></script>
@@ -36,8 +39,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
-	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
 
 
 
@@ -131,23 +133,33 @@ body::-webkit-scrollbar-thumb {
 		<!-- data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500" data-aos="fade-up" data-aos-duration="3000"  -->
 		<div style="margin-top: -150px;">
 			<h2 class="andymainfont">Andrywin Maquinto</h2>
-			<h5 class="andysecondfont">Developer / Musician / Gaming Enthusiast</h5>
+			<h5 class="andysecondfont" id="andytyping"><span class="typed"></span></h5>			
 			<div class="andylinks" style="padding-top:10px;">
-				<a href="https://www.facebook.com/w3schoolscom/" target="_blank" title="Facebook" style="color:blue;">
+				<a href="https://www.facebook.com/w3schoolscom/" target="_blank" title="Facebook" style="color:blue;" class="hvr-grow-rotate">
 					<span class="fa fa-facebook-square fa-2x"></span>
 				</a>
-				<a href="https://www.instagram.com/w3schools.com_official/" target="_blank" title="Github" style="color:black;">
+				<a href="https://www.instagram.com/w3schools.com_official/" target="_blank" title="Github" style="color:black;" class="hvr-grow-rotate">
 					<span class="fa-brands fa-square-github fa-2x"></span>
 				</a>
-				<a href="https://www.linkedin.com/company/w3schools.com/" target="_blank" title="LinkedIn" style="color:#006599;">
+				<a href="https://www.linkedin.com/company/w3schools.com/" target="_blank" title="LinkedIn" style="color:#006599;" class="hvr-grow-rotate">
 					<span class="fa fa-linkedin-square fa-2x"></span>
 				</a>
-				<a href="https://discord.gg/6Z7UaRbUQM" target="_blank" title="Join the W3schools community on Discord" style="color:#6e85d2;">
+				<a href="https://discord.gg/6Z7UaRbUQM" target="_blank" title="Join the W3schools community on Discord" style="color:#6e85d2;" class="hvr-grow-rotate">
 					<span class="fa fa-discord fa-2x"></span>
 				</a>
 			</div>
-	
-		</div>
+			
+			<div class="position-absolute text-center " style="bottom:1%; left:50%; transform: translate(-50%, -50%);">
+				<p style="margin: 0; font-size: 12pt;font-style: 'Raleway', cursive; color: #a8a8a8;">Scroll to see my story</p><br>
+				<img class="img-responsive" width="50px" height="50px" src="images/scroll.gif" >
+			</div>
+
+			<div class="position-absolute" style="bottom:1%; right:2%;">
+				<img class="andymainimage" src="images/ani1.png" >
+			</div>
+
+
+
 
 	</section>
 	<section class="container-fluid vh-100" style="background-color:#454d55" id="skillsection">
@@ -168,7 +180,7 @@ body::-webkit-scrollbar-thumb {
 		<div id="target" >
 			<img id="plane" src="images/example_bezier.png" style="margin-left: -90px;">
 		</div>
-		
+	
 	
 
 	</section>
@@ -197,8 +209,45 @@ body::-webkit-scrollbar-thumb {
 
 </script>
 
+
 <script>
   AOS.init();
+</script>
+<script>
+	$(function(){
+	$(".typed").typed({
+		strings: ["Developer, Editor, Gaming Enthusiast", "Curious, Reliable, Cooperative","Games, Movies, Foods"],
+		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+		stringsElement: null,
+		// typing speed
+		typeSpeed: 30,
+		// time before typing starts
+		startDelay: 1200,
+		// backspacing speed
+		backSpeed: 20,
+		// time before backspacing
+		backDelay: 500,
+		// loop
+		loop: true,
+		// show cursor
+		showCursor: true,
+		// character for cursor
+		cursorChar: "|",
+		// attribute to type (null == text)
+		attr: null,
+		// either html or text
+		contentType: 'html',
+		// call when done callback function
+		callback: function() {},
+		// starting callback function before each string
+		preStringTyped: function() {},
+		//callback for every typed string
+		onStringTyped: function() {},
+		// callback for reset
+		resetCallback: function() {}
+	});
+});
+
 </script>
 
 <script type="text/javascript">
