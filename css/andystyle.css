@@ -11,6 +11,12 @@
 	color: #a8a8a8;
 }
 
+.andyskillsectiontext {
+	font-size: 19pt;
+	font-style: 'Raleway', cursive;
+	color: #a8a8a8;
+}
+
 
 .typed-cursor{
         opacity: 1;
@@ -21,12 +27,40 @@
         -o-animation: blink 0.7s infinite;
     }
 
+@media all and (min-width: 320px) {
+  /* For phones: */
+	.andymainfont { margin-left: 0%; margin-top: -11%}
+	.andysecondfont { margin-left: 0%; font-size: 20pt;}
+	.andylinks { margin-left: 0%; font-size: 10pt;}
+	.navbartoggler {display:initial;}
+
+	.andyscroll { bottom:-6% !important; left:50%; transform: translate(-50%, -50%); }
+	
+	#homesection {background-image: url('../images/ani1.png');	background-color:#343a40; background-repeat: no-repeat; background-position: 74% 100%;}
+}
+/*turn main image to background image*/
+
+@media all and (min-width: 375px) {
+  /* For phones: */
+	.andymainfont { margin-left: 0%; margin-top: -11%}
+	.andysecondfont { margin-left: 0%; font-size: 20pt;}
+	.andylinks { margin-left: 0%; font-size: 10pt;}
+	.navbartoggler {display:initial;}
+	
+	.andyscroll { bottom:-6% !important; left:50%; transform: translate(-50%, -50%); }
+
+	#homesection {background-image: url('../images/ani1.png');	background-color:#343a40; background-repeat: no-repeat; background-position: 75% 100%;}
+
+}
+
 @media all and (min-width: 425px) {
   /* For phones: */
 	.andymainfont { margin-left: 0%; margin-top: -11%}
 	.andysecondfont { margin-left: 0%; font-size: 20pt;}
 	.andylinks { margin-left: 0%; font-size: 10pt;}
 	.navbartoggler {display:initial;}
+
+	#homesection {background-size: 220%;background-image: url('../images/ani1.png');	background-color:#343a40; background-repeat: no-repeat; background-position: 75% 100%;}
 
 }
 
@@ -36,15 +70,19 @@
 	.andysecondfont { margin-left: -10%; font-size: 20pt;}
 	.andylinks { margin-left: -10%; font-size: 10pt;}
 	.navbartoggler {display:initial;}
+
+	#homesection {background-size: 90%;background-image: url('../images/ani1.png');	background-color:#343a40; background-repeat: no-repeat; background-position: bottom right;}
 }
 	
 
 @media all and (min-width: 1024px) {
   /* For tablets: */
-	.andymainfont {margin-left: -15%; margin-top: -10%; font-size: 36pt;}
-	.andysecondfont { margin-left: -15%; font-size: 20pt;}
-	.andylinks { margin-left: -15%; font-size: 10pt;}
+	.andymainfont {margin-left: -40%; margin-top: -10%; font-size: 36pt;}
+	.andysecondfont { margin-left: -40%; font-size: 20pt;}
+	.andylinks { margin-left: -40%; font-size: 10pt;}
 	.navbartoggler {display:none;}
+
+	#homesection {background-size: 90%;background-image: url('../images/ani1.png');	background-color:#343a40; background-repeat: no-repeat; background-position: bottom right;}
 }
 
 @media all and (min-width: 1280px) {
@@ -52,9 +90,10 @@
 	.andymainfont {margin-left: -20%; margin-top: -10%; font-size: 48pt;}
 	.andysecondfont { margin-left: -20%; font-size: 20pt;}
 	.andylinks { margin-left: -20%; font-size: 10pt;}
-	#navbar {margin-right: -20%;}
+	#navbar {margin-right: -10%;}
 	.navbartoggler {display:none;}
 
+	#homesection {background-size: 80%; background-image: url('../images/ani1.png');	background-color:#343a40; background-repeat: no-repeat; background-position: bottom right;}
 }
 
 @media all and (min-width: 1440px) {
@@ -66,6 +105,7 @@
 	#navbar {margin-right: -20%;}
 	.navbartoggler {display:none;}
 
+	#homesection {background-size: 80%; background-image: url('../images/ani1.png');	background-color:#343a40; background-repeat: no-repeat; background-position: bottom right;}
 }
 
 @media all and (min-width: 1920px) {
@@ -76,6 +116,8 @@
 	.andynavs {  font-size: 20pt;}
 	#navbar {margin-right: -40%;}
 	.navbartoggler {display:none;}
+
+	#homesection {background-size: 70%;background-image: url('../images/ani1.png');	background-color:#343a40; background-repeat: no-repeat; background-position: bottom right;}
 
 
 }
@@ -88,7 +130,8 @@
 	.andynavs {  font-size: 34pt;}
 	#navbar {margin-right: -53%;}
 	.navbartoggler {display:none;}
-	.andymainimage { width: 140%;}
+
+	#homesection {background-size: 70%;background-image: url('../images/ani1.png');	background-color:#343a40; background-repeat: no-repeat; background-position: bottom right;}
 
 
 }

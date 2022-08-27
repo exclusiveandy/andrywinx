@@ -48,8 +48,10 @@
 html {
 	scroll-behavior: smooth;
 }
+
 body::-webkit-scrollbar {
   width: 7px;               /* width of the entire scrollbar */
+
 }
 
 body::-webkit-scrollbar-track {
@@ -129,9 +131,10 @@ body::-webkit-scrollbar-thumb {
 	    </div>
 	  </nav>
 
-	<section class="container-fluid vh-100 login-page" style="background-color:#343a40">
-		<!-- data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500" data-aos="fade-up" data-aos-duration="3000"  -->
-		<div style="margin-top: -150px;">
+	<section class="container-fluid vh-100 login-page" id="homesection">
+		
+			<!-- data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500" data-aos="fade-up" data-aos-duration="3000"  -->
+		<div style="margin-top: -150px; " >
 			<h2 class="andymainfont">Andrywin Maquinto</h2>
 			<h5 class="andysecondfont" id="andytyping"><span class="typed"></span></h5>			
 			<div class="andylinks" style="padding-top:10px;">
@@ -148,29 +151,32 @@ body::-webkit-scrollbar-thumb {
 					<span class="fa fa-discord fa-2x"></span>
 				</a>
 			</div>
+
+			<!-- <div class="position-absolute" style="bottom:1%; right:2%;" id="andymainimagelocation">
+					<img class="andymainimage" src="images/ani1.png">
+			</div> -->
 			
-			<div class="position-absolute text-center " style="bottom:1%; left:50%; transform: translate(-50%, -50%);">
+			<div class="position-absolute text-center andyscroll" style="bottom:1%; left:50%; transform: translate(-50%, -50%);" id="andyscroll">
 				<p style="margin: 0; font-size: 12pt;font-style: 'Raleway', cursive; color: #a8a8a8;">Scroll to see my story</p><br>
 				<img class="img-responsive" width="50px" height="50px" src="images/scroll.gif" >
 			</div>
-
-			<div class="position-absolute" style="bottom:1%; right:2%;">
-				<img class="andymainimage" src="images/ani1.png" >
-			</div>
+	
+		</div>
+			
 
 
 
 
 	</section>
-	<section class="container-fluid vh-100" style="background-color:#454d55" id="skillsection">
+	<section class="container-fluid vh-100" style="background-image: linear-gradient(#454d55,#7d4949)" id="skillsection">
 		<!-- <div data-aos="fade-up" data-aos-duration="3000"> -->
-			<div class="row">
+			<div class="row" style="padding-top:10%;">
 				<div class="col-md-8 text-center" >
 					<h1>You can call me Andy / Drew!</h1>
-					<p>I love coding I love coding I love coding I love coding I love coding I love coding I love coding I love coding I love coding I love coding I love coding </p>
+					<p class="andyskillsectiontext">The things you read above, are the things that I usually do, what I think of myself and things that I like. </p>
 				</div>
 				<div class="col-md-3 text-center">
-					<img class="m-50 h-100" src="images/andy1.png" style="width: 80%; padding: 0;">
+					<img class="m-50 h-100" src="images/andy1anim.gif" style="width: 80%; padding: 0;">
 				</div>	
 
 			</div>
