@@ -109,18 +109,18 @@ body::-webkit-scrollbar-thumb {
 	        <div class="andynavs">
 		        <ul class="navbar-nav nav-flex-icons" >
 		          <li class="nav-item">
-		            <a href="#skillsection" class="nav-link" style="color:white">
-		              Skills
+		            <a href="#skillsection" class="nav-link" style="color:white" id="skillbutton">
+		              <small style="color:#a8a8a8">1. </small>Skills
 		            </a>
 		          </li>
 		          <li class="nav-item">
-		            <a href="#experiencesection" class="nav-link" style="color:white">
-		              Experience
+		            <a href="#experiencesection" class="nav-link" style="color:white" id="experiencebutton">
+		              <small style="color:#a8a8a8">2. </small>Experience
 		            </a>
 		          </li>
 		          <li class="nav-item">
-		            <a href="#contactsection" class="nav-link" style="color:white">
-		              Contact
+		            <a href="#contactsection" class="nav-link" style="color:white" id="contactbutton">
+		              <small style="color:#a8a8a8">3. </small>Contact
 		            </a>
 		          </li>
 		        </ul>
@@ -168,7 +168,7 @@ body::-webkit-scrollbar-thumb {
 
 
 	</section>
-	<section class="container-fluid vh-100" style="background-image: linear-gradient(#454d55,#7d4949)" id="skillsection">
+	<section class="container-fluid vh-100" style="background-image: linear-gradient(#454d55,#454d55,#7d4949)" id="skillsection">
 		<!-- <div data-aos="fade-up" data-aos-duration="3000"> -->
 			<div class="row" style="padding-top:10%;">
 				<div class="col-md-8 text-center" >
@@ -203,8 +203,44 @@ body::-webkit-scrollbar-thumb {
 
 
 </body>
+<!-- FOR NAVIGATION CONTROLS -->
+<script>
+
+	document.addEventListener('keydown', (event) => {
+		var keypress = event.key;
+		var keycode = event.code;
+
+		if(keycode === "Space")
+		{	
+			$('html, body').animate({
+				scrollTop: $("#homesection").offset().top
+			});
+		}
+		if(keypress === "1")
+		{	
+			$('html, body').animate({
+				scrollTop: $("#skillsection").offset().top
+			});
+		}
+		if(keypress === "2")
+		{	
+			$('html, body').animate({
+				scrollTop: $("#experiencesection").offset().top
+			});
+		}
+		if(keypress === "3")
+		{	
+			$('html, body').animate({
+				scrollTop: $("#contactsection").offset().top
+			});
+		}
+		
+	}, false);
 
 
+</script>
+
+<!-- FOR NAVBAR -->
 <script type="text/javascript">
 	
 	$('#navbartoggler').click(function() {
@@ -230,7 +266,7 @@ body::-webkit-scrollbar-thumb {
 		// time before typing starts
 		startDelay: 1200,
 		// backspacing speed
-		backSpeed: 20,
+		backSpeed: 2,
 		// time before backspacing
 		backDelay: 500,
 		// loop
