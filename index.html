@@ -198,7 +198,17 @@ body::-webkit-scrollbar-thumb {
 						<h1 class="callmeandy">You can call me Andy / Drew!</h1>
 						<p class="andyskillsectiontext">The things you read above, are the things that I usually do, what I think of myself and things that I like. </p>
 						
-						<img style="width: 30%;" src="images/kape1.png" id="coffeeimage">
+						<img style="width: 30%;" src="images/kape1.png" id="coffeeimage1">
+						<img style="width: 30%; display: none;" src="images/kape2.png" id="coffeeimage2">
+						<img style="width: 30%; display: none;" src="images/kape3.png" id="coffeeimage3">
+						<img style="width: 30%; display: none;" src="images/kape4.png" id="coffeeimage4">
+						<img style="width: 30%; display: none;" src="images/kape5.png" id="coffeeimage5">
+						<img style="width: 30%; display: none;" src="images/kape6.png" id="coffeeimage6">
+						<img style="width: 30%; display: none;" src="images/kape7.png" id="coffeeimage7">
+						<img style="width: 30%; display: none;" src="images/kape8.png" id="coffeeimage8">
+
+
+
 						<h1 style="margin-top: 10px;" id="mugofcoffeetext" class="mugofcoffeetext">Here's a mug of coffee</h1>
 						<p class="andyskillsectiontext" id="pressforcoffee"><small>[Press F or Tap the Coffee]</small></p>
 
@@ -1011,54 +1021,71 @@ body::-webkit-scrollbar-thumb {
 			var scale_size=1;
 			imagetimer = setInterval(function(){
 				scale_size++;
-				$('#coffeeimage').attr('src',dataArray[0]);
-				$('#coffeeimage').css('transform', 'scale('+scale_size+')');
-				console.log(dataArray[countimagepress]);
-				countimagepress++; //increment data array id
+			
+				if(countimagepress==0)
+				{	
+					$('#coffeeimage1').show();
+					$('#coffeeimage1').css('transform', 'scale('+scale_size+')');
+				} 
 				if(countimagepress==1)
-				{
-					$('#coffeeimage').css('transform-origin', '24% 10%');
-					$('#coffeeimage').attr('src',dataArray[1]);
+				{	
+					$('#coffeeimage1').hide();
+					$('#coffeeimage2').css('transform-origin', '24% 10%');
+					$('#coffeeimage2').css('transform', 'scale('+scale_size+')');
+					$('#coffeeimage2').show();
 				} 
 				if(countimagepress==2)
 				{
-					$('#coffeeimage').css('transform-origin', '24% 14%');
-					$('#coffeeimage').attr('src',dataArray[2]);
+					$('#coffeeimage2').hide();
+					$('#coffeeimage3').css('transform-origin', '24% 14%');
+					$('#coffeeimage3').css('transform', 'scale('+scale_size+')');
+					$('#coffeeimage3').show();
 				} 
 				if(countimagepress==3)
 				{
-					$('#coffeeimage').css('transform-origin', '24% 18%');
-					$('#coffeeimage').attr('src',dataArray[3]);
+					$('#coffeeimage3').hide();
+					$('#coffeeimage4').css('transform-origin', '24% 18%');
+					$('#coffeeimage4').css('transform', 'scale('+scale_size+')');
+					$('#coffeeimage4').show();
 				}
 				if(countimagepress==4)
 				{
-					$('#coffeeimage').css('transform-origin', '24% 21%');
-					$('#coffeeimage').attr('src',dataArray[4]);
+					$('#coffeeimage4').hide();
+					$('#coffeeimage5').css('transform-origin', '24% 21%');
+					$('#coffeeimage5').css('transform', 'scale('+scale_size+')');
+					$('#coffeeimage5').show();
 				} 
 				if(countimagepress==5)
 				{
-					$('#coffeeimage').css('transform-origin', '24% 23%');
-					$('#coffeeimage').attr('src',dataArray[5]);
+					$('#coffeeimage5').hide();
+					$('#coffeeimage6').css('transform-origin', '24% 23%');
+					$('#coffeeimage6').css('transform', 'scale('+scale_size+')');
+					$('#coffeeimage6').show();
 				} 
 				if(countimagepress==6)
 				{
-					$('#coffeeimage').css('transform-origin', '24% 25%');
-					$('#coffeeimage').attr('src',dataArray[6]);
+					$('#coffeeimage6').hide();
+					$('#coffeeimage7').css('transform-origin', '24% 25%');
+					$('#coffeeimage7').css('transform', 'scale('+scale_size+')');
+					$('#coffeeimage7').show();
 				} 
 				if(countimagepress==7)
 				{
-					$('#coffeeimage').css('transform-origin', '24% 27%');
-					$('#coffeeimage').attr('src',dataArray[7]);
+					$('#coffeeimage7').hide();
+					$('#coffeeimage8').css('transform-origin', '24% 27%');
+					$('#coffeeimage8').css('transform', 'scale('+scale_size+')');
+					$('#coffeeimage8').show()
 				} 
 				if (scale_size>=8) {
 					$('#coffeeoval').show();
-					$('#coffeeimage').css('transform-origin', '24% 31%');
+					$('#coffeeimage8').css('transform-origin', '24% 31%');
 					$('#coffeeoval').css('transform', 'translate(-50%, -50%) scale(40)');
 
 					clearInterval(imagetimer);
 
 					return;
 				}
+				countimagepress++; //increment data array id
 
 			},50); 
 			var countp = 9;
@@ -1071,8 +1098,9 @@ body::-webkit-scrollbar-thumb {
 						scrollTop: $("#experiencesection1").offset().top
 					});
 					$('#coffeeoval').delay(500).fadeOut(2000);
-					$('#coffeeimage').attr('src',dataArray[0]);
-					$('#coffeeimage').css('transform', 'scale(1)');
+					$('#coffeeimage8').hide();
+					$('#coffeeimage1').show();
+					$('#coffeeimage1').css('transform', 'scale(1)');
 					return;
 				}
 
