@@ -902,7 +902,6 @@ body::-webkit-scrollbar-thumb {
 						$('#coffeeoval').show();
 						$('#coffeeimage').css('transform-origin', '24% 31%');
 						$('#coffeeoval').css('transform', 'translate(-50%, -50%) scale(40)');
-						console.log('firstimerremove'+ count);
 						clearInterval(imagetimer);
 
 						return;
@@ -914,8 +913,6 @@ body::-webkit-scrollbar-thumb {
 					count++;
 					if (count>=10) {
 						
-						console.log(count);
-						console.log('ovalremove');
 						clearInterval(ovalremovertimer);
 						$('html, body').animate({
 							scrollTop: $("#experiencesection1").offset().top
