@@ -886,6 +886,7 @@ body::-webkit-scrollbar-thumb {
 				imagetimer = setInterval(function(){
 					scale_size++;
 					$('#coffeeimage').attr('src',dataArray[count]);
+					console.log(dataArray[count]);
 					$('#coffeeimage').css('transform', 'scale('+scale_size+')');
 
 					count++; //increment data array id
