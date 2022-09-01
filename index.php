@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <!-- jQuery -->
 	<script src="plugins/jquery/jquery.min.js"></script>
@@ -40,6 +41,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+
 
 
 
@@ -77,63 +79,83 @@ body::-webkit-scrollbar-thumb {
 
 
 
-<body class="hold-transition layout-top-nav dark-mode" >
+<body class="position-relative hold-transition layout-top-nav dark-mode" style="background-color: #7d4949;" >
 
-	
+	<div id="navbarcontrols" class="position-fixed vh-100 vw-100 text-center" style="z-index: 4; margin-left: -100%">
+		<div class="bg-red" style="margin:10%">
+			<ul class="navbar-nav nav-flex-icons" >
+			  <li class="nav-item">
+				<a href="#skillsection" class="nav-link" style="color:white" id="navskillbutton">
+				  <small style="color:#a8a8a8">1. </small>About
+				</a>
+			  </li>
+			  <li class="nav-item">
+				<a href="#experiencesection" class="nav-link" style="color:white" id="navexperiencebutton">
+				  <small style="color:#a8a8a8">2. </small>Experience
+				</a>
+			  </li>
+			  <li class="nav-item">
+				<a href="#contactsection" class="nav-link" style="color:white" id="navcontactbutton">
+				  <small style="color:#a8a8a8">3. </small>Contact
+				</a>
+			  </li>
+			</ul>
+		</div>
+		
+
+	</div>
 
 	<nav class="navbar fixed-top navbar-expand-lg scrolling-navbar" id="navbar"	style="transition: top 0.3s;"> 
-	    <div class="container">
+		<div class="container">
 
-	    	<div onclick="navbar_toggler()" id="navbartoggler" class="navbartoggler" style="background-color:RGB(177,0,0); transition: all .2s linear; position: absolute">
-	    		<span class="fa fa-facebook-square fa-2x"></span>
-	      	</div>
+			<div id="navbartoggler" class="navbartoggler" style="background-color:RGB(177,0,0); transition: all .2s ease; position: absolute; top:0;right:2%;">
+				<span class="fa fa-facebook-square fa-2x"></span>
+			</div>
 
 
-	      <!-- Collapse -->
-	<!--       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-	        aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="navbar-toggler-icon"></span>
-	      </button>
- -->
-	      
+		  <!-- Collapse -->
+	      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button> -->
 
-	      <!-- Links -->
-	      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  <!-- Links -->
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-	        <!-- Left -->
-	        <ul class="navbar-nav mr-auto">
-	      
-	        </ul>
+			<!-- Left -->
+			<ul class="navbar-nav mr-auto">
+		  
+			</ul>
 
-	        <!-- Right -->
-	        <div class="andynavs">
-		        <ul class="navbar-nav nav-flex-icons" >
-		          <li class="nav-item">
-		            <a href="#skillsection" class="nav-link" style="color:white" id="skillbutton">
-		              <small style="color:#a8a8a8">1. </small>Skills
-		            </a>
-		          </li>
-		          <li class="nav-item">
-		            <a href="#experiencesection" class="nav-link" style="color:white" id="experiencebutton">
-		              <small style="color:#a8a8a8">2. </small>Experience
-		            </a>
-		          </li>
-		          <li class="nav-item">
-		            <a href="#contactsection" class="nav-link" style="color:white" id="contactbutton">
-		              <small style="color:#a8a8a8">3. </small>Contact
-		            </a>
-		          </li>
-		        </ul>
-	        </div>
+			<!-- Right -->
+			<div class="andynavs">
+				<ul class="navbar-nav nav-flex-icons" >
+				  <li class="nav-item">
+					<a href="#skillsection" class="nav-link" style="color:white" id="skillbutton">
+					  <small style="color:#a8a8a8">1. </small>About
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a href="#experiencesection" class="nav-link" style="color:white" id="experiencebutton">
+					  <small style="color:#a8a8a8">2. </small>Experience
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a href="#contactsection" class="nav-link" style="color:white" id="contactbutton">
+					  <small style="color:#a8a8a8">3. </small>Contact
+					</a>
+				  </li>
+				</ul>
+			</div>
 
-	      </div>
+		  </div>
 
-	    </div>
+		</div>
 	  </nav>
-
-	<section class="container-fluid vh-100 login-page" id="homesection">
+	  <!-- data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500" data-aos="fade-up" data-aos-duration="3000"  -->
+	<section class="position-relative container-fluid vh-100 login-page" id="homesection">
 		
-			<!-- data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500" data-aos="fade-up" data-aos-duration="3000"  -->
+			
 		<div style="margin-top: -150px; " >
 			<h2 class="andymainfont">Andrywin Maquinto</h2>
 			<h5 class="andysecondfont" id="andytyping"><span class="typed"></span></h5>			
@@ -152,9 +174,7 @@ body::-webkit-scrollbar-thumb {
 				</a>
 			</div>
 
-			<!-- <div class="position-absolute" style="bottom:1%; right:2%;" id="andymainimagelocation">
-					<img class="andymainimage" src="images/ani1.png">
-			</div> -->
+	
 			
 			<div class="position-absolute text-center andyscroll" style="bottom:1%; left:50%; transform: translate(-50%, -50%);" id="andyscroll">
 				<p style="margin: 0; font-size: 12pt;font-style: 'Raleway', cursive; color: #a8a8a8;">Scroll to see my story</p><br>
@@ -162,35 +182,627 @@ body::-webkit-scrollbar-thumb {
 			</div>
 	
 		</div>
-			
+
 
 
 
 
 	</section>
-	<section class="container-fluid vh-100" style="background-image: linear-gradient(#454d55,#454d55,#7d4949)" id="skillsection">
+	<section class="position-relative container-fluid vh-100" style="background-image: linear-gradient(#454d55,#454d55,#7d4949)" id="skillsection">
 		<!-- <div data-aos="fade-up" data-aos-duration="3000"> -->
-			<div class="row" style="padding-top:10%;">
-				<div class="col-md-8 text-center" >
-					<h1>You can call me Andy / Drew!</h1>
-					<p class="andyskillsectiontext">The things you read above, are the things that I usually do, what I think of myself and things that I like. </p>
-				</div>
-				<div class="col-md-3 text-center">
-					<img class="m-50 h-100" src="images/andy1anim.gif" style="width: 80%; padding: 0;">
-				</div>	
 
-			</div>
+				<div class="row" style="padding-top:7%;">
+					<div class="col-md-2 text-center">					
+					</div>
+					<div class="col-md-4 text-center">
+						<h1 class="callmeandy">You can call me Andy / Drew!</h1>
+						<p class="andyskillsectiontext">The things you read above, are the things that I usually do, what I think of myself and things that I like. </p>
+						
+						<img style="width: 30%;" src="images/kape1.png" id="coffeeimage">
+						<h1 style="margin-top: 10px;" id="mugofcoffeetext" class="mugofcoffeetext">Here's a mug of coffee</h1>
+						<p class="andyskillsectiontext" id="pressforcoffee"><small>[Press F or Tap the Coffee]</small></p>
+
+					</div>
+					<div class="col-md-2 text-center">					
+					</div>
+					<div class="col-md-3 text-center">
+						
+						<img class="m-50" src="images/andy1anim.gif" style="width: 80%; padding: 0;" id="andyitanimation">
+					
+
+
+					</div>	
+
+				</div>
+
+			<div class="coffeeoval" id="coffeeoval" style="position: fixed; bottom:50%; left:50%; transform: translate(-50%, -50%); transition: all 0.5s ease;"></div>
+
+
+
+
+
 		<!-- </div> -->
 	</section>
-	<section class="section3 vh-100" style="background-color:dimgray" id="experiencesection">
-		<div id="target" >
-			<img id="plane" src="images/example_bezier.png" style="margin-left: -90px;">
+	<section class="position-relative container-fluid vh-100" style="background-color: #7d4949;"  id="experiencesection">
+<!-- 
+		<div class="spacer s2"></div>
+		<div class="spacer s0" id="trigger"></div>
+		<div id="target" style="position: absolute;">
+			<img id="plane" src="images/paperplane.png" style="width:10%;margin-left: -130px">
+		</div>
+		<div class="spacer s2"></div> -->
+
+		<div class="row" style="padding-top:5%;">
+			<div class="col-md-3 text-center">
+			</div>
+			<div class="col-md-6 text-center">
+				<p class="andyskillsectiontext"  data-aos="fade-up" data-aos-duration="2000">You spill the Coffee, you are interested in me!!!</p>
+				<h1 class="callmeandy"  data-aos="fade-up" data-aos-duration="2000">I am a graduate from </h1>
+				<br>
+				<a href="https://www.pup.edu.ph/" target="_blank" class="hvr-buzz-out"><img src="images/pup.png" style="width:40%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+				<br>
+				<br>
+				<p class="andyskillsectiontext" data-aos="fade-up" data-aos-duration="2000">Taking the Course</p>
+				<h1 class="callmeandy" data-aos="fade-up" data-aos-duration="3000">BS Information Technology</h1>
+				<br>
+			</div>
+			<div class="col-md-3 text-center">
+			</div>
+		</div>
+		<style>
+			@keyframes floating {
+				0% { transform: translate(0,  0px); }
+				50%  { transform: translate(0, 30px); }
+				100%   { transform: translate(0, -0px); }   
+			}
+		</style>
+
+
+		<div class="position-absolute" style="bottom: 3.2%; left: 1%;">
+			<img id="pupcloud" src="images/pupcloud.png" style="width:100%; animation-name: floating; animation-duration: 3s; animation-iteration-count: infinite;animation-timing-function: ease-in-out;">
 		</div>
 	
-	
+
+
 
 	</section>
-	<section class="container-fluid vh-100" style="background-color:#454d55" id="contactsection">
+
+
+	<section class="position-relative container-fluid" style="background-color: #7d4949;"  id="experiencesection">
+
+		<!-- <div class="spacer s2"></div>
+		<div class="spacer s0" id="trigger"></div>
+		<div id="target" style="position: absolute;">
+			<img id="plane" src="images/paperplane.png" style="width:10%;margin-left: -130px">
+		</div>
+		<div class="spacer s2"></div> -->
+
+		<div class="row" style="padding-top:5%;">
+			<div class="col-md-3 text-center">
+			</div>
+			<div class="col-md-6 text-center">
+				<p class="andyskillsectiontext"  data-aos="fade-up" data-aos-duration="2000">You spill the Coffee, you are interested in me!!!</p>
+				<h1 class="callmeandy"  data-aos="fade-up" data-aos-duration="2000">I am a graduate from </h1>
+				<br>
+				<a href="https://www.pup.edu.ph/" target="_blank" class="hvr-buzz-out"><img src="images/pup.png" style="width:40%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+				<br>
+				<br>
+				<p class="andyskillsectiontext" data-aos="fade-up" data-aos-duration="2000">Taking the Course</p>
+				<h1 class="callmeandy" data-aos="fade-up" data-aos-duration="3000">BS Information Technology</h1>
+				<br>
+			</div>
+			<div class="col-md-3 text-center">
+			</div>
+	
+			
+			
+			
+		</div>
+
+
+
+		<!-- seond part -->
+
+		<div class="row" style="padding-top:5%;">
+			<div class="col-md-1 text-center">
+			</div>
+			<div class="col-md-3 text-center">
+				<p class="andyskillsectiontext"  data-aos="fade-up" data-aos-duration="2000">You spill the Coffee, you are interested in me!!!</p>
+				<h1 class="callmeandy"  data-aos="fade-up" data-aos-duration="2000">I am a graduate from </h1>
+				<br>
+				<a href="https://www.pup.edu.ph/" target="_blank" class="hvr-buzz-out"><img src="images/pup.png" style="width:40%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+				<br>
+				<br>
+				<p class="andyskillsectiontext" data-aos="fade-up" data-aos-duration="2000">Taking the Course</p>
+				<h1 class="callmeandy" data-aos="fade-up" data-aos-duration="3000">BS Information Technology</h1>
+				<br>
+			</div>
+			<div class="col-md-1 text-center">
+			</div>
+			<div class="col-md-6 text-center">
+				<h1 class="callmeandy"  data-aos="fade-up" data-aos-duration="2000">So far this are the skill / technology that I'm knowledgeable</h1>
+				<p class="andyskillsectiontext" data-aos="fade-up" data-aos-duration="2000">[Didn't include html, css and javascript]</p>
+				<div class="row">
+					<div class="col">
+						<a href="https://jquery.com/" class="hvr-pulse-grow" target="_blank"><img src="images/techs/jquery.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+					</div>
+					<div class="col">
+						<a href="https://api.jquery.com/jquery.ajax/" class="hvr-hang" target="_blank"><img src="images/techs/ajax.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+					</div>
+					<div class="col">
+						<a href="https://getbootstrap.com/" class="hvr-wobble-vertical" target="_blank"><img src="images/techs/boostrap.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+					</div>
+					<div class="col">
+						<a href="https://www.php.net/" class="hvr-wobble-skew" target="_blank"><img src="images/techs/php.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="col">
+						<a href="https://www.postgresql.org/" class="hvr-bounce-in" target="_blank"><img src="images/techs/postgres.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+					</div>
+					<div class="col">
+						<a href="https://www.odoo.com/" class="hvr-buzz" target="_blank"><img src="images/techs/odoo.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+					</div>
+					<div class="col">
+						<a href="https://www.python.org/" class="hvr-grow-rotate" target="_blank"><img src="images/techs/python.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+					</div>
+
+				</div>
+
+				<div class="row">
+					<div class="col">
+						<a href="https://www.adobe.com/ph_en/products/photoshop.HTML" class="hvr-wobble-bottom" target="_blank"><img src="images/techs/photoshop.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+					</div>
+					<div class="col">
+						<a href="https://www.java.com/en/" class="hvr-wobble-to-top-right" target="_blank"><img src="images/techs/java.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+					</div>
+					<div class="col">
+						<a href="https://reactnative.dev/" class="hvr-wobble-horizontal" target="_blank"><img src="images/techs/react.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+					</div>
+
+					<div class="col">
+						<a href="https://www.mysql.com/" class="hvr-skew-backward" target="_blank"><img src="images/techs/mysql.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+					</div>
+
+					<div class="col">
+						<a href="https://www.adobe.com/ph_en/products/premiere.html" class="hvr-wobble-to-bottom-right" target="_blank"><img src="images/techs/premiere.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+					</div>
+					
+
+				</div>
+
+				
+				
+			</div>		
+			
+			
+			
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- SECOND PART -->
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+
+		<div class="row text-center">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<p class="andyskillsectiontext"  data-aos="fade-up" data-aos-duration="2000">Actually my first program is written in C language but I expand my learnings in Java</p>
+				<h1 class="callmeandy"  data-aos="fade-up" data-aos-duration="2000">Here are the Projects that I have contributions</h1>
+				<br><br>
+				<div class="row">
+		
+					<div class="col-md">
+						<div class="text-center my-auto" data-aos="fade-up" data-aos-duration="3000">
+							<div class="position-relative card card-block d-flex" style="border-radius: 50px;">
+								<div class="position-absolute" style="top:20%; right:5%; transform: translate(-50%, -50%); transition: all 0.5s ease;">
+									<a data-toggle="collapse" href="#cparamount" role="button" aria-expanded="false" aria-controls="cparamount" 
+									class="collapsed"><i class="fa fa-chevron-up pull-right"></i></a>
+								</div>
+								<div class="text-center" style="margin-top: 5%;">
+									<img src="images/company/paramount.png" class="card-img-top" style="width:50%;">
+								</div>
+								<div class="card-body align-items-center d-flex justify-content-center">
+								<h5 class="card-title text-muted" ><span class="fa-solid fa-circle-caret-up"></span>Paramount ERP</h5>
+									 
+								</div>
+
+								<div class="collapse" id="cparamount" style="padding: 0px 15px 15px 15px;">
+						
+								   Paramount Sales and Services is an international company that also have an ERP system. I helped on customizing their Print Check format and adding some functions in their Employee, Purchase, Sales and Accounting Modules. I also create a customized receivable and payable reports
+
+								
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div class="col-md">
+						<div class="text-center my-auto" data-aos="fade-up" data-aos-duration="3000">
+							<div class="position-relative card card-block d-flex" style="border-radius: 50px;">
+								<div class="position-absolute" style="top:20%; right:5%; transform: translate(-50%, -50%); transition: all 0.5s ease;">
+									<a data-toggle="collapse" href="#cjng" role="button" aria-expanded="false" aria-controls="cjng" 
+									class="collapsed"><i class="fa fa-chevron-up pull-right"></i></a>
+								</div>
+								<div class="text-center" style="margin-top: 5%;">
+									<img src="images/company/jng.png" class="card-img-top" style="width:50%;">
+								</div>
+								<div class="card-body align-items-center d-flex justify-content-center">
+								<h5 class="card-title text-muted" ><span class="fa-solid fa-circle-caret-up"></span>Joy~Nostalg ERP</h5>
+									 
+								</div>
+
+								<div class="collapse" id="cjng" style="padding: 0px 15px 15px 15px;">
+						
+								   In Joy Nostalg, I helped in certain reports and monitor the development issue logs.
+
+								
+								</div>
+							</div>
+						</div>
+					</div>	
+
+					<div class="col-md">
+						<div class="text-center my-auto" data-aos="fade-up" data-aos-duration="3000">
+							<div class="position-relative card card-block d-flex" style="border-radius: 50px;">
+								<div class="position-absolute" style="top:20%; right:5%; transform: translate(-50%, -50%); transition: all 0.5s ease;">
+									<a data-toggle="collapse" href="#cmwts" role="button" aria-expanded="false" aria-controls="cmwts" 
+									class="collapsed"><i class="fa fa-chevron-up pull-right"></i></a>
+								</div>
+								<div class="text-center" style="margin-top: 5%;">
+									<img src="images/company/mwts.png" class="card-img-top" style="width:50%;">
+								</div>
+								<div class="card-body align-items-center d-flex justify-content-center">
+								<h5 class="card-title text-muted" ><span class="fa-solid fa-circle-caret-up"></span>MWTS / MPC ERP</h5>
+									 
+								</div>
+
+								<div class="collapse" id="cmwts" style="padding: 0px 15px 15px 15px;">
+						
+								   Manila Water Total Solutions / Maris Pure Corp. have an ERP system that focus on Sales. I customized certain Sales and Inventory Reports.
+
+								
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md">
+						<div class="text-center my-auto" data-aos="fade-up" data-aos-duration="3000">
+							<div class="position-relative card card-block d-flex" style="border-radius: 50px;">
+								<div class="position-absolute" style="top:20%; right:5%; transform: translate(-50%, -50%); transition: all 0.5s ease;">
+									<a data-toggle="collapse" href="#cisteel" role="button" aria-expanded="false" aria-controls="cisteel" 
+									class="collapsed"><i class="fa fa-chevron-up pull-right"></i></a>
+								</div>
+								<div class="text-center" style="margin-top: 5%;">
+									<img src="images/company/isteel.png" class="card-img-top" style="width:50%;">
+								</div>
+								<div class="card-body align-items-center d-flex justify-content-center">
+								<h5 class="card-title text-muted" ><span class="fa-solid fa-circle-caret-up"></span>iSteel Inc. ERP</h5>
+									 
+								</div>
+
+								<div class="collapse" id="cisteel" style="padding: 0px 15px 15px 15px;">
+						
+								   In their ERP system, I implemented a Customized Coil and Warehouse request module. It is like a purchase requisition request but different Inventory locations.
+
+								   
+
+								</div>
+							</div>
+						</div>
+					</div>	
+
+
+					<div class="col-md">
+						<div class="text-center my-auto" data-aos="fade-up" data-aos-duration="3000">
+							<div class="position-relative card card-block d-flex" style="border-radius: 50px;">
+								<div class="position-absolute" style="top:20%; right:5%; transform: translate(-50%, -50%); transition: all 0.5s ease;">
+									<a data-toggle="collapse" href="#cdlsz" role="button" aria-expanded="false" aria-controls="cdlsz" 
+									class="collapsed"><i class="fa fa-chevron-up pull-right"></i></a>
+								</div>
+								<div class="text-center" style="margin-top: 5%;">
+									<img src="images/company/dlsz.png" class="card-img-top" style="width:50%;">
+								</div>
+								<div class="card-body align-items-center d-flex justify-content-center">
+								<h5 class="card-title text-muted" ><span class="fa-solid fa-circle-caret-up"></span>DLSZ ERP</h5>
+									 
+								</div>
+
+								<div class="collapse" id="cdlsz" style="padding: 0px 15px 15px 15px;">
+						
+								   We implement an ERP system and I develop and customized their Request for Payment and Journal Voucher Module. I also create certain report related on Purchase.
+
+								   
+								
+								</div>
+							</div>
+						</div>
+					</div>	
+			
+			
+		 
+
+					
+		
+				</div>
+
+				<!-- company list second set -->
+				<div class="row">
+		
+					<div class="col-md">
+						<div class="text-center my-auto" data-aos="fade-up" data-aos-duration="3000">
+							<div class="position-relative card card-block d-flex" style="border-radius: 50px;">
+								<div class="position-absolute" style="top:20%; right:5%; transform: translate(-50%, -50%); transition: all 0.5s ease;">
+									<a data-toggle="collapse" href="#cadvani" role="button" aria-expanded="false" aria-controls="cadvani" 
+									class="collapsed"><i class="fa fa-chevron-up pull-right"></i></a>
+								</div>
+								<div class="text-center" style="margin-top: 5%;">
+									<img src="images/company/advani.png" class="card-img-top" style="width:50%;">
+								</div>
+								<div class="card-body align-items-center d-flex justify-content-center">
+								<h5 class="card-title text-muted" ><span class="fa-solid fa-circle-caret-up"></span>Advani ERP</h5>
+									 
+								</div>
+
+								<div class="collapse" id="cadvani" style="padding: 0px 15px 15px 15px;">
+						
+								   Customized their Product and Operations modules in their existing ERP system. Also helped create certain reports.
+
+								
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div class="col-md">
+						<div class="text-center my-auto" data-aos="fade-up" data-aos-duration="3000">
+							<div class="position-relative card card-block d-flex" style="border-radius: 50px;">
+								<div class="position-absolute" style="top:20%; right:5%; transform: translate(-50%, -50%); transition: all 0.5s ease;">
+									<a data-toggle="collapse" href="#cparef" role="button" aria-expanded="false" aria-controls="cparef" 
+									class="collapsed"><i class="fa fa-chevron-up pull-right"></i></a>
+								</div>
+								<div class="text-center" style="margin-top: 5%;">
+									<img src="images/company/paref.png" class="card-img-top" style="width:50%;">
+								</div>
+								<div class="card-body align-items-center d-flex justify-content-center">
+								<h5 class="card-title text-muted" ><span class="fa-solid fa-circle-caret-up"></span>Paref Central ERP</h5>
+									 
+								</div>
+
+								<div class="collapse" id="cparef" style="padding: 0px 15px 15px 15px;">
+						
+								   In Paref Central ERP system, I develop their initial Petty Cash Module, also develop certain reports and helped in data migrations.
+
+
+								
+								</div>
+							</div>
+						</div>
+					</div>	
+
+					<div class="col-md">
+						<div class="text-center my-auto" data-aos="fade-up" data-aos-duration="3000">
+							<div class="position-relative card card-block d-flex" style="border-radius: 50px;">
+								<div class="position-absolute" style="top:20%; right:5%; transform: translate(-50%, -50%); transition: all 0.5s ease;">
+									<a data-toggle="collapse" href="#cavsc" role="button" aria-expanded="false" aria-controls="cavsc" 
+									class="collapsed"><i class="fa fa-chevron-up pull-right"></i></a>
+								</div>
+								<div class="text-center" style="margin-top: 5%;">
+									<img src="images/company/avsc.png" class="card-img-top" style="width:50%;">
+								</div>
+								<div class="card-body align-items-center d-flex justify-content-center">
+								<h5 class="card-title text-muted" ><span class="fa-solid fa-circle-caret-up"></span>AVSC ERP</h5>
+									 
+								</div>
+
+								<div class="collapse" id="cavsc" style="padding: 0px 15px 15px 15px;">
+						
+								  In their ERP system, I develop a Cash Advance module and create certain views that is related in Product Inventory. I also helped on some data migrations
+
+
+								
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md">
+						<div class="text-center my-auto" data-aos="fade-up" data-aos-duration="3000">
+							<div class="position-relative card card-block d-flex" style="border-radius: 50px;">
+								<div class="position-absolute" style="top:20%; right:5%; transform: translate(-50%, -50%); transition: all 0.5s ease;">
+									<a data-toggle="collapse" href="#cwaterkonsult" role="button" aria-expanded="false" aria-controls="cwaterkonsult" 
+									class="collapsed"><i class="fa fa-chevron-up pull-right"></i></a>
+								</div>
+								<div class="text-center" style="margin-top: 5%;">
+									<img src="images/company/waterkonsult.png" class="card-img-top" style="width:50%;">
+								</div>
+								<div class="card-body align-items-center d-flex justify-content-center">
+								<h5 class="card-title text-muted" ><span class="fa-solid fa-circle-caret-up"></span>Waterkonsult ERP</h5>
+									 
+								</div>
+
+								<div class="collapse" id="cwaterkonsult" style="padding: 0px 15px 15px 15px;">
+						
+								   I implement new fields in their Employee module and create certain employee reports.
+
+								   
+
+								</div>
+							</div>
+						</div>
+					</div>	
+
+
+					<div class="col-md">
+						<div class="text-center my-auto" data-aos="fade-up" data-aos-duration="3000">
+							<div class="position-relative card card-block d-flex" style="border-radius: 50px;">
+								<div class="position-absolute" style="top:20%; right:5%; transform: translate(-50%, -50%); transition: all 0.5s ease;">
+									<a data-toggle="collapse" href="#casj" role="button" aria-expanded="false" aria-controls="casj" 
+									class="collapsed"><i class="fa fa-chevron-up pull-right"></i></a>
+								</div>
+								<div class="text-center" style="margin-top: 5%;">
+									<img src="images/company/asj.png" class="card-img-top" style="width:50%;">
+								</div>
+								<div class="card-body align-items-center d-flex justify-content-center">
+								<h5 class="card-title text-muted" ><span class="fa-solid fa-circle-caret-up"></span>ASJ ERP</h5>
+									 
+								</div>
+
+								<div class="collapse" id="casj" style="padding: 0px 15px 15px 15px;">
+						
+								   In Academy of Saint John ERP, I helped customized or update their grading reports 
+
+								   
+								
+								</div>
+							</div>
+						</div>
+					</div>	
+			
+			
+		 
+
+					
+		
+				</div>
+
+				<!-- 3rd set company -->
+
+				<div class="row">
+		
+					<div class="col-md">
+						<div class="text-center my-auto" data-aos="fade-up" data-aos-duration="3000">
+							<div class="position-relative card card-block d-flex" style="border-radius: 50px;">
+								<div class="position-absolute" style="top:20%; right:5%; transform: translate(-50%, -50%); transition: all 0.5s ease;">
+									<a data-toggle="collapse" href="#cmegabasic" role="button" aria-expanded="false" aria-controls="cmegabasic" 
+									class="collapsed"><i class="fa fa-chevron-up pull-right"></i></a>
+								</div>
+								<div class="text-center" style="margin-top: 5%;">
+									<img src="images/company/megabasic.png" class="card-img-top" style="width:50%;">
+								</div>
+								<div class="card-body align-items-center d-flex justify-content-center">
+								<h5 class="card-title text-muted" ><span class="fa-solid fa-circle-caret-up"></span>Megabasic ERP</h5>
+									 
+								</div>
+
+								<div class="collapse" id="cmegabasic" style="padding: 0px 15px 15px 15px;">
+						
+								   Megabasic Lifeline Shirt Inc. also have an ERP system that focus on Sales, I did some data migration and I also develop a customize Request for Payment module.
+
+
+								
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div class="col-md">
+						<div class="text-center my-auto" data-aos="fade-up" data-aos-duration="3000">
+							<div class="position-relative card card-block d-flex" style="border-radius: 50px;">
+								<div class="position-absolute" style="top:20%; right:5%; transform: translate(-50%, -50%); transition: all 0.5s ease;">
+									<a data-toggle="collapse" href="#casiawide" role="button" aria-expanded="false" aria-controls="casiawide" 
+									class="collapsed"><i class="fa fa-chevron-up pull-right"></i></a>
+								</div>
+								<div class="text-center" style="margin-top: 5%;">
+									<img src="images/company/asiawide.png" class="card-img-top" style="width:50%;">
+								</div>
+								<div class="card-body align-items-center d-flex justify-content-center">
+								<h5 class="card-title text-muted" ><span class="fa-solid fa-circle-caret-up"></span>WRLD Capital ERP</h5>
+									 
+								</div>
+
+								<div class="collapse" id="casiawide" style="padding: 0px 15px 15px 15px;">
+						
+								   We build an integrated ERP and CRM system that focus on business management. I develop certain modules such as Purchase, Purchase Requisition, Request for Payment, Custom Accounting, Custom Budgetting and Many More! I also mainly handle technical supports related to Purchase module.
+
+								
+								</div>
+							</div>
+						</div>
+					</div>	
+
+					<div class="col-md">
+						<div class="text-center my-auto" data-aos="fade-up" data-aos-duration="3000">
+							<div class="position-relative card card-block d-flex" style="border-radius: 50px;">
+								<div class="position-absolute" style="top:20%; right:5%; transform: translate(-50%, -50%); transition: all 0.5s ease;">
+									<a data-toggle="collapse" href="#cvinland" role="button" aria-expanded="false" aria-controls="cvinland" 
+									class="collapsed"><i class="fa fa-chevron-up pull-right"></i></a>
+								</div>
+								<div class="text-center" style="margin-top: 5%;">
+									<img src="images/company/vinland.png" class="card-img-top" style="width:50%;">
+								</div>
+								<div class="card-body align-items-center d-flex justify-content-center">
+								<h5 class="card-title text-muted" ><span class="fa-solid fa-circle-caret-up"></span>Vinland ERP</h5>
+									 
+								</div>
+
+								<div class="collapse" id="cvinland" style="padding: 0px 15px 15px 15px;">
+						
+								  In Vinland ERP system. I develop and customized their Product Approval flow, create certain reports related in Inventory and create custom access rights for the users.
+
+
+							
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+			
+			
+		 
+
+					
+		
+				</div>
+
+
+			</div>
+			<div class="col-md-1"></div>
+				
+		</div>
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+
+
+
+	</section>
+
+
+
+	<section class="position-relative container-fluid vh-100" style="background-image: linear-gradient(#7d4949,dimgray);" id="contactsection">
 		<div data-aos="fade-up" data-aos-duration="3000">
 			<h5 class="andysecondfont">Mukhang Pwet Mabantot si Aldwin</h5>
 		</div>
@@ -204,11 +816,175 @@ body::-webkit-scrollbar-thumb {
 
 </body>
 <!-- FOR NAVIGATION CONTROLS -->
+
 <script>
+
+	$( document ).ready(function() {
+
+		// $('#experiencesection').hide();
+		// $('#contactsection').hide();
+		$('#coffeeoval').hide();
+
+	   var is_visible = false;
+		$('#navbartoggler').click(function() {
+			
+			if(is_visible == false)
+			{
+				// $("#navbarcontrols").show();
+				is_visible = true;
+				$("#navbarcontrols").animate({marginLeft: '0%'});
+
+			}
+			else
+			{	
+				
+				$("#navbarcontrols").animate({marginLeft: '-100%'});
+
+				is_visible = false;
+			}
+		});
+
+		$('#navskillbutton').click(function() {			
+			if(is_visible == false)
+			{
+				is_visible = true;
+				$("#navbarcontrols").animate({marginLeft: '0%'});
+
+			}
+			else
+			{					
+				$("#navbarcontrols").animate({marginLeft: '-100%'});
+				is_visible = false;
+			}
+		});
+
+		$('#navexperiencebutton').click(function() {			
+			if(is_visible == false)
+			{
+				is_visible = true;
+				$("#navbarcontrols").animate({marginLeft: '0%'});
+
+			}
+			else
+			{					
+				$("#navbarcontrols").animate({marginLeft: '-100%'});
+				is_visible = false;
+			}
+		});
+
+		$('#navcontactbutton').click(function() {			
+			if(is_visible == false)
+			{
+				is_visible = true;
+				$("#navbarcontrols").animate({marginLeft: '0%'});
+
+			}
+			else
+			{					
+				$("#navbarcontrols").animate({marginLeft: '-100%'});
+				is_visible = false;
+			}
+		});
+
+
+		var is_tapped = false;
+
+		$('#coffeeimage').click(function(){
+
+			if(is_tapped == false)
+			{
+				is_tapped = true
+				$('html, body').animate({
+					scrollTop: $("#skillsection").offset().top
+				});
+				var dataArray= new Array();
+				dataArray[0]="images/kape1.png";
+				dataArray[1]="images/kape2.png";
+				dataArray[2]="images/kape3.png";
+				dataArray[4]="images/kape4.png";
+				dataArray[5]="images/kape5.png";
+				dataArray[6]="images/kape6.png";
+				dataArray[7]="images/kape7.png";
+				dataArray[7]="images/kape8.png";
+
+
+				//start with id=0 after 5 seconds
+				var count=0;
+				var scale_size=1;
+				imagetimer = setInterval(function(){
+					scale_size++;
+					$('#coffeeimage').attr('src',dataArray[count]);
+					$('#coffeeimage').css('transform', 'scale('+scale_size+')');
+
+					count++; //increment data array id
+					if (count==1) $('#coffeeimage').css('transform-origin', '24% 10%');
+					if (count==2) $('#coffeeimage').css('transform-origin', '24% 14%');
+					if (count==3) $('#coffeeimage').css('transform-origin', '24% 18%');
+					if (count==4) $('#coffeeimage').css('transform-origin', '24% 21%');
+					if (count==5) $('#coffeeimage').css('transform-origin', '24% 23%');
+					if (count==6) $('#coffeeimage').css('transform-origin', '24% 25%');
+					if (count==7) $('#coffeeimage').css('transform-origin', '24% 27%');
+					if (count==8) $('#coffeeimage').css('transform-origin', '24% 29%');
+					if (scale_size>=9) {
+						$('#coffeeoval').show();
+						$('#coffeeimage').css('transform-origin', '24% 31%');
+						$('#coffeeoval').css('transform', 'translate(-50%, -50%) scale(40)');
+						console.log('firstimerremove'+ count);
+						clearInterval(imagetimer);
+
+						return;
+					}
+
+				},50); 
+
+				ovalremovertimer = setInterval(function(){
+					count++;
+					if (count>=10) {
+						
+						console.log(count);
+						console.log('ovalremove');
+						clearInterval(ovalremovertimer);
+						$('html, body').animate({
+							scrollTop: $("#experiencesection").offset().top
+						});
+						$('#coffeeoval').delay(500).fadeOut(2000);
+						$('#coffeeimage').attr('src',dataArray[0]);
+						$('#coffeeimage').css('transform', 'scale(1)');
+						return;
+					}
+
+				},500); 
+
+
+				$("#mugofcoffeetext").text("Coffee Already Given");
+				$("#pressforcoffee").text("[Reload the Page]");
+
+				// animate image then do this
+
+				$('#experiencesection').show();
+				$('#contactsection').show();
+
+			}
+
+
+		});
+
+
+
+
+	});
+
+</script>
+
+<script>
+
+	var is_keyf_pressed = false;
 
 	document.addEventListener('keydown', (event) => {
 		var keypress = event.key;
 		var keycode = event.code;
+
+		
 
 		if(keycode === "Space")
 		{	
@@ -224,9 +1000,13 @@ body::-webkit-scrollbar-thumb {
 		}
 		if(keypress === "2")
 		{	
+			$('#experiencesection').show();
+			$('#contactsection').show();
 			$('html, body').animate({
 				scrollTop: $("#experiencesection").offset().top
 			});
+			is_keyf_pressed = true;
+
 		}
 		if(keypress === "3")
 		{	
@@ -234,22 +1014,94 @@ body::-webkit-scrollbar-thumb {
 				scrollTop: $("#contactsection").offset().top
 			});
 		}
+
+
+		if(keycode === "KeyF" && is_keyf_pressed == false)
+		{	
+
+			is_keyf_pressed = true;
+
+			$('html, body').animate({
+				scrollTop: $("#skillsection").offset().top
+			});
+			var dataArray= new Array();
+			dataArray[0]="images/kape1.png";
+			dataArray[1]="images/kape2.png";
+			dataArray[2]="images/kape3.png";
+			dataArray[4]="images/kape4.png";
+			dataArray[5]="images/kape5.png";
+			dataArray[6]="images/kape6.png";
+			dataArray[7]="images/kape7.png";
+			dataArray[7]="images/kape8.png";
+
+
+			//start with id=0 after 5 seconds
+			var count=0;
+			var scale_size=1;
+			imagetimer = setInterval(function(){
+				scale_size++;
+				$('#coffeeimage').attr('src',dataArray[count]);
+				$('#coffeeimage').css('transform', 'scale('+scale_size+')');
+
+				count++; //increment data array id
+				if (count==1) $('#coffeeimage').css('transform-origin', '24% 10%');
+				if (count==2) $('#coffeeimage').css('transform-origin', '24% 14%');
+				if (count==3) $('#coffeeimage').css('transform-origin', '24% 18%');
+				if (count==4) $('#coffeeimage').css('transform-origin', '24% 21%');
+				if (count==5) $('#coffeeimage').css('transform-origin', '24% 23%');
+				if (count==6) $('#coffeeimage').css('transform-origin', '24% 25%');
+				if (count==7) $('#coffeeimage').css('transform-origin', '24% 27%');
+				if (count==8) $('#coffeeimage').css('transform-origin', '24% 29%');
+				if (scale_size>=9) {
+					$('#coffeeoval').show();
+					$('#coffeeimage').css('transform-origin', '24% 31%');
+					$('#coffeeoval').css('transform', 'translate(-50%, -50%) scale(40)');
+					console.log('firstimerremove'+ count);
+					clearInterval(imagetimer);
+
+					return;
+				}
+
+			},50); 
+
+			ovalremovertimer = setInterval(function(){
+				count++;
+				if (count>=10) {
+					
+					console.log(count);
+					console.log('ovalremove');
+					clearInterval(ovalremovertimer);
+					$('html, body').animate({
+						scrollTop: $("#experiencesection").offset().top
+					});
+					$('#coffeeoval').delay(500).fadeOut(2000);
+					$('#coffeeimage').attr('src',dataArray[0]);
+					$('#coffeeimage').css('transform', 'scale(1)');
+					return;
+				}
+
+			},500); 
+
+
+			$("#mugofcoffeetext").text("Coffee Already Given");
+			$("#pressforcoffee").text("[Reload the Page]");
+
+			// animate image then do this
+
+			$('#experiencesection').show();
+			$('#contactsection').show();
+
+		
+
+			
+		}
 		
 	}, false);
 
 
 </script>
 
-<!-- FOR NAVBAR -->
-<script type="text/javascript">
-	
-	$('#navbartoggler').click(function() {
-	    $(this).toggleClass('vh-100');
-	    $(this).toggleClass('vw-100');
-	});
 
-
-</script>
 
 
 <script>
@@ -309,38 +1161,7 @@ body::-webkit-scrollbar-thumb {
 	});
 </script>
 
-<script>
-	$(function () { // wait for document ready
-		var flightpath = {
-			entry : {
-				curviness: 1.25,
-				autoRotate: true,
-				values: [
-						{x: 100,	y: -20},
-						{x: 300,	y: 10},
-						{x: 500,	y: -100},
-						{x: 380,	y: 20},
-						{x: 500,	y: 60},
-						{x: 580,	y: 20},
-						{x: window.innerWidth,	y: 0}
-					]
-			},
+<script src="js/andyscroll.js"></script>
 
-		};
-		// init controller
-		var controller = new ScrollMagic.Controller();
 
-		// create tween
-		var tween = new TimelineMax()
-			.add(TweenMax.to($("#plane"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
-			.add(TweenMax.to($("#plane"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
-
-		// build scene
-		var scene = new ScrollMagic.Scene({triggerElement: "#experiencesection", duration: 1000,})
-						.setPin("#target")
-						.setTween(tween)
-						// .addIndicators() // ajaxdd indicators (requires plugin)
-						.addTo(controller);
-	})
-</script>
 </html>
