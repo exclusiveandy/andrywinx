@@ -1011,19 +1011,46 @@ body::-webkit-scrollbar-thumb {
 			var scale_size=1;
 			imagetimer = setInterval(function(){
 				scale_size++;
-				$('#coffeeimage').attr('src',dataArray[countimagepress]);
+				$('#coffeeimage').attr('src',dataArray[0]);
 				$('#coffeeimage').css('transform', 'scale('+scale_size+')');
 				console.log(dataArray[countimagepress]);
 				countimagepress++; //increment data array id
-				if (countimagepress==1) $('#coffeeimage').css('transform-origin', '24% 10%');
-				if (countimagepress==2) $('#coffeeimage').css('transform-origin', '24% 14%');
-				if (countimagepress==3) $('#coffeeimage').css('transform-origin', '24% 18%');
-				if (countimagepress==4) $('#coffeeimage').css('transform-origin', '24% 21%');
-				if (countimagepress==5) $('#coffeeimage').css('transform-origin', '24% 23%');
-				if (countimagepress==6) $('#coffeeimage').css('transform-origin', '24% 25%');
-				if (countimagepress==7) $('#coffeeimage').css('transform-origin', '24% 27%');
-				if (countimagepress==8) $('#coffeeimage').css('transform-origin', '24% 29%');
-				if (scale_size>=9) {
+				if(countimagepress==1)
+				{
+					$('#coffeeimage').css('transform-origin', '24% 10%');
+					$('#coffeeimage').attr('src',dataArray[1]);
+				} 
+				if(countimagepress==2)
+				{
+					$('#coffeeimage').css('transform-origin', '24% 14%');
+					$('#coffeeimage').attr('src',dataArray[2]);
+				} 
+				if(countimagepress==3)
+				{
+					$('#coffeeimage').css('transform-origin', '24% 18%');
+					$('#coffeeimage').attr('src',dataArray[3]);
+				}
+				if(countimagepress==4)
+				{
+					$('#coffeeimage').css('transform-origin', '24% 21%');
+					$('#coffeeimage').attr('src',dataArray[4]);
+				} 
+				if(countimagepress==5)
+				{
+					$('#coffeeimage').css('transform-origin', '24% 23%');
+					$('#coffeeimage').attr('src',dataArray[5]);
+				} 
+				if(countimagepress==6)
+				{
+					$('#coffeeimage').css('transform-origin', '24% 25%');
+					$('#coffeeimage').attr('src',dataArray[6]);
+				} 
+				if(countimagepress==7)
+				{
+					$('#coffeeimage').css('transform-origin', '24% 27%');
+					$('#coffeeimage').attr('src',dataArray[7]);
+				} 
+				if (scale_size>=8) {
 					$('#coffeeoval').show();
 					$('#coffeeimage').css('transform-origin', '24% 31%');
 					$('#coffeeoval').css('transform', 'translate(-50%, -50%) scale(40)');
@@ -1033,7 +1060,7 @@ body::-webkit-scrollbar-thumb {
 					return;
 				}
 
-			},100); 
+			},50); 
 			var countp = 9;
 			ovalremovertimer = setInterval(function(){
 				countp++;
