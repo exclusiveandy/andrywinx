@@ -90,7 +90,7 @@ body::-webkit-scrollbar-thumb {
 				</a>
 			  </li>
 			  <li class="nav-item">
-				<a href="#experiencesection" class="nav-link" style="color:white" id="navexperiencebutton">
+				<a href="#experiencesection1" class="nav-link" style="color:white" id="navexperiencebutton">
 				  <small style="color:#a8a8a8">2. </small>Experience
 				</a>
 			  </li>
@@ -136,7 +136,7 @@ body::-webkit-scrollbar-thumb {
 					</a>
 				  </li>
 				  <li class="nav-item">
-					<a href="#experiencesection" class="nav-link" style="color:white" id="experiencebutton">
+					<a href="#experiencesection1" class="nav-link" style="color:white" id="experiencebutton">
 					  <small style="color:#a8a8a8">2. </small>Experience
 					</a>
 				  </li>
@@ -223,7 +223,7 @@ body::-webkit-scrollbar-thumb {
 
 		<!-- </div> -->
 	</section>
-	<section class="position-relative container-fluid vh-100" style="background-color: #7d4949;"  id="experiencesection">
+	<section class="position-relative container-fluid vh-100" style="background-color: #7d4949;"  id="experiencesection1">
 <!-- 
 		<div class="spacer s2"></div>
 		<div class="spacer s0" id="trigger"></div>
@@ -268,7 +268,7 @@ body::-webkit-scrollbar-thumb {
 	</section>
 
 
-	<section class="position-relative container-fluid" style="background-color: #7d4949;"  id="experiencesection">
+	<section class="position-relative container-fluid" style="background-color: #7d4949;"  id="experiencesection2">
 
 		<!-- <div class="spacer s2"></div>
 		<div class="spacer s0" id="trigger"></div>
@@ -792,8 +792,9 @@ body::-webkit-scrollbar-thumb {
 
 	$( document ).ready(function() {
 
-		// $('#experiencesection').hide();
-		// $('#contactsection').hide();
+		$('#experiencesection1').hide();
+		$('#experiencesection2').hide();
+		$('#contactsection').hide();
 		$('#coffeeoval').hide();
 
 	   var is_visible = false;
@@ -916,7 +917,7 @@ body::-webkit-scrollbar-thumb {
 						console.log('ovalremove');
 						clearInterval(ovalremovertimer);
 						$('html, body').animate({
-							scrollTop: $("#experiencesection").offset().top
+							scrollTop: $("#experiencesection1").offset().top
 						});
 						$('#coffeeoval').delay(500).fadeOut(2000);
 						$('#coffeeimage').attr('src',dataArray[0]);
@@ -932,7 +933,8 @@ body::-webkit-scrollbar-thumb {
 
 				// animate image then do this
 
-				$('#experiencesection').show();
+				$('#experiencesection1').show();
+				$('#experiencesection2').show();
 				$('#contactsection').show();
 
 			}
@@ -971,10 +973,10 @@ body::-webkit-scrollbar-thumb {
 		}
 		if(keypress === "2")
 		{	
-			$('#experiencesection').show();
+			$('#experiencesection1').show();
 			$('#contactsection').show();
 			$('html, body').animate({
-				scrollTop: $("#experiencesection").offset().top
+				scrollTop: $("#experiencesection1").offset().top
 			});
 			is_keyf_pressed = true;
 
@@ -1043,7 +1045,7 @@ body::-webkit-scrollbar-thumb {
 					console.log('ovalremove');
 					clearInterval(ovalremovertimer);
 					$('html, body').animate({
-						scrollTop: $("#experiencesection").offset().top
+						scrollTop: $("#experiencesection1").offset().top
 					});
 					$('#coffeeoval').delay(500).fadeOut(2000);
 					$('#coffeeimage').attr('src',dataArray[0]);
@@ -1059,7 +1061,8 @@ body::-webkit-scrollbar-thumb {
 
 			// animate image then do this
 
-			$('#experiencesection').show();
+			$('#experiencesection1').show();
+			$('#experiencesection2').show();
 			$('#contactsection').show();
 
 		
