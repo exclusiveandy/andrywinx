@@ -873,31 +873,31 @@ body::-webkit-scrollbar-thumb {
 				dataArray[0]="images/kape1.png";
 				dataArray[1]="images/kape2.png";
 				dataArray[2]="images/kape3.png";
-				dataArray[4]="images/kape4.png";
-				dataArray[5]="images/kape5.png";
-				dataArray[6]="images/kape6.png";
-				dataArray[7]="images/kape7.png";
+				dataArray[3]="images/kape4.png";
+				dataArray[4]="images/kape5.png";
+				dataArray[5]="images/kape6.png";
+				dataArray[6]="images/kape7.png";
 				dataArray[7]="images/kape8.png";
 
 
 				//start with id=0 after 5 seconds
-				var count=0;
+				var countimagetap=0;
 				var scale_size=1;
 				imagetimer = setInterval(function(){
 					scale_size++;
-					$('#coffeeimage').attr('src',dataArray[count]);
-					console.log(dataArray[count]);
+					$('#coffeeimage').attr('src',dataArray[countimagetap]);
+					console.log(dataArray[countimagetap]);
 					$('#coffeeimage').css('transform', 'scale('+scale_size+')');
 
-					count++; //increment data array id
-					if (count==1) $('#coffeeimage').css('transform-origin', '24% 10%');
-					if (count==2) $('#coffeeimage').css('transform-origin', '24% 14%');
-					if (count==3) $('#coffeeimage').css('transform-origin', '24% 18%');
-					if (count==4) $('#coffeeimage').css('transform-origin', '24% 21%');
-					if (count==5) $('#coffeeimage').css('transform-origin', '24% 23%');
-					if (count==6) $('#coffeeimage').css('transform-origin', '24% 25%');
-					if (count==7) $('#coffeeimage').css('transform-origin', '24% 27%');
-					if (count==8) $('#coffeeimage').css('transform-origin', '24% 29%');
+					countimagetap++; //increment data array id
+					if (countimagetap==1) $('#coffeeimage').css('transform-origin', '24% 10%');
+					if (countimagetap==2) $('#coffeeimage').css('transform-origin', '24% 14%');
+					if (countimagetap==3) $('#coffeeimage').css('transform-origin', '24% 18%');
+					if (countimagetap==4) $('#coffeeimage').css('transform-origin', '24% 21%');
+					if (countimagetap==5) $('#coffeeimage').css('transform-origin', '24% 23%');
+					if (countimagetap==6) $('#coffeeimage').css('transform-origin', '24% 25%');
+					if (countimagetap==7) $('#coffeeimage').css('transform-origin', '24% 27%');
+					if (countimagetap==8) $('#coffeeimage').css('transform-origin', '24% 29%');
 					if (scale_size>=9) {
 						$('#coffeeoval').show();
 						$('#coffeeimage').css('transform-origin', '24% 31%');
@@ -908,10 +908,10 @@ body::-webkit-scrollbar-thumb {
 					}
 
 				},50); 
-
+				var countt = 9;
 				ovalremovertimer = setInterval(function(){
-					count++;
-					if (count>=10) {
+					countt++;
+					if (countt>=10) {
 						
 						clearInterval(ovalremovertimer);
 						$('html, body').animate({
@@ -927,7 +927,7 @@ body::-webkit-scrollbar-thumb {
 
 
 				$("#mugofcoffeetext").text("Coffee Already Given");
-				$("#pressforcoffee").text("[Reload the Page]");
+				$("#pressforcoffee").text("[Drink water next!]");
 
 				// animate image then do this
 
@@ -999,48 +999,46 @@ body::-webkit-scrollbar-thumb {
 			dataArray[0]="images/kape1.png";
 			dataArray[1]="images/kape2.png";
 			dataArray[2]="images/kape3.png";
-			dataArray[4]="images/kape4.png";
-			dataArray[5]="images/kape5.png";
-			dataArray[6]="images/kape6.png";
-			dataArray[7]="images/kape7.png";
+			dataArray[3]="images/kape4.png";
+			dataArray[4]="images/kape5.png";
+			dataArray[5]="images/kape6.png";
+			dataArray[6]="images/kape7.png";
 			dataArray[7]="images/kape8.png";
 
 
 			//start with id=0 after 5 seconds
-			var count=0;
+			var countimagepress=0;
 			var scale_size=1;
 			imagetimer = setInterval(function(){
 				scale_size++;
-				$('#coffeeimage').attr('src',dataArray[count]);
+				$('#coffeeimage').attr('src',dataArray[countimagepress]);
 				$('#coffeeimage').css('transform', 'scale('+scale_size+')');
-
-				count++; //increment data array id
-				if (count==1) $('#coffeeimage').css('transform-origin', '24% 10%');
-				if (count==2) $('#coffeeimage').css('transform-origin', '24% 14%');
-				if (count==3) $('#coffeeimage').css('transform-origin', '24% 18%');
-				if (count==4) $('#coffeeimage').css('transform-origin', '24% 21%');
-				if (count==5) $('#coffeeimage').css('transform-origin', '24% 23%');
-				if (count==6) $('#coffeeimage').css('transform-origin', '24% 25%');
-				if (count==7) $('#coffeeimage').css('transform-origin', '24% 27%');
-				if (count==8) $('#coffeeimage').css('transform-origin', '24% 29%');
+				console.log(dataArray[countimagepress]);
+				countimagepress++; //increment data array id
+				if (countimagepress==1) $('#coffeeimage').css('transform-origin', '24% 10%');
+				if (countimagepress==2) $('#coffeeimage').css('transform-origin', '24% 14%');
+				if (countimagepress==3) $('#coffeeimage').css('transform-origin', '24% 18%');
+				if (countimagepress==4) $('#coffeeimage').css('transform-origin', '24% 21%');
+				if (countimagepress==5) $('#coffeeimage').css('transform-origin', '24% 23%');
+				if (countimagepress==6) $('#coffeeimage').css('transform-origin', '24% 25%');
+				if (countimagepress==7) $('#coffeeimage').css('transform-origin', '24% 27%');
+				if (countimagepress==8) $('#coffeeimage').css('transform-origin', '24% 29%');
 				if (scale_size>=9) {
 					$('#coffeeoval').show();
 					$('#coffeeimage').css('transform-origin', '24% 31%');
 					$('#coffeeoval').css('transform', 'translate(-50%, -50%) scale(40)');
-					console.log('firstimerremove'+ count);
+
 					clearInterval(imagetimer);
 
 					return;
 				}
 
 			},50); 
-
+			var countp = 9;
 			ovalremovertimer = setInterval(function(){
-				count++;
-				if (count>=10) {
+				countp++;
+				if (countp>=10) {
 					
-					console.log(count);
-					console.log('ovalremove');
 					clearInterval(ovalremovertimer);
 					$('html, body').animate({
 						scrollTop: $("#experiencesection1").offset().top
