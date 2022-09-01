@@ -277,95 +277,64 @@ body::-webkit-scrollbar-thumb {
 		</div>
 		<div class="spacer s2"></div> -->
 
-		<div class="row" style="padding-top:5%;">
-			<div class="col-md-3 text-center">
-			</div>
-			<div class="col-md-6 text-center">
-				<p class="andyskillsectiontext"  data-aos="fade-up" data-aos-duration="2000">You spill the Coffee, you are interested in me!!!</p>
-				<h1 class="callmeandy"  data-aos="fade-up" data-aos-duration="2000">I am a graduate from </h1>
-				<br>
-				<a href="https://www.pup.edu.ph/" target="_blank" class="hvr-buzz-out"><img src="images/pup.png" style="width:40%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
-				<br>
-				<br>
-				<p class="andyskillsectiontext" data-aos="fade-up" data-aos-duration="2000">Taking the Course</p>
-				<h1 class="callmeandy" data-aos="fade-up" data-aos-duration="3000">BS Information Technology</h1>
-				<br>
-			</div>
-			<div class="col-md-3 text-center">
-			</div>
-	
-			
-			
-			
-		</div>
-
-
 
 		<!-- seond part -->
 
 		<div class="row" style="padding-top:5%;">
-			<div class="col-md-1 text-center">
-			</div>
+			
 			<div class="col-md-3 text-center">
-				<p class="andyskillsectiontext"  data-aos="fade-up" data-aos-duration="2000">You spill the Coffee, you are interested in me!!!</p>
-				<h1 class="callmeandy"  data-aos="fade-up" data-aos-duration="2000">I am a graduate from </h1>
-				<br>
-				<a href="https://www.pup.edu.ph/" target="_blank" class="hvr-buzz-out"><img src="images/pup.png" style="width:40%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
-				<br>
-				<br>
-				<p class="andyskillsectiontext" data-aos="fade-up" data-aos-duration="2000">Taking the Course</p>
-				<h1 class="callmeandy" data-aos="fade-up" data-aos-duration="3000">BS Information Technology</h1>
-				<br>
-			</div>
-			<div class="col-md-1 text-center">
 			</div>
 			<div class="col-md-6 text-center">
 				<h1 class="callmeandy"  data-aos="fade-up" data-aos-duration="2000">So far this are the skill / technology that I'm knowledgeable</h1>
 				<p class="andyskillsectiontext" data-aos="fade-up" data-aos-duration="2000">[Didn't include html, css and javascript]</p>
 				<div class="row">
-					<div class="col">
-						<a href="https://jquery.com/" class="hvr-pulse-grow" target="_blank"><img src="images/techs/jquery.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+					<div class="row">
+						<div class="col">
+							<a href="https://jquery.com/" class="hvr-pulse-grow" target="_blank"><img src="images/techs/jquery.png" style="width:50%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+						</div>
+						<div class="col">
+							<a href="https://api.jquery.com/jquery.ajax/" class="hvr-hang" target="_blank"><img src="images/techs/ajax.png" style="width:50%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+						</div>
 					</div>
-					<div class="col">
-						<a href="https://api.jquery.com/jquery.ajax/" class="hvr-hang" target="_blank"><img src="images/techs/ajax.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
-					</div>
-					<div class="col">
-						<a href="https://getbootstrap.com/" class="hvr-wobble-vertical" target="_blank"><img src="images/techs/boostrap.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
-					</div>
-					<div class="col">
-						<a href="https://www.php.net/" class="hvr-wobble-skew" target="_blank"><img src="images/techs/php.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+					<div class="row">
+						<div class="col">
+							<a href="https://getbootstrap.com/" class="hvr-wobble-vertical" target="_blank"><img src="images/techs/boostrap.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+						</div>
+						<div class="col">
+							<a href="https://www.php.net/" class="hvr-wobble-skew" target="_blank"><img src="images/techs/php.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+						</div>
 					</div>
 
 				</div>
 				<div class="row">
-					<div class="col">
+					<div class="col-md">
 						<a href="https://www.postgresql.org/" class="hvr-bounce-in" target="_blank"><img src="images/techs/postgres.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
 					</div>
-					<div class="col">
+					<div class="col-md">
 						<a href="https://www.odoo.com/" class="hvr-buzz" target="_blank"><img src="images/techs/odoo.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
 					</div>
-					<div class="col">
+					<div class="col-md">
 						<a href="https://www.python.org/" class="hvr-grow-rotate" target="_blank"><img src="images/techs/python.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
 					</div>
 
 				</div>
 
 				<div class="row">
-					<div class="col">
+					<div class="col-md">
 						<a href="https://www.adobe.com/ph_en/products/photoshop.HTML" class="hvr-wobble-bottom" target="_blank"><img src="images/techs/photoshop.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
 					</div>
-					<div class="col">
+					<div class="col-md">
 						<a href="https://www.java.com/en/" class="hvr-wobble-to-top-right" target="_blank"><img src="images/techs/java.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
 					</div>
-					<div class="col">
+					<div class="col-md">
 						<a href="https://reactnative.dev/" class="hvr-wobble-horizontal" target="_blank"><img src="images/techs/react.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
 					</div>
 
-					<div class="col">
+					<div class="col-md">
 						<a href="https://www.mysql.com/" class="hvr-skew-backward" target="_blank"><img src="images/techs/mysql.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
 					</div>
 
-					<div class="col">
+					<div class="col-md">
 						<a href="https://www.adobe.com/ph_en/products/premiere.html" class="hvr-wobble-to-bottom-right" target="_blank"><img src="images/techs/premiere.png" style="width:100%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
 					</div>
 					
@@ -374,7 +343,9 @@ body::-webkit-scrollbar-thumb {
 
 				
 				
-			</div>		
+			</div>	
+			<div class="col-md-3 text-center">
+			</div>	
 			
 			
 			
