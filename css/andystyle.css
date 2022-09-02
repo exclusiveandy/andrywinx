@@ -11,7 +11,7 @@
 	color: #a8a8a8;
 }
 
-.andyskillsectiontext {
+.andyaboutsectiontext {
 	font-size: 19pt;
 	font-style: 'Raleway', cursive;
 	color: #a8a8a8;
@@ -37,6 +37,8 @@
   transform: rotate(180deg);
 }
 
+
+
 .typed-cursor{
 		opacity: 1;
 		font-weight: 100;
@@ -59,8 +61,10 @@
 
 	.callmeandy { font-size: 15pt; }
 	.mugofcoffeetext { font-size: 15pt; }	
-	.andyskillsectiontext { font-size: 12pt; } 
+	.andyaboutsectiontext { font-size: 12pt; } 
 	#andyitanimation { width: 40% !important; }
+
+	#pupcloud { width: 43% !important; }
 }
 
 
@@ -78,8 +82,10 @@
 
 	.callmeandy { font-size: 19pt; }
 	.mugofcoffeetext { font-size: 19pt; }	
-	.andyskillsectiontext { font-size: 12pt; } 
+	.andyaboutsectiontext { font-size: 12pt; } 
 	#andyitanimation { width: 35% !important; }
+	
+	#pupcloud { width: 43% !important; }
 
 }
 
@@ -95,8 +101,10 @@
 
 	.callmeandy { font-size: 20pt; }
 	.mugofcoffeetext { font-size: 20pt; }		
-	.andyskillsectiontext { font-size: 15pt; } 
+	.andyaboutsectiontext { font-size: 15pt; } 
 	#andyitanimation { width: 33% !important; }
+
+	#pupcloud { width: 43% !important; }
 }
 
 @media all and (min-width: 768px) and (max-width:1023px) {
@@ -111,7 +119,7 @@
 
 	.callmeandy { font-size: 24pt; }
 	.mugofcoffeetext { font-size: 24pt; }
-	.andyskillsectiontext { font-size: 16pt; } 
+	.andyaboutsectiontext { font-size: 16pt; } 
 	#andyitanimation { width: 120% !important; }	
 }
 	
