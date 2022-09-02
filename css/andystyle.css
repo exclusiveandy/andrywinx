@@ -26,6 +26,11 @@
 
 }
 
+.andyskillicon {
+	width: 70%;
+}
+
+
 .fa-chevron-down[aria-expanded="true"] {
   transform: rotate(180deg) !important;
 }
@@ -120,7 +125,7 @@
 	.callmeandy { font-size: 24pt; }
 	.mugofcoffeetext { font-size: 24pt; }
 	.andyaboutsectiontext { font-size: 16pt; } 
-	#andyitanimation { width: 120% !important; }	
+	#andyitanimation { width: 70% !important; }	
 }
 	
 
@@ -133,7 +138,7 @@
 
 	#homesection {background-size: 90%;background-image: url('../images/ani1.png');	background-color:#343a40; background-repeat: no-repeat; background-position: bottom right;}
 
-	
+	.andyskillicon { width: 50%; }
 
 }
 
@@ -148,6 +153,7 @@
 	#homesection {background-size: 80%; background-image: url('../images/ani1.png');	background-color:#343a40; background-repeat: no-repeat; background-position: bottom right;}
 
 	/*.callmeandy { font-size: 2.5rem; }*/
+	.andyskillicon { width: 50%; }
 }
 
 @media all and (min-width: 1440px) and (max-width:1919px) {
@@ -161,7 +167,7 @@
 
 	#homesection {background-size: 80%; background-image: url('../images/ani1.png');	background-color:#343a40; background-repeat: no-repeat; background-position: bottom right;}
 
-
+	.andyskillicon { width: 50%; }
 	/*.callmeandy { font-size: 2.5rem; }*/
 }
 
@@ -176,7 +182,7 @@
 
 	#homesection {background-size: 70%;background-image: url('../images/ani1.png');	background-color:#343a40; background-repeat: no-repeat; background-position: bottom right;}
 
-
+	.andyskillicon { width: 50%; }
 	/*.callmeandy { font-size: 2.5rem; }*/
 }
 
@@ -190,7 +196,7 @@
 	.navbartoggler {display:none;}
 
 	#homesection {background-size: 70%;background-image: url('../images/ani1.png');	background-color:#343a40; background-repeat: no-repeat; background-position: bottom right;}
-
+	.andyskillicon { width: 50%; }
 	/*.callmeandy { font-size: 4rem; }*/
 }
 
