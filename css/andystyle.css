@@ -27,8 +27,19 @@
 }
 
 .andyskillicon {
-	width: 70%;
+	width: 65%;
 }
+
+.parent-section {
+	overflow-y: auto;
+	scroll-snap-type: y proximity;
+	position: sticky;
+}
+
+.andy-scroll-snap{
+	scroll-snap-align: center;
+}
+
 
 
 .fa-chevron-down[aria-expanded="true"] {

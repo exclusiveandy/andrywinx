@@ -109,7 +109,7 @@ body::-webkit-scrollbar-thumb {
 		<div class="container">
 
 			<div id="navbartoggler" class="navbartoggler" style="background-color:RGB(177,0,0); transition: all .2s ease; position: absolute; top:0;right:2%;">
-				<span class="fa fa-facebook-square fa-2x"></span>
+				<span class="fa fa-facebook-square fa-2x" id="clickmoto"></span>
 			</div>
 
 
@@ -271,9 +271,15 @@ body::-webkit-scrollbar-thumb {
 
 
 	</section>
+	<br class="phase-2" style="display:none;">
+	<br class="phase-2" style="display:none;">
+	<br class="phase-2" style="display:none;">
+	<br class="phase-2" style="display:none;">
+	<br class="phase-2" style="display:none;">
 
 
-	<section class="position-relative container-fluid vh-100 text-center" style="background-color: dimgray;  display: flex; align-items: center; justify-content: center;"  id="experiencesection2">
+
+	<section class="position-relative container-fluid vh-100 text-center" style="background-image: linear-gradient(#343a40,dimgray);  display: flex; align-items: center; justify-content: center;"  id="experiencesection2">
 
 		<!-- <div class="spacer s2"></div>
 		<div class="spacer s0" id="trigger"></div>
@@ -296,64 +302,64 @@ body::-webkit-scrollbar-thumb {
 				</div>	
 
 				<div class="row">
-					<div class="col-md-3 col-4 text-center">
+					<div class="col-md-3 col-6 text-center">
 						<a href="https://jquery.com/" class="hvr-pulse-grow" target="_blank">
 							<img src="images/techs/jquery.png" class="andyskillicon" data-aos="fade-up" data-aos-duration="2000"/>
 						</a>
 					</div>
-					<div class="col-md-3 col-4">
+					<div class="col-md-3 col-6">
 						<a href="https://api.jquery.com/jquery.ajax/" class="hvr-hang" target="_blank">
 							<img src="images/techs/ajax.png" class="andyskillicon" data-aos="fade-up" data-aos-duration="2000"/></a>
 					</div>
-					<div class="col-md-3 col-4">
+					<div class="col-md-3 col-6">
 						<a href="https://getbootstrap.com/" class="hvr-wobble-skew" target="_blank">
 							<img src="images/techs/boostrap.png" class="andyskillicon" data-aos="fade-up" data-aos-duration="2000"/>
 						</a>
 					</div>
-					<div class="col-md-3 col-4">
+					<div class="col-md-3 col-6">
 						<a href="https://www.php.net/" class="hvr-wobble-vertical" target="_blank">
 							<img src="images/techs/php.png" class="andyskillicon" data-aos="fade-up" data-aos-duration="2000"/>
 						</a>
 					</div>
-					<div class="col-md-3 col-4">
+					<div class="col-md-3 col-6">
 						<a href="https://www.postgresql.org/" class="hvr-bounce-in" target="_blank">
 							<img src="images/techs/postgres.png" class="andyskillicon" data-aos="fade-up" data-aos-duration="2000"/>
 						</a>
 					</div>
-					<div class="col-md-3 col-4">
+					<div class="col-md-3 col-6">
 						<a href="https://www.odoo.com/" class="hvr-buzz" target="_blank">
 							<img src="images/techs/odoo.png" class="andyskillicon" data-aos="fade-up" data-aos-duration="2000"/>
 						</a>
 					</div>
-					<div class="col-md-3 col-4">
+					<div class="col-md-3 col-6">
 						<a href="https://www.python.org/" class="hvr-grow-rotate" target="_blank">
 							<img src="images/techs/python.png" class="andyskillicon" data-aos="fade-up" data-aos-duration="2000"/>
 						</a>
 					</div>
 
-					<div class="col-md-3 col-4">
+					<div class="col-md-3 col-6">
 						<a href="https://www.java.com/en/" class="hvr-wobble-to-top-right" target="_blank">
 							<img src="images/techs/java.png" class="andyskillicon" data-aos="fade-up" data-aos-duration="2000"/>
 						</a>
 					</div>
-					<div class="col-md-3 col-4">
+					<div class="col-md-3 col-6">
 						<a href="https://www.adobe.com/ph_en/products/photoshop.HTML" class="hvr-wobble-bottom" target="_blank">
 							<img src="images/techs/photoshop.png" class="andyskillicon" data-aos="fade-up" data-aos-duration="2000"/>
 						</a>
 					</div>
-					<div class="col-md-3 col-4">
+					<div class="col-md-3 col-6">
 						<a href="https://reactnative.dev/" class="hvr-wobble-horizontal" target="_blank">
 							<img src="images/techs/react.png" class="andyskillicon" data-aos="fade-up" data-aos-duration="2000"/>
 						</a>
-					</div>
+					</div>	
 
-					<div class="col-md-3 col-4">
+					<div class="col-md-3 col-6">
 						<a href="https://www.mysql.com/" class="hvr-skew-backward" target="_blank">
 							<img src="images/techs/mysql.png" class="andyskillicon"  data-aos="fade-up" data-aos-duration="2000"/>
 						</a>
 					</div>
 
-					<div class="col-md-3 col-4">
+					<div class="col-md-3 col-6">
 						<a href="https://www.adobe.com/ph_en/products/premiere.html" class="hvr-wobble-to-bottom-right" target="_blank">
 							<img src="images/techs/premiere.png" class="andyskillicon"  data-aos="fade-up" data-aos-duration="2000"/>
 						</a>
@@ -363,6 +369,7 @@ body::-webkit-scrollbar-thumb {
 			
 					
 				</div>
+				
 
 				
 
@@ -379,8 +386,8 @@ body::-webkit-scrollbar-thumb {
 
 
 
-
 	</section>
+
 	<!-- PAKING -->
 <!-- 	<section class="position-relative container-fluid vh-100" style="display:none; background-color: red;  display: flex; align-items: center; justify-content: center;"  id="experiencesection3">
 
@@ -413,10 +420,39 @@ body::-webkit-scrollbar-thumb {
 
 		// $('#homesection').hide();
 		// $('#aboutsection').hide();
-		// $('#experiencesection1').hide();
-		// $('#experiencesection2').hide();
+		$('#experiencesection1').hide();
+		$('#experiencesection2').hide();
 		$('#contactsection').hide();
 		$('#coffeeoval').hide();
+
+		
+
+		
+		$(window).on('scroll', function() {
+			
+			var offset = $(window).scrollTop();
+			console.log("potanks" +offset +" / "+ $("#aboutsection").offset().top + "gg");
+			if(offset ==  $("#aboutsection").offset().top * 2)
+			{
+				$("#experiencesection1").addClass("position-sticky");
+				$("#experiencesection1").css("top", "0");
+
+			}
+				
+		});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	   var is_visible = false;
 		$('#navbartoggler').click(function() {
@@ -601,6 +637,7 @@ body::-webkit-scrollbar-thumb {
 				$('#experiencesection1').show();
 				$('#experiencesection2').show();
 				$('#contactsection').show();
+				$('.phase-2').show();
 
 			}
 
@@ -773,6 +810,7 @@ body::-webkit-scrollbar-thumb {
 			$('#experiencesection1').show();
 			$('#experiencesection2').show();
 			$('#contactsection').show();
+			$('.phase-2').show();
 
 		
 
