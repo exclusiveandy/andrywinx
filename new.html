@@ -96,14 +96,57 @@ body::-webkit-scrollbar-thumb {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #555;
 }
+.custom-shape-divider-top-1662215606 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
 
+.custom-shape-divider-top-1662215606 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+
+.custom-shape-divider-top-1662215606 .shape-fill {
+    fill: #7D4949;
+}
 </style>
-
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 
 
 <body class="position-relative hold-transition layout-top-nav dark-mode" style="background-color: #7d4949; " >
-	<div class="scroll-container" id="">
-	  <section class="vh-100 bg-red child"></section>
+	<div class="scroll-container position-relative" id="">
+		
+
+	  <section class="vh-100 bg-blue child text-center">
+
+        <div id="card" class="text-center" style="width:100%; height:100%;"> 
+		  <div class="front"> 
+		    <div class="card border-dark mb-3" style="width:100%;height:100%;">
+			  <div class="card-header">Header</div>
+			  <div class="card-body text-dark">
+			    <h5 class="card-title">Dark card title</h5>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			  </div>
+			</div>
+		  </div> 
+		  <div class="back">
+		    <div class="card border-dark mb-3" style="width:100%;height:100%;">
+			  <div class="card-header">Paramount ERP</div>
+			  <div class="card-body text-dark">
+			    <h5 class="card-title">Dark card title</h5>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			  </div>
+			</div>
+		  </div> 
+		</div>
+	  </section>
 	  <section class="vh-100 bg-blue child"></section>
 	  <section class="vh-100 bg-yellow child">
 	  	<div class="scrollbar" id="style-1">
@@ -125,6 +168,17 @@ section {
   scroll-snap-align: center;
 }
 	</style>
+
+	<script type="text/javascript">
+
+		$( document ).ready(function() {
+			$("#card").flip({
+			  trigger: 'click'
+			});
+
+		});
+		
+	</script>
 
 
 
