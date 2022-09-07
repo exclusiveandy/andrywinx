@@ -1,0 +1,51 @@
+#board {
+	position: relative;
+	width: 400px;
+	height: 400px;
+	margin: 40px auto;
+	border: 2px solid #0F2027;
+	background-image: url("../images/galaxy.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+#jet {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: url("../images/game/rocket.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	left: 46%;
+	bottom: 0px;
+}
+
+.bullets {
+	position: absolute;
+	bottom: 40px;
+	left: 51%;
+	width: 20px;
+	height: 20px;
+	background: url("../images/game/ray.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.rocks {
+	position: absolute;
+	top: 0px;
+	width: 50px;
+	height: 50px;
+	background: url("../images/game/alien.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+/*#points {
+	position: absolute;
+	top: 0px;
+	margin: 40px;
+	opacity: 0.7;
+	font-size: 10em;
+	color: white;
+}*/

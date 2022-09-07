@@ -11,7 +11,8 @@
 	<link rel="icon" href="images/andrywinxico.png">
 	<link rel="stylesheet" href="css/adminlte.css">  
 	<link rel="stylesheet" href="css/andystyle.css">  
-	<!-- <link rel="stylesheet" href="css/projects.css"> -->
+	<link rel="stylesheet" href="css/projects.css">
+	<link rel="stylesheet" href="css/andygame.css">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
 
@@ -25,6 +26,7 @@
 
   <!-- jQuery -->
 	<script src="plugins/jquery/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
 	<!-- Bootstrap 4 -->
 	<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<!-- FastClick -->
@@ -43,7 +45,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
 	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/addons/p5.dom.js"></script>
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
+	<!-- <script type="text/javascript" src="js/lib/turn.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/0.11/turn.min.js"></script> -->
 
 
 
@@ -81,7 +87,9 @@ body::-webkit-scrollbar-thumb {
 </style>
 
 
-
+<script>
+  
+</script>
 <body class="position-relative hold-transition layout-top-nav dark-mode" style="background-color: #7d4949;" >
 
 	<div id="navbarcontrols" class="position-fixed vh-100 vw-100 text-center" style="z-index: 4; margin-left: -100%">
@@ -423,7 +431,7 @@ body::-webkit-scrollbar-thumb {
 				<div class="col-md-10">
 					<div class="row">
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper1" class="text-center" style="width:100%; height:100%;" data-aos="zoom-in" > 
+							<div id="flipper1" class="text-center" style="width:100%; height:100%;"   > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -444,7 +452,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper2" class="text-center" style="width:100%; height:100%;" data-aos="zoom-in" > 
+							<div id="flipper2" class="text-center" style="width:100%; height:100%;"   > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -465,7 +473,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper3" class="text-center" style="width:100%; height:100%;" data-aos="zoom-in"> 
+							<div id="flipper3" class="text-center" style="width:100%; height:100%;"  > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -486,7 +494,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper4" class="text-center" style="width:100%; height:100%;" data-aos="zoom-in"> 
+							<div id="flipper4" class="text-center" style="width:100%; height:100%;"  > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -508,7 +516,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper5" class="text-center" style="width:100%; height:100%;" data-aos="zoom-in"> 
+							<div id="flipper5" class="text-center" style="width:100%; height:100%;"  > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -529,7 +537,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper6" class="text-center" style="width:100%; height:100%;" data-aos="zoom-in" > 
+							<div id="flipper6" class="text-center" style="width:100%; height:100%;"   > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -550,7 +558,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper7" class="text-center" style="width:100%; height:100%;" data-aos="zoom-in"> 
+							<div id="flipper7" class="text-center" style="width:100%; height:100%;"  > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -571,7 +579,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper8" class="text-center" style="width:100%; height:100%;" data-aos="zoom-in" > 
+							<div id="flipper8" class="text-center" style="width:100%; height:100%;"   > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -592,7 +600,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper9" class="text-center" style="width:100%; height:100%;" data-aos="zoom-in" > 
+							<div id="flipper9" class="text-center" style="width:100%; height:100%;"   > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -613,7 +621,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper10" class="text-center" style="width:100%; height:100%;" data-aos="zoom-in"> 
+							<div id="flipper10" class="text-center" style="width:100%; height:100%;"  > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -634,7 +642,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper11" class="text-center" style="width:100%; height:100%;" data-aos="zoom-in" > 
+							<div id="flipper11" class="text-center" style="width:100%; height:100%;"   > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -655,7 +663,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper12" class="text-center" style="width:100%; height:100%;" data-aos="zoom-in"> 
+							<div id="flipper12" class="text-center" style="width:100%; height:100%;"  > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -676,7 +684,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper13" class="text-center" style="width:100%; height:100%;" data-aos="zoom-in"> 
+							<div id="flipper13" class="text-center" style="width:100%; height:100%;"  > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -725,11 +733,143 @@ body::-webkit-scrollbar-thumb {
 
 
 	
+	<section class="position-relative container-fluid " style="background-image: linear-gradient(#2C5364,#2C5364); display: flex; align-items: center; justify-content: center;" id="experiencesection4">
 
-	<section class="position-relative container-fluid vh-100" style="background-image: linear-gradient(#2C5364,#2C5364);" id="contactsection">
-		<div data-aos="fade-up" data-aos-duration="3000">
-			<h5 class="andysecondfont">Mukhang Pwet Mabantot si Aldwin</h5>
+		<div class="d-flex flex-column">
+			<div class="text-center" style="margin: 4% 5% 3% 5%	">
+				<h1 class="skilltext"  data-aos="fade-up" data-aos-duration="2000" id="skillheading">Companies that I work with!</h1>
+			</div>
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<article class="postcard orange" data-aos="fade-right">
+						<a class="postcard__img_link text-center" href="#">
+							<img class="postcard__img  w-100" src="images/work/toolkit.png"/>
+						</a>
+						<div class="postcard__text ">
+							<h1 class="postcard__title "><a href="https://toolkt.com/" target="_blank">Toolkit Inc.</a></h1>
+							<div class="postcard__subtitle text-muted">
+								<time datetime="2020-05-25 12:00:00 ">
+									<i class="fa fa-briefcase mr-2"></i>Technical Consultant / Odoo Developer
+								</time>
+							</div>
+							<div class="postcard__bar"></div>
+							<div class="postcard__preview-txt">
+
+								Developed certain modules that focused on ERP system such as relating to Purchase, Sales, HR and Many More! Also customized existing modules and implement new features or functions which is based on the client requirements and assist, fixed or troubleshoot client raised issue as soon on possible.
+
+							</div>
+							<ul class="postcard__tagbox">
+								<li class="tag__item"><i class="fas fa-calendar-alt mr-2"></i></i>Oct 2020 - Present</li>						
+							</ul>
+						</div>
+					</article>
+
+					<article class="postcard blue" data-aos="fade-left">
+						<a class="postcard__img_link text-center" href="#">
+							<img class="postcard__img  w-100" src="images/work/pcaat.png"/>
+						</a>
+						<div class="postcard__text">
+							<h1 class="postcard__title blue"><a href="http://pcaat.edu.ph/" target="_blank">Philppine College of Advanced Arts And Technology</a></h1>
+							<div class="postcard__subtitle text-muted">
+								<time datetime="2020-05-25 12:00:00 ">
+									<i class="fa fa-briefcase mr-2"></i>Programming Professor / Faculty
+								</time>
+							</div>
+							<div class="postcard__bar"></div>
+							<div class="postcard__preview-txt">
+
+								Create lesson plan and activities that follows the modular curriculum of the given subject such as Computer Programming then Teach and Guide the students basic computer fundamentals, introduction on creating website and computer softwares and hardwares. 
+
+							</div>
+							<ul class="postcard__tagbox">
+								<li class="tag__item"><i class="fas fa-calendar-alt mr-2"></i></i>Sept 2021 - Sept 2022</li>						
+							</ul>
+						</div>
+					</article>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+						
+			
+			
 		</div>
+	</section>
+
+
+	<section class="position-relative container-fluid vh-100" style="background-image: linear-gradient(#2C5364,#2C5364); display: flex; align-items: center; justify-content: center;" id="playsection">
+
+		<div class="d-flex flex-column">
+			<div class="text-center" >
+				<h1 class="skilltext"i d="skillheading">Wanna Play A Game?</h1>
+				<button class="andy-game-button" id="yesgame">Yes</button>
+				<button class="andy-game-button" id="nogame">No</button>
+			</div>				
+						
+			
+			
+		</div>
+		
+	</section>
+
+	<div id="playground" class="position-fixed container-fluid" style="top: 0%;z-index: 1050; width:100%; height: 100%; background-image: linear-gradient(to right,#0F2027,#203A43,#2C5364); display: none; align-items: center; justify-content: center;">
+
+		<div class="d-flex flex-column">
+			<div class="position-relative text-center">
+				<button id="startgame" style="width: 20%; background-color: #0F2027; border-radius: 25px; color:white;border-color: purple;" id="nogame" class="position-relative" >Start</button>
+				<button id="stopgame" style="width: 20%; background-color: #0F2027; border-radius: 25px; color:white;border-color: purple;" id="nogame" class="position-relative" >Stop</button>
+				<div id="board" class="position-relative" style="margin: 2% 0% 2% 0%;">
+					<div class="position-absolute" style="top:30px; left:50%; transform: translate(-50%, -50%);"><h5 id="points">0</h5></div>
+					<div class="rocks" id="rocks"></div>
+					<div id="jet"></div>
+				</div>
+			</div>
+			<div class="position-absolute" style="top:25px; right:50px;">
+				<button id="closegame" style="background-color: #0F2027; border-radius: 25px; color:white;border-color: purple;" id="nogame" class="position-absolute" >X</button>
+			</div>
+			<div class="position-relative text-center">
+				<button id="gotoleft" style="width: 20%; background-color: #0F2027; border-radius: 25px; color:white;border-color: purple;" id="nogame" class="position-relative" ><i class="fa-solid fa-circle-left"></i></button>
+				<button id="gotoright" style="width: 20%; background-color: #0F2027; border-radius: 25px; color:white;border-color: purple;" id="nogame" class="position-relative" ><i class="fa-solid fa-circle-right"></i></button>
+			</div>
+			<div class="position-relative text-center" style="margin-top: 2%;">
+				<button id="shootrock" style="width: 20%; background-color: #0F2027; border-radius: 25px; color:white;border-color: purple;" id="nogame" class="position-relative" ><i class="fa-solid fa-bullseye"></i></button>
+			</div>
+
+			<div class="position-relative text-center">
+				<p><small class="text-muted"><i>Left - [A] Right - [D] Shoot - [C]</i></small></p> <br>
+				<p><small class="text-muted"><i>How high can you get?</i></small></p>
+			</div>
+		</div>
+		<div class="text-center position-absolute">
+			<div class="position-relative w-100 h-100 text-center">
+				<div id="gameover" style="color: #990000;display:none; z-index: 1090; transform: scale(1); margin-bottom:105%; transition: all 0.5s ease;">
+					Game Over
+				</div>
+			</div>
+		</div>
+		<div class="text-center position-absolute">
+			<div class="position-relative w-100 h-100 text-center">
+				<div id="gameoverpoints" style="color: #990000;display:none; z-index: 1090; transform: scale(1); margin-bottom:45%; transition: all 0.5s ease;">
+					You do know this is a portfolio right?
+					<br>
+					Thanks for playing anyway!
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<section class="position-relative container-fluid vh-100" style="background-image: linear-gradient(#990000,#990000); display: flex; align-items: center; justify-content: center;" id="contactsection">
+
+		<div class="d-flex flex-column">
+			<div class="text-center" >
+				<h1 class="skilltext"i d="skillheading">Still on going</h1>
+			</div>				
+						
+			
+			
+		</div>
+		
 	</section>
 
 	
@@ -739,17 +879,20 @@ body::-webkit-scrollbar-thumb {
 
 
 </body>
-<!-- FOR NAVIGATION CONTROLS -->
-
+<script src="js/andygame.js"></script>
 <script>
 
 	$( document ).ready(function() {
+		AOS.init();
+
 
 		// $('#homesection').hide();
 		// $('#aboutsection').hide();
 		$('#experiencesection1').hide();
 		$('#experiencesection2').hide();
 		$('#experiencesection3').hide();
+		$('#experiencesection4').hide();
+		$('#playsection').hide();
 		$('#contactsection').hide();
 		$('#coffeeoval').hide();
 
@@ -1019,7 +1162,9 @@ body::-webkit-scrollbar-thumb {
 				$('#experiencesection1').show();
 				$('#experiencesection2').show();
 				$('#experiencesection3').show();
-				$('#contactsection').show();
+				$('#experiencesection4').show();
+				$('#playsection').show();
+				// $('#contactsection').show();
 				$('.phase-2').show();
 
 			}
@@ -1043,8 +1188,8 @@ body::-webkit-scrollbar-thumb {
 		var keycode = event.code;
 
 		
-
-		if(keycode === "Space")
+		console.log(keycode);
+		if(keycode === 72)
 		{	
 			$('html, body').animate({
 				scrollTop: $("#homesection").offset().top
@@ -1193,7 +1338,9 @@ body::-webkit-scrollbar-thumb {
 			$('#experiencesection1').show();
 			$('#experiencesection2').show();
 			$('#experiencesection3').show();
-			$('#contactsection').show();
+			$('#experiencesection4').show();
+			$('#playsection').show();
+			// $('#contactsection').show();
 			$('.phase-2').show();
 
 		
@@ -1209,9 +1356,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-<script>
-  AOS.init();
-</script>
+
 <script>
 	$(function(){
 	$(".typed").typed({
