@@ -56,6 +56,6 @@ $(function () { // wait for document ready
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 800, offset: 0})
 					.setPin("#target")
 					.setTween(tween)
-					.addIndicators() // add indicators (requires plugin)
+					// .addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
 })

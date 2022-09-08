@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/andystyle.css">  
 	<link rel="stylesheet" href="css/projects.css">
 	<link rel="stylesheet" href="css/andygame.css">
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
   
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <!-- jQuery -->
-	<script src="plugins/jquery/jquery.min.js"></script>
+	<!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
 	<!-- Bootstrap 4 -->
 	<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -36,7 +38,7 @@
 	<!-- AOS -->
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
-	
+		
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
@@ -45,12 +47,15 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
 	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/addons/p5.dom.js"></script>
-	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
-	<!-- <script type="text/javascript" src="js/lib/turn.min.js"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/0.11/turn.min.js"></script> -->
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/plugins/ScrollToPlugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/plugins/EaselPlugin.min.js"></script>
+	<script src="js/animate-scroll.js"></script>
 
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 
 
 
@@ -173,16 +178,16 @@ body::-webkit-scrollbar-thumb {
 			<h2 class="andymainfont">Andrywin Maquinto</h2>
 			<h5 class="andysecondfont" id="andytyping"><span class="typed"></span></h5>			
 			<div class="andylinks" style="padding-top:10px;">
-				<a href="https://www.facebook.com/w3schoolscom/" target="_blank" title="Facebook" style="color:blue;" class="hvr-grow-rotate">
+				<a href="https://www.facebook.com" target="_blank" title="Facebook" style="color:blue;" class="hvr-grow-rotate">
 					<span class="fa fa-facebook-square fa-2x"></span>
 				</a>
-				<a href="https://www.instagram.com/w3schools.com_official/" target="_blank" title="Github" style="color:black;" class="hvr-grow-rotate">
+				<a href="https://github.com/exclusiveandy" target="_blank" title="Github" style="color:black;" class="hvr-grow-rotate">
 					<span class="fa-brands fa-square-github fa-2x"></span>
 				</a>
-				<a href="https://www.linkedin.com/company/w3schools.com/" target="_blank" title="LinkedIn" style="color:#006599;" class="hvr-grow-rotate">
+				<a href="https://www.linkedin.com/in/saxandy/" target="_blank" title="LinkedIn" style="color:#006599;" class="hvr-grow-rotate">
 					<span class="fa fa-linkedin-square fa-2x"></span>
 				</a>
-				<a href="https://discord.gg/6Z7UaRbUQM" target="_blank" title="Join the W3schools community on Discord" style="color:#6e85d2;" class="hvr-grow-rotate">
+				<a href="https://discord.gg/a7s26dMCMC" target="_blank" title="Join the W3schools community on Discord" style="color:#6e85d2;" class="hvr-grow-rotate">
 					<span class="fa fa-discord fa-2x"></span>
 				</a>
 			</div>
@@ -202,15 +207,14 @@ body::-webkit-scrollbar-thumb {
 
 	</section>
 	<section class="container-fluid vh-100" style="background-image: linear-gradient(#454d55,#454d55,#7d4949); display: flex; align-items: center; justify-content: center;" id="aboutsection">
-		<!-- <div data-aos="fade-up" data-aos-duration="3000"> -->
 
 			<div class="row" style="">
 
 				<div class="col-md-7 text-center">
-					<h1 class="callmeandy">You can call me Andy / Drew!</h1>
-					<p style="padding: 0% 7% 0% 7%" class="andyaboutsectiontext">The things you read above, are the things that I usually do, what I think of myself and things that I like. </p>
+					<h1 data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}' class="callmeandy">You can call me Andy / Drew!</h1>
+					<p data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}' style="padding: 0% 7% 0% 7%" class="andyaboutsectiontext">The things you read above, are the things that I usually do, what I think of myself and things that I like. </p>
 					
-					<img style="width: 20%;" src="images/kape1.png" id="coffeeimage1">
+					<img data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}' style="width: 20%;" src="images/kape1.png" id="coffeeimage1">
 					<img style="width: 20%; display: none;" src="images/kape2.png" id="coffeeimage2">
 					<img style="width: 20%; display: none;" src="images/kape3.png" id="coffeeimage3">
 					<img style="width: 20%; display: none;" src="images/kape4.png" id="coffeeimage4">
@@ -221,13 +225,13 @@ body::-webkit-scrollbar-thumb {
 
 
 
-					<h1 style="margin-top: 10px;" id="mugofcoffeetext" class="mugofcoffeetext">Here's a mug of coffee</h1>
-					<p class="andyaboutsectiontext" id="pressforcoffee"><small>[Press F or Tap the Coffee]</small></p>
+					<h1 data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}' style="margin-top: 10px;" id="mugofcoffeetext" class="mugofcoffeetext">Here's a mug of coffee</h1>
+					<p data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}' class="andyaboutsectiontext" id="pressforcoffee"><small>[Press F or Tap the Coffee]</small></p>
 
 				</div>
 
 				<div class="col-md-5 text-center">
-					<img class="m-50" src="images/andy1anim.gif" style="width: 50%; padding: 0;" id="andyitanimation">
+					<img data-animate-scroll='{"x": "100","y": "0", "duration": "0.5","scaleX": "0","scaleY": "0"}' class="m-50" src="images/andy1anim.gif" style="width: 50%; padding: 0;" id="andyitanimation">
 				</div>	
 
 			</div>
@@ -254,14 +258,14 @@ body::-webkit-scrollbar-thumb {
 			<div class="col-md-3 text-center">
 			</div>
 			<div class="col-md-6 text-center">
-				<p class="andyaboutsectiontext"  data-aos="fade-up" data-aos-duration="2000">You spill the Coffee, you are interested in me!!!</p>
-				<h1 class="callmeandy"  data-aos="fade-up" data-aos-duration="2000">I graduated from</h1>
+				<p class="andyaboutsectiontext" data-animate-scroll='{"y":"50", "duration": "1.75","scaleX": "0","scaleY": "0"}'>You spill the Coffee, you are interested in me!!!</p>
+				<h1 data-animate-scroll='{"y":"50", "duration": "1.75","scaleX": "0","scaleY": "0"}' class="callmeandy"  >I graduated from</h1>
 				<br>
-				<a href="https://www.pup.edu.ph/" target="_blank" class="hvr-buzz-out"><img src="images/pup.png" style="width:40%;"  data-aos="fade-up" data-aos-duration="2000"/></a>
+				<a data-animate-scroll='{"rotation": "180","duration": "2.5","scaleX": "0","scaleY": "0"}' href="https://www.pup.edu.ph/" target="_blank" class="hvr-buzz-out"><img src="images/pup.png" style="width:40%;" /></a>
 				<br>
 				<br>
-				<p class="andyaboutsectiontext" data-aos="fade-up" data-aos-duration="2000">Taking the Course</p>
-				<h1 class="callmeandy" data-aos="fade-up" data-aos-duration="3000">BS Information Technology</h1>
+				<p data-animate-scroll='{"y":"50", "duration": "1.75","scaleX": "0","scaleY": "0"}' class="andyaboutsectiontext" >Taking the Course</p>
+				<h1 data-animate-scroll='{"y":"50", "duration": "1.75","scaleX": "0","scaleY": "0"}' class="callmeandy" >BS Information Technology</h1>
 				<br>
 			</div>
 			<div class="col-md-3 text-center">
@@ -418,12 +422,16 @@ body::-webkit-scrollbar-thumb {
 					}
 				}
 			</style>
-			<div class="text-center justify-content-center" style="margin: 5% 5% 12% 5%;">
-				<img src="images/sax.png" style="width:10%;" id="saxicon" class="saxicon"/> 
+			<div class="text-center justify-content-center position-relative" style="margin: 5% 5% 12% 5%;">
+				<img src="images/sax.png" style="width:10%;" id="saxicon" class="saxicon position-relative"/> 
+				
+				<div class="position-absolute" style="bottom: 35%;width:100%;z-index: 1;" >
+					<img src="https://readme-typing-svg.herokuapp.com?font=Permanent+Marker&size=32&duration=3000&pause=1000&center=true&vCenter=true&width=435&lines=Saxophone+Hero;I+love+music"/>
+				</div>
 			</div>
 			
 			<div class="text-center ">
-				<h1 class="skilltext"  data-aos="fade-up" data-aos-duration="2000">Here are the Company Projects that I have contributions</h1>
+				<h1 class="skilltext" >Here are the Company Projects that I have contributions</h1>
 			</div>	
 			<br>
 			<div class="row">
@@ -431,7 +439,7 @@ body::-webkit-scrollbar-thumb {
 				<div class="col-md-10">
 					<div class="row">
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper1" class="text-center" style="width:100%; height:100%;"   > 
+							<div id="flipper1" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'   > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -452,7 +460,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper2" class="text-center" style="width:100%; height:100%;"   > 
+							<div id="flipper2" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'   > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -473,7 +481,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper3" class="text-center" style="width:100%; height:100%;"  > 
+							<div id="flipper3" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'  > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -494,7 +502,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper4" class="text-center" style="width:100%; height:100%;"  > 
+							<div id="flipper4" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'  > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -516,7 +524,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper5" class="text-center" style="width:100%; height:100%;"  > 
+							<div id="flipper5" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'  > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -537,7 +545,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper6" class="text-center" style="width:100%; height:100%;"   > 
+							<div id="flipper6" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'   > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -558,7 +566,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper7" class="text-center" style="width:100%; height:100%;"  > 
+							<div id="flipper7" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'  > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -579,7 +587,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper8" class="text-center" style="width:100%; height:100%;"   > 
+							<div id="flipper8" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'   > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -600,7 +608,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper9" class="text-center" style="width:100%; height:100%;"   > 
+							<div id="flipper9" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'   > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -621,7 +629,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper10" class="text-center" style="width:100%; height:100%;"  > 
+							<div id="flipper10" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'  > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -642,7 +650,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper11" class="text-center" style="width:100%; height:100%;"   > 
+							<div id="flipper11" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'   > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -663,7 +671,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper12" class="text-center" style="width:100%; height:100%;"  > 
+							<div id="flipper12" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'  > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -684,7 +692,7 @@ body::-webkit-scrollbar-thumb {
 							</div>
 						</div>
 						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
-							<div id="flipper13" class="text-center" style="width:100%; height:100%;"  > 
+							<div id="flipper13" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'  > 
 								<div class="front"> 
 									<div class="card project-card">							
 										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
@@ -742,7 +750,7 @@ body::-webkit-scrollbar-thumb {
 			<div class="row">
 				<div class="col-md-2"></div>
 				<div class="col-md-8">
-					<article class="postcard orange" data-aos="fade-right">
+					<article class="postcard orange" data-aos="fade-right" data-animate-scroll='{"x": "-100","y": "0", "alpha": "0", "duration": ".5"}'>
 						<a class="postcard__img_link text-center" href="#">
 							<img class="postcard__img  w-100" src="images/work/toolkit.png"/>
 						</a>
@@ -765,12 +773,12 @@ body::-webkit-scrollbar-thumb {
 						</div>
 					</article>
 
-					<article class="postcard blue" data-aos="fade-left">
+					<article class="postcard blue" data-aos="fade-left" data-animate-scroll='{"x": "100","y": "0", "alpha": "0", "duration": ".5"}'>
 						<a class="postcard__img_link text-center" href="#">
 							<img class="postcard__img  w-100" src="images/work/pcaat.png"/>
 						</a>
 						<div class="postcard__text">
-							<h1 class="postcard__title blue"><a href="http://pcaat.edu.ph/" target="_blank">Philppine College of Advanced Arts And Technology</a></h1>
+							<h1 class="postcard__title blue"><a href="http://pcaat.edu.ph/" target="_blank">Philippine College of Advanced Arts And Technology</a></h1>
 							<div class="postcard__subtitle text-muted">
 								<time datetime="2020-05-25 12:00:00 ">
 									<i class="fa fa-briefcase mr-2"></i>Programming Professor / Faculty
@@ -801,7 +809,7 @@ body::-webkit-scrollbar-thumb {
 
 		<div class="d-flex flex-column">
 			<div class="text-center" >
-				<h1 class="skilltext"i d="skillheading">Wanna Play A Game?</h1>
+				<h1 data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}' class="skilltext"i d="skillheading">Wanna Play A Game?</h1>
 				<button class="andy-game-button" id="yesgame">Yes</button>
 				<button class="andy-game-button" id="nogame">No</button>
 			</div>				
@@ -859,16 +867,71 @@ body::-webkit-scrollbar-thumb {
 	</div>
 
 
-	<section class="position-relative container-fluid vh-100" style="background-image: linear-gradient(#990000,#990000); display: flex; align-items: center; justify-content: center;" id="contactsection">
+	<section class="position-relative container-fluid vh-100" style="background-image: linear-gradient(#343a40,#343a40); display: flex; align-items: center; justify-content: center;" id="constactsection">
 
-		<div class="d-flex flex-column">
-			<div class="text-center" >
-				<h1 class="skilltext"i d="skillheading">Still on going</h1>
-			</div>				
-						
-			
-			
-		</div>
+		<div class="row" style="">
+				
+
+				<div class="col-md-4 text-center position-relative">
+					<img data-animate-scroll='{"x": "-100","y": "0", "duration": "0.5","scaleX": "0","scaleY": "0"}' class="" src="images/andy.png" style="width: 50%; padding: 0;" id="andygroom">
+					<img src="images/contact/speech1.png" class="position-absolute speech-balloon" id="speechballoon1">
+					<img src="images/contact/speech2.png" class="position-absolute speech-balloon" id="speechballoon2">
+					<img src="images/contact/speech3.png" class="position-absolute speech-balloon" id="speechballoon3">
+					<img src="images/contact/speech4.png" class="position-absolute speech-balloon" id="speechballoon4">
+					<img src="images/contact/speech5.png" class="position-absolute speech-balloon" id="speechballoon5">
+
+				</div>		
+				<div class="col-md-7 text-center">
+					<h1 data-animate-scroll='{"alpha": "0","y":"0","duration": "0.5"}' class="callmeandy">
+						We at the bottom!
+					</h1>
+					<p data-animate-scroll='{"alpha": "0","y":"0","duration": "0.5"}' style="padding: 0% 7% 0% 7%" class="contactmessage">Feel free to message or contact me if you have any questions or clarification with me. You can also check my GitHub account for the technologies that I use in this portfolio.</p>
+					<style>
+						.error {
+							color: #990000;
+						}
+					</style>
+					<div class="d-flex text-center justify-content-center">
+						<div data-animate-scroll='{"alpha": "0","y":"0","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}' class="" style="width:60%" id="formcontact">	
+							<div class="card text-center">
+								<div class="card-body">
+									<form target="_blank" action="https://formsubmit.co/506219e404ee65c970185e50771aabde" method="POST">
+										<input style="color:#a8a8a8" class="form-control form-control-lg form-control-md form-control-sm" id="name" name="name" type="text" placeholder="Name" required>
+										<br>
+										<input style="color:#a8a8a8" class="form-control form-control-lg" id="email" name="email" type="email" placeholder="Email" required>
+										<br>
+										<textarea style="color:#a8a8a8" class="form-control form-control-lg" id="message" name="message" rows="3" required>Awesome Portfolio?</textarea>
+										<button type="submit" class="btn btn-secondary btn-lg w-100" style="margin-top: 1.5rem;" id="sendmessage">Send Message</button>
+										
+									</form>
+									<form method="GET" action="assets/andyresume.pdf">
+										<button type="submit" class="btn btn-primary btn-sm w-100 mt-2 ">Download CV</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h1 data-animate-scroll='{"alpha": "0","y":"0","duration": "0.5"}' style="margin-top: 10px;" id="andylinkbottom" class="andylinkbottom">
+						<div class="" >
+							<a href="https://www.facebook.com/" target="_blank" title="Facebook" style="color:blue;" class="hvr-grow-rotate">
+								<span class="fa fa-facebook-square fa-2x"></span>
+							</a>
+							<a href="https://github.com/exclusiveandy" target="_blank" title="Github" style="color:black;" class="hvr-grow-rotate">
+								<span class="fa-brands fa-square-github fa-2x"></span>
+							</a>
+							<a href="https://www.linkedin.com/in/saxandy/" target="_blank" title="LinkedIn" style="color:#006599;" class="hvr-grow-rotate">
+								<span class="fa fa-linkedin-square fa-2x"></span>
+							</a>
+							<a href="https://discord.gg/a7s26dMCMC" target="_blank" title="Join the W3schools community on Discord" style="color:#6e85d2;" class="hvr-grow-rotate">
+								<span class="fa fa-discord fa-2x"></span>
+							</a>
+						</div>
+					</h1>
+					<p data-animate-scroll='{"alpha": "0","y":"0","duration": "0.5"}' class="andyaboutsectiontext" id="gototop"><small>[Press H or Tap this to Scroll at the Top]</small></p>
+
+				</div>
+
+			</div>
 		
 	</section>
 
@@ -880,11 +943,13 @@ body::-webkit-scrollbar-thumb {
 
 </body>
 <script src="js/andygame.js"></script>
+<script src="js/andyemail.js"></script>
 <script>
 
-	$( document ).ready(function() {
+	
+	$(document).ready(function() {
 		AOS.init();
-
+		$(document).animateScroll();
 
 		// $('#homesection').hide();
 		// $('#aboutsection').hide();
@@ -895,6 +960,7 @@ body::-webkit-scrollbar-thumb {
 		$('#playsection').hide();
 		$('#contactsection').hide();
 		$('#coffeeoval').hide();
+
 
 		$("#flipper1").flip();
 		$("#flipper1").css("perspective", "");
@@ -968,10 +1034,95 @@ body::-webkit-scrollbar-thumb {
 
 
 
+		$('#gototop').click(function() {
+			$('html, body').animate({
+				scrollTop: $("#homesection").offset().top
+			});
+		});
 
 
 
+	
 
+		// chatboy
+
+		$('#speechballoon1').hide();
+		$('#speechballoon2').hide();
+		$('#speechballoon3').hide();	
+		$('#speechballoon4').hide();
+		$('#speechballoon5').hide();
+
+		var is_talked = false;
+		$('#andygroom').click(function() {
+			if(is_talked == false)
+			{
+				$('#speechballoon1').show().css('borderSpacing', 1).animate({borderSpacing: 1.3},{ 
+					step: function(now,fx) {
+						$(this).css('transform','scale('+1+')');  
+				    },
+				    duration:100
+				});
+
+				is_talked = true
+			}
+			
+
+		});
+
+		$('#speechballoon1').click(function() {
+			$('#speechballoon1').hide()
+			$('#speechballoon2').show().css('borderSpacing', 1).animate({borderSpacing: 1.3},{ 
+				step: function(now,fx) {
+					$(this).css('transform','scale('+1+')');  
+			    },
+			    duration:100
+			});
+			
+		});
+
+		$('#speechballoon2').click(function() {
+			$('#speechballoon2').hide()
+			$('#speechballoon3').show().css('borderSpacing', 1).animate({borderSpacing: 1.3},{ 
+				step: function(now,fx) {
+					$(this).css('transform','scale('+1+')');  
+			    },
+			    duration:100
+			});
+			
+		});
+
+		$('#speechballoon3').click(function() {
+			$('#speechballoon3').hide()
+			$('#speechballoon4').show().css('borderSpacing', 1).animate({borderSpacing: 1.3},{ 
+				step: function(now,fx) {
+					$(this).css('transform','scale('+1+')');  
+			    },
+			    duration:100
+			});
+			
+		});
+
+		$('#speechballoon4').click(function() {
+			$('#speechballoon4').hide()
+			$('#speechballoon5').show().css('borderSpacing', 1).animate({borderSpacing: 1.3},{ 
+				step: function(now,fx) {
+					$(this).css('transform','scale('+1+')');  
+			    },
+			    duration:100
+			});
+			
+		});
+
+		$('#speechballoon5').click(function() {
+			$('#speechballoon5').hide()
+			is_talked = false;
+			
+			$('#speechballoon1').css('transform','scale('+0+')');
+			$('#speechballoon2').css('transform','scale('+0+')');
+			$('#speechballoon3').css('transform','scale('+0+')');
+			$('#speechballoon4').css('transform','scale('+0+')');
+			$('#speechballoon5').css('transform','scale('+0+')');
+		});
 
 
 
@@ -1174,7 +1325,29 @@ body::-webkit-scrollbar-thumb {
 
 
 
+		
 
+
+
+		$("#contactform").validate({
+			rules: {
+				name: {
+					required: true,
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				message: {
+				  required: true,
+				},
+			  },
+			 messages: {
+						name: {required:"Please enter your name!"},
+						email:{required: "Please a valid email!"},
+						message: {required: "Atleast leave a message for me."},
+				  },
+		 });
 	});
 
 </script>
@@ -1188,8 +1361,8 @@ body::-webkit-scrollbar-thumb {
 		var keycode = event.code;
 
 		
-		console.log(keycode);
-		if(keycode === 72)
+		// console.log(keycode);
+		if(keycode === "KeyH")
 		{	
 			$('html, body').animate({
 				scrollTop: $("#homesection").offset().top

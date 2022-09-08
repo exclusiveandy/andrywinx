@@ -35,7 +35,10 @@
 	color: #a8a8a8;
 }
 
-
+.contactmessage {
+	font-size: 19pt;
+	color: #a8a8a8;
+}
 .andyskillicon {
 	width: 65%;
 }
@@ -117,7 +120,14 @@
 	}
 
 
-
+.speech-balloon {
+	width: 40%;
+	bottom:22%; 
+	right:5%;
+	display: inline;
+	transition: all 0.5s ease;
+	transform: scale(0);
+}
 
 
 @media all and (min-width: 320px) and (max-width:374px) {
@@ -145,7 +155,16 @@
 	.project-body-text { font-size: 8pt; }
 	#saxicon { width: 30% !important; }
 
-
+	#andygroom { width: 40% !important; }
+	#formcontact { width: 100%; }
+	.contactmessage { font-size: 10pt;}
+	#formcontact { width: 100% !important; }
+	.form-control-lg { height: calc(1.875rem + 2px);padding: 0.5rem 0.7rem;font-size: 0.65rem;line-height: 1.5;border-radius: 0.1rem;}
+	.form-control {display: inline; margin-bottom:4px;}
+	#andylinkbottom { font-size: 12pt;margin-top: 2px; }
+	.btn-lg { height: calc(1.875rem + 2px);padding: 0.5rem 0.7rem;font-size: 0.65rem;line-height: 0.5;border-radius: 0.1rem;}
+	#sendmessage { margin-top: 3px !important; }
+	.speech-balloon { width: 35%;bottom:2%;right:5%; }
 }
 
 
@@ -178,6 +197,16 @@
 	#saxicon { width: 30% !important; }
 
 
+	#andygroom { width: 40% !important; }
+	#formcontact { width: 100%; }
+	.contactmessage { font-size: 10pt;}
+	#formcontact { width: 100% !important; }
+	.form-control-lg { height: calc(1.875rem + 2px);padding: 0.5rem 0.7rem;font-size: 0.65rem;line-height: 1.5;border-radius: 0.1rem;}
+	.form-control {display: inline; margin-bottom:4px;}
+	#andylinkbottom { font-size: 12pt;margin-top: 2px; }
+	.btn-lg { height: calc(1.875rem + 2px);padding: 0.5rem 0.7rem;font-size: 0.65rem;line-height: 0.5;border-radius: 0.1rem;}
+	#sendmessage { margin-top: 3px !important; }
+	.speech-balloon { width: 35%;bottom:2%;right:5%; }
 }
 
 @media all and (min-width: 425px) and (max-width:767px)    {
@@ -201,10 +230,19 @@
 	.andyskillicon { width: 60%; }
 	.project-body-title { font-size:10pt; }
 	.project-body-text { font-size: 8pt; }
-
-
-
 	#saxicon { width: 30% !important; }
+
+
+	#andygroom { width: 40% !important; }
+	#formcontact { width: 100%; }
+	.contactmessage { font-size: 10pt;}
+	#formcontact { width: 100% !important; }
+	.form-control-lg { height: calc(1.875rem + 2px);padding: 0.5rem 0.7rem;font-size: 0.65rem;line-height: 1.5;border-radius: 0.1rem;}
+	.form-control {display: inline; margin-bottom:4px;}
+	#andylinkbottom { font-size: 12pt;margin-top: 2px; }
+	.btn-lg { height: calc(1.875rem + 2px);padding: 0.5rem 0.7rem;font-size: 0.65rem;line-height: 0.5;border-radius: 0.1rem;}
+	#sendmessage { margin-top: 3px !important; }
+	.speech-balloon { width: 35%;bottom:2%;right:5%; }
 }
 
 @media all and (min-width: 768px) and (max-width:1023px) {
@@ -230,7 +268,18 @@
 	.project-body-text { font-size: 8pt; }
 
 	#saxicon { width: 15% !important; }
-}
+
+	#andygroom { width: 60% !important; }
+	#formcontact { width: 100%; }
+	.contactmessage { font-size: 10pt;}
+	#formcontact { width: 100% !important; }
+	.form-control-lg { height: calc(1.875rem + 2px);padding: 0.5rem 0.7rem;font-size: 0.65rem;line-height: 1.5;border-radius: 0.1rem;}
+	.form-control {display: inline; margin-bottom:4px;}
+	#andylinkbottom { font-size: 12pt;margin-top: 2px; }
+	.btn-lg { height: calc(1.875rem + 2px);padding: 0.5rem 0.7rem;font-size: 0.65rem;line-height: 0.5;border-radius: 0.1rem;}
+	#sendmessage { margin-top: 3px !important; }
+	.speech-balloon { width: 45%;bottom:55%;right:4%; }
+}	
 	
 
 @media all and (min-width: 1024px) and (max-width:1279px){
@@ -252,6 +301,17 @@
 
 	#pupcloud { width: 50% !important; }
 
+	#andygroom { width: 60% !important; }
+	#formcontact { width: 100%; }
+	.contactmessage { font-size: 14pt;}
+	#formcontact { width: 100% !important; }
+	.form-control-lg { height: calc(1.875rem + 2px);padding: 0.5rem 0.7rem;font-size: 0.65rem;line-height: 1.5;border-radius: 0.1rem;}
+	.form-control {display: inline; margin-bottom:4px;}
+	#andylinkbottom { font-size: 12pt;margin-top: 2px; }
+	.btn-lg { height: calc(1.875rem + 2px);padding: 0.5rem 0.7rem;font-size: 0.65rem;line-height: 0.5;border-radius: 0.1rem;}
+	#sendmessage { margin-top: 3px !important; }
+	.speech-balloon { width: 45%;bottom:38%;right:5%; }
+
 
 }
 
@@ -267,6 +327,9 @@
 
 	/*.callmeandy { font-size: 2.5rem; }*/
 	.andyskillicon { width: 50%; }
+
+	#andygroom { width: 70% !important; }
+	.speech-balloon { width: 60%;bottom:38%;right:-10%; }
 }
 
 @media all and (min-width: 1440px) and (max-width:1919px) {
@@ -282,6 +345,8 @@
 
 	.andyskillicon { width: 50%; }
 	/*.callmeandy { font-size: 2.5rem; }*/
+	#andygroom { width: 70% !important; }
+	.speech-balloon { width: 60%;bottom:28%;right:-12%; }
 }
 
 @media all and (min-width: 1920px) and (max-width:2559px) {

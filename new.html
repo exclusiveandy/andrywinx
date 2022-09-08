@@ -1,142 +1,571 @@
-  <html>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<title>AndrywinX</title>
+
+	<link rel="icon" href="images/andrywinxico.png">
+	<link rel="stylesheet" href="css/adminlte.css">  
+	<link rel="stylesheet" href="css/andystyle.css">  
+	<link rel="stylesheet" href="css/projects.css">
+	<link rel="stylesheet" href="css/andygame.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" >
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" >
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- jQuery -->
+	<script src="plugins/jquery/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+	<!-- Bootstrap 4 -->
+	<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- FastClick -->
+	<script src="plugins/fastclick/fastclick.js"></script>
+	<!-- AdminLTE App -->
+	<script src="js/adminlte.min.js"></script>
 	
-	<head>
-		<title>Galaga</title>
-		<link href="css/andygame.css" rel="stylesheet"/>
-	</head>
-	<body>
-		<div id="board">
-			<div class="rocks"></div>
-			<div id="jet"></div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<!-- AOS -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/jquery-animate-scroll@1.0.0/dist/jquery.animate-scroll.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/EasePack.min.js"></script>
+	<!-- <script type="text/javascript" src="js/lib/turn.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/0.11/turn.min.js"></script> -->
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/plugins/ScrollToPlugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/plugins/EaselPlugin.min.js"></script>
+	<script src="js/animate-scroll.js"></script>
+
+
+</head>
+<style>
+html {
+	scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;               /* width of the entire scrollbar */
+
+}
+
+body::-webkit-scrollbar-track {
+  background: gray;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: black;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid dimgray;  /* creates padding around scroll thumb */
+}
+
+.box {
+  clip-path: circle(75%);
+  transition: clip-path 1s;
+}
+
+.box:hover {
+  clip-path: circle(40%);
+}
+
+</style>
+
+
+<script>
+  
+</script>
+<body class="position-relative hold-transition layout-top-nav dark-mode" style="background-color: #7d4949;" >
+
+	<div id="navbarcontrols" class="position-fixed vh-100 vw-100 text-center" style="z-index: 4; margin-left: -100%">
+		<div class="bg-red" style="margin:10%">
+			<ul class="navbar-nav nav-flex-icons" >
+			  <li class="nav-item">
+				<a href="#aboutsection" class="nav-link" style="color:white" id="navskillbutton">
+				  <small style="color:#a8a8a8">1. </small>About
+				</a>
+			  </li>
+			  <li class="nav-item">
+				<a href="#experiencesection1" class="nav-link" style="color:white" id="navexperiencebutton">
+				  <small style="color:#a8a8a8">2. </small>Experience
+				</a>
+			  </li>
+			  <li class="nav-item">
+				<a href="#contactsection" class="nav-link" style="color:white" id="navcontactbutton">
+				  <small style="color:#a8a8a8">3. </small>Contact
+				</a>
+			  </li>
+			</ul>
 		</div>
-		<button onclick="gameStart()"></button>
-	</body>
-	<script type="text/javascript">
-		var jet = document.getElementById("jet");
-		var board = document.getElementById("board");
-
-		function gameStart()
-		{
-			gameInit();
-			generateRocks();
-			moveRocks();
-		}
-
-		function gameInit()
-		{
-			window.addEventListener("keydown", (e) => {
-
-				var left = parseInt(window.getComputedStyle(jet).getPropertyValue("left"));
-				if (e.key == "ArrowLeft" && left > 0)
-				{
-					jet.style.left = left - 30 + "px";
-				}
-				//460  =>  board width - jet width
-				else if (e.key == "ArrowRight" && left <= 460) 
-				{
-					jet.style.left = left + 30 + "px";
-				}
-
-				if (e.key == "ArrowUp" || e.keyCode == 32) 
-				{
-					//32 is for space key
-					var bullet = document.createElement("div");
-					bullet.classList.add("bullets");
-					board.appendChild(bullet);
-
-					var movebullet = setInterval(() => {
-
-						var rocks = document.getElementsByClassName("rocks");
-
-						for (var i = 0; i < rocks.length; i++) 
-						{
-							var rock = rocks[i];
-							if (rock != undefined) 
-							{								
-								var rockbound = rock.getBoundingClientRect();
-								var bulletbound = bullet.getBoundingClientRect();
-
-								//Condition to check whether the rock/alien and the bullet are at the same position..!
-								//If so,then we have to destroy that rock
-
-								if (
-								bulletbound.left >= rockbound.left &&
-								bulletbound.right <= rockbound.right &&
-								bulletbound.top <= rockbound.top &&
-								bulletbound.bottom <= rockbound.bottom
-								) 
-								{
-									rock.parentElement.removeChild(rock); //Just removing that particular rock;
-									//Scoreboard
-									document.getElementById("points").innerHTML =
-									parseInt(document.getElementById("points").innerHTML) + 1;
-								}
-							}
-						}
-						var bulletbottom = parseInt(window.getComputedStyle(bullet).getPropertyValue("bottom"));
-
-						//Stops the bullet from moving outside the gamebox
-						if (bulletbottom >= 500) 
-						{
-							clearInterval(movebullet);
-						}
-
-						bullet.style.left = left + "px"; //bullet should always be placed at the top of my jet..!
-						bullet.style.bottom = bulletbottom + 3 + "px";
-
-					});
-				}
-			});
-
-		}
 		
 
-		function generateRocks()
-		{
-			var generaterocks = setInterval(() => {
-				var rock = document.createElement("div");
-				rock.classList.add("rocks");
-				//Just getting the left of the rock to place it in random position...
-				var rockleft = parseInt(
-				  window.getComputedStyle(rock).getPropertyValue("left")
-				);
-				//generate value between 0 to 450 where 450 => board width - rock width
-				rock.style.left = Math.floor(Math.random() * 450) + "px";
+	</div>
 
-				board.appendChild(rock);
-			}, 1000);
-		}
-		
-		function moveRocks()
-		{
-			var moverocks = setInterval(() => {
-				var rocks = document.getElementsByClassName("rocks");
+	<nav class="navbar fixed-top navbar-expand-lg scrolling-navbar" id="navbar"	style="transition: top 0.3s;"> 
+		<div class="container">
 
-				if (rocks != undefined) {
-					for (var i = 0; i < rocks.length; i++) {
-						//Now I have to increase the top of each rock,so that the rocks can move downwards..
-						var rock = rocks[i]; //getting each rock
-						var rocktop = parseInt(
-							window.getComputedStyle(rock).getPropertyValue("top")
-						);
-						//475 => boardheight - rockheight + 25
-						if (rocktop aa>= 475) {
+			<div id="navbartoggler" class="navbartoggler" style="background-color:RGB(177,0,0); transition: all .2s ease; position: absolute; top:0;right:2%;">
+				<span class="fa fa-facebook-square fa-2x" id="clickmoto"></span>
+			</div>
 
-							alert("Game Over");
-							clearInterval(moverocks);
-							window.location.reload();
-						}
 
-						rock.style.top = rocktop + 25 + "px";
+		  <!-- Collapse -->
+		  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button> -->
+
+		  <!-- Links -->
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+			<!-- Left -->
+			<ul class="navbar-nav mr-auto">
+		  
+			</ul>
+
+			<!-- Right -->
+			<div class="andynavs">
+				<ul class="navbar-nav nav-flex-icons" >
+				  <li class="nav-item">
+					<a href="#aboutsection" class="nav-link" style="color:white" id="skillbutton">
+					  <small style="color:#a8a8a8">1. </small>About
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a href="#experiencesection1" class="nav-link" style="color:white" id="experiencebutton">
+					  <small style="color:#a8a8a8">2. </small>Experience
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a href="#contactsection" class="nav-link" style="color:white" id="contactbutton">
+					  <small style="color:#a8a8a8">3. </small>Contact
+					</a>
+				  </li>
+				</ul>
+			</div>
+
+		  </div>
+
+		</div>
+	  </nav>
+	  <!-- data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500" data-aos="fade-up" data-aos-duration="3000"  -->
+
+
+
+
+	<section class="position-relative container-fluid text-center" style="background-image: linear-gradient(#044c62,#044c62);  display: flex; align-items: center; justify-content: center;"  id="experiencesection3">
+
+
+		<div class="d-flex flex-column">
+			<style>
+				#saxicon {					
+					animation: loading 3s linear infinite;					
+				}
+				@keyframes loading {
+					0% {
+						transform: rotate(0); 
+					}
+					100% { 
+						transform: rotate(360deg);
 					}
 				}
-			}, 450);
-		}
+			</style>
+			
+			
+			<div class="text-center ">
+				<h1 class="skilltext"  data-animate-scroll="{'y':'50', 'duration': '1.75','scaleX': '0','scaleY': '0'}">Here are the Company Projects that I have contributions</h1>
+			</div>	
+			<br>
 
-		
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<div class="row">
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper1" class="text-center" style="width:100%; height:100%;"   > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/paramount.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.youtube.com/" target="_blank" style="color:white">Paramount Sales and Services ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											An international company that have an ERP system. I customized certain reports and implement new functions in their modules.
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper2" class="text-center" style="width:100%; height:100%;"   > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/jng.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.youtube.com/" target="_blank" style="color:white">JNG ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											In Joy Nostalg, I helped in certain reports implement customized accounting view and monitor the development issue logs.
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper3" class="text-center" style="width:100%; height:100%;"  > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/mwts.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.youtube.com/" target="_blank" style="color:white">MWTS / MPC ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											Manila Water Total Solutions / Maris Pure Corp. have an ERP system that focus on Sales. I customized certain Sales and Inventory Reports.
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper4" class="text-center" style="width:100%; height:100%;"  > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/isteel.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.youtube.com/" target="_blank" style="color:white">iSteel Inc. ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											In their ERP system, I implemented a Customized Coil and Warehouse request module. It is like a purchase requisition request but have different Inventory locations.
+
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper5" class="text-center" style="width:100%; height:100%;"  > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/dlsz.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.youtube.com/" target="_blank" style="color:white">DLSZ ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											We implement an ERP system and I develop and customized their Request for Payment and Journal Voucher Module. I also create certain report related on Purchase.
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper6" class="text-center" style="width:100%; height:100%;"   > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/advani.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.youtube.com/" target="_blank" style="color:white">Advani ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											Customized their Product and Operations modules in their existing ERP system. Also helped create certain reports and help on technical supports
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper7" class="text-center" style="width:100%; height:100%;"  > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/paref.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.youtube.com/" target="_blank" style="color:white">Paref Central ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											In Paref Central ERP system, I develop their initial Petty Cash Module, also develop certain reports and helped in data migrations.
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper8" class="text-center" style="width:100%; height:100%;"   > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/avsc.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.youtube.com/" target="_blank" style="color:white">AVSC ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											In their ERP system, I develop a Cash Advance module and create certain views that is related in Product Inventory. I also helped on some data migrations
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper9" class="text-center" style="width:100%; height:100%;"   > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/waterkonsult.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.youtube.com/" target="_blank" style="color:white">Waterkonsult ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											I implement new fields in their Employee module and create certain employee reports.
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper10" class="text-center" style="width:100%; height:100%;"  > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/asj.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.youtube.com/" target="_blank" style="color:white">ASJ Grade Management System</a>
+										</div>
+										<div class="card-body project-body-text">
+											In Academy of Saint John ERP, I helped customized or update their grading reports
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper11" class="text-center" style="width:100%; height:100%;"   > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/megabasic.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.youtube.com/" target="_blank" style="color:white">Megabasic ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											Megabasic Lifeline Shirt Inc. also have an ERP system that focus on Sales, I did some data migration and I also develop a customize Request for Payment module.
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper12" class="text-center" style="width:100%; height:100%;"  > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/asiawide.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.youtube.com/" target="_blank" style="color:white">WRLD Capital ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											We build an integrated ERP and CRM system that focus on business management. I develop certain modules such as Purchase, Purchase Requisition, Request for Payment, Custom Accounting, Custom Budgetting and Many More! I also mainly handle technical supports related to Purchase module.
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper13" class="text-center" style="width:100%; height:100%;"  > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/vinland.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.youtube.com/" target="_blank" style="color:white">Vinland ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											In Vinland ERP system. I develop and customized their Product Approval flow, create certain reports related in Inventory and create custom access rights for the users.
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+
+			<div class="d-flex justify-content-center text-center" style="margin: 5% 5% 10% 5%;">
+				<button data-animate-scroll='{"alpha": "0",
+                    "y":"50", 
+                    "duration": "0.5",
+                    "scaleX": "0",
+                    "scaleY": "0",
+                    "ease": "Elastic.easeIn"}' id="flipall" style="border-color: skyblue; padding: 12px 35px 12px 35px;border-radius: 25px; background-color: #2a6877;color:white;"><i class="fa-brands fa-flipboard mr-2"></i> Flip All</button>
+			</div>
+
+
+
+	
+			
+	
+	
+			
+			
+		</div>
+
+
+
+
+
+
+	</section>
+
+
+
+
+
+
+</body>
+<script src="js/andygame.js"></script>
+<script>
+	$(document).animateScroll();
+	$( document ).ready(function() {
+		AOS.init();
+
+
+		// $('#homesection').hide();
+		// $('#aboutsection').hide();
+		// $('#experiencesection1').hide();
+		// $('#experiencesection2').hide();
+		// $('#experiencesection3').hide();
+		// $('#experiencesection4').hide();
+		// $('#playsection').hide();
+		// $('#contactsection').hide();
+		$('#coffeeoval').hide();
+
+	});
+
+
+
+
+
+
+
+
+
+
+
 </script>
-	
-	
-	
-</html>
 
+
+
+<script type="text/javascript">
+	var lastScrollTop;
+	navbar = document.getElementById('navbar');
+	window.addEventListener('scroll',function(){
+	var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	if(scrollTop > lastScrollTop){
+		
+		navbar.style.top= '-80px';
+		
+	}
+	else{
+	navbar.style.top='0';
+	}
+	lastScrollTop = scrollTop;
+	});
+</script>
+
+<script src="js/andyscroll.js"></script>
+
+
+</html>
