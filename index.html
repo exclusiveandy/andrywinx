@@ -97,8 +97,8 @@ body::-webkit-scrollbar-thumb {
 </script>
 <body class="position-relative hold-transition layout-top-nav dark-mode" style="background-color: #7d4949;" >
 
-	<div id="navbarcontrols" class="position-fixed vh-100 vw-100 text-center" style="z-index: 4; margin-left: -100%">
-		<div class="bg-red" style="margin:10%">
+	<div id="navbarcontrols" class="position-fixed vh-100 vw-100 text-center" style="z-index: 4; margin-left: 200%">
+		<div class=""  style="background-color:#343a40;margin:10%">
 			<ul class="navbar-nav nav-flex-icons" >
 			  <li class="nav-item">
 				<a href="#aboutsection" class="nav-link" style="color:white" id="navskillbutton">
@@ -124,8 +124,8 @@ body::-webkit-scrollbar-thumb {
 	<nav class="navbar fixed-top navbar-expand-lg scrolling-navbar" id="navbar"	style="transition: top 0.3s;"> 
 		<div class="container">
 
-			<div id="navbartoggler" class="navbartoggler" style="background-color:RGB(177,0,0); transition: all .2s ease; position: absolute; top:0;right:2%;">
-				<span class="fa fa-facebook-square fa-2x" id="clickmoto"></span>
+			<div id="navbartoggler" class="navbartoggler" style="transition: all .2s ease; position: absolute; top:0;right:2%;">
+				<img src="images/navribbon.png" style="width:40%;float: right;margin-top: 0%" id="navribbon">
 			</div>
 
 
@@ -867,7 +867,7 @@ body::-webkit-scrollbar-thumb {
 	</div>
 
 
-	<section class="position-relative container-fluid vh-100" style="background-image: linear-gradient(#343a40,#343a40); display: flex; align-items: center; justify-content: center;" id="constactsection">
+	<section class="position-relative container-fluid vh-100" style="background-image: linear-gradient(#343a40,#343a40); display: flex; align-items: center; justify-content: center;" id="contactsection">
 
 		<div class="row" style="">
 				
@@ -900,7 +900,7 @@ body::-webkit-scrollbar-thumb {
 										<br>
 										<input style="color:#a8a8a8" class="form-control form-control-lg" id="email" name="email" type="email" placeholder="Email" required>
 										<br>
-										<textarea style="color:#a8a8a8" class="form-control form-control-lg" id="message" name="message" rows="3" required>Awesome Portfolio?</textarea>
+										<textarea style="color:#a8a8a8" class="form-control form-control-lg" id="message" name="message" rows="3" required>Awesome Portfolio? You can also click the image in this section</textarea>
 										<button type="submit" class="btn btn-secondary btn-lg w-100" style="margin-top: 1.5rem;" id="sendmessage">Send Message</button>
 										
 									</form>
@@ -1018,8 +1018,16 @@ body::-webkit-scrollbar-thumb {
 			$("#flipper13").flip('toggle');
 		});
 
-		
+		// onscroll
 		$(window).on('scroll', function() {
+			
+			if(is_ribbon==false)
+			{
+				$("#navribbon").animate({marginTop: '0%'});
+				$("#navbarcontrols").animate({marginLeft: '200%'});
+				is_ribbon = true
+				is_visible = false;
+			}
 			
 			var offset = $(window).scrollTop();
 			// console.log("potanks" +offset +" / "+ $("#aboutsection").offset().top + "gg");
@@ -1131,6 +1139,7 @@ body::-webkit-scrollbar-thumb {
 
 
 	   var is_visible = false;
+	   var is_ribbon = true;
 		$('#navbartoggler').click(function() {
 			
 			if(is_visible == false)
@@ -1138,14 +1147,16 @@ body::-webkit-scrollbar-thumb {
 				// $("#navbarcontrols").show();
 				is_visible = true;
 				$("#navbarcontrols").animate({marginLeft: '0%'});
-
+				$("#navribbon").animate({marginTop: '1000%'});
+				is_ribbon = false;
 			}
 			else
 			{	
 				
-				$("#navbarcontrols").animate({marginLeft: '-100%'});
-
+				$("#navbarcontrols").animate({marginLeft: '200%'});
+				$("#navribbon").animate({marginTop: '0%'});
 				is_visible = false;
+				is_ribbon = true;
 			}
 		});
 
