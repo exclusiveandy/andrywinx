@@ -55,8 +55,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/plugins/EaselPlugin.min.js"></script>
 	<script src="js/animate-scroll.js"></script>
 
-	<script src="https://smtpjs.com/v3/smtp.js"></script>
-
 
 
 </head>
@@ -97,23 +95,26 @@ body::-webkit-scrollbar-thumb {
 </script>
 <body class="position-relative hold-transition layout-top-nav dark-mode" style="background-color: #7d4949;" >
 
-	<div id="navbarcontrols" class="position-fixed vh-100 vw-100 text-center" style="z-index: 4; margin-left: 200%">
-		<div class=""  style="background-color:#343a40;margin:10%">
+	<!-- design on default of 425 resolution -->
+	<div id="navbarcontrols" class="position-fixed vh-100 text-center" style="width:848px;z-index: 4; margin-left: 200%;background-image: url('images/buster.png'); background-repeat: no-repeat;background-position: left 5%;">
+		<div class=""  style="margin:9%">
 			<ul class="navbar-nav nav-flex-icons" >
 			  <li class="nav-item">
-				<a href="#aboutsection" class="nav-link" style="color:white" id="navskillbutton">
+				<a href="#aboutsection" class="nav-link nav-sword navskillbutton" style="color:white; margin-left: 10%;" id="navskillbutton">
 				  <small style="color:#a8a8a8">1. </small>About
 				</a>
 			  </li>
 			  <li class="nav-item">
-				<a href="#experiencesection1" class="nav-link" style="color:white" id="navexperiencebutton">
+				<a  class="nav-link nav-sword navexperiencebutton" style="color:white;margin-left: 10%;" id="navexperiencebutton">
 				  <small style="color:#a8a8a8">2. </small>Experience
 				</a>
+				<a href="#experiencesection1" id="hiddenxpbutton" hidden></a>
 			  </li>
 			  <li class="nav-item">
-				<a href="#contactsection" class="nav-link" style="color:white" id="navcontactbutton">
+				<a class="nav-link nav-sword navcontactbutton" style="color:white; margin-left: 10%;" id="navcontactbutton">
 				  <small style="color:#a8a8a8">3. </small>Contact
 				</a>
+				<a href="#contactsection" id="hiddenxpbutton" hidden></a>
 			  </li>
 			</ul>
 		</div>
@@ -147,17 +148,17 @@ body::-webkit-scrollbar-thumb {
 			<div class="andynavs">
 				<ul class="navbar-nav nav-flex-icons" >
 				  <li class="nav-item">
-					<a href="#aboutsection" class="nav-link" style="color:white" id="skillbutton">
+					<a href="#aboutsection" class="nav-link navskillbutton" style="color:white" id="skillbutton">
 					  <small style="color:#a8a8a8">1. </small>About
 					</a>
 				  </li>
 				  <li class="nav-item">
-					<a href="#experiencesection1" class="nav-link" style="color:white" id="experiencebutton">
+					<a href="#experiencesection1" class="nav-link navexperiencebutton" style="color:white" id="experiencebutton">
 					  <small style="color:#a8a8a8">2. </small>Experience
 					</a>
 				  </li>
 				  <li class="nav-item">
-					<a href="#contactsection" class="nav-link" style="color:white" id="contactbutton">
+					<a href="#contactsection" class="nav-link navcontactbutton" style="color:white" id="contactbutton">
 					  <small style="color:#a8a8a8">3. </small>Contact
 					</a>
 				  </li>
@@ -174,7 +175,7 @@ body::-webkit-scrollbar-thumb {
 	<section class="position-relative container-fluid vh-100 login-page" id="homesection">
 		
 			
-		<div style="margin-top: -150px; " >
+		<div style="margin-top: -150px;" >
 			<h2 class="andymainfont">Andrywin Maquinto</h2>
 			<h5 class="andysecondfont" id="andytyping"><span class="typed"></span></h5>			
 			<div class="andylinks" style="padding-top:10px;">
@@ -1018,9 +1019,138 @@ body::-webkit-scrollbar-thumb {
 			$("#flipper13").flip('toggle');
 		});
 
-		// onscroll
-		$(window).on('scroll', function() {
+		
+		var is_visible = false;
+		var is_ribbon = true;
+		$('#navbartoggler').click(function() {
+			console.log(window.screen.width);
+			if(is_visible == false)
+			{
+				if(window.screen.width <= 320 && window.screen.width >= 100)
+				{
+					is_visible = true;
+					$("#navbarcontrols").animate({marginLeft: '-91%'});
+					$("#navribbon").animate({marginTop: '1000%'});
+					is_ribbon = false;
+				}
+				if(window.screen.width <= 375 && window.screen.width >= 321)
+				{
+					is_visible = true;
+					$("#navbarcontrols").animate({marginLeft: '-71%'});
+					$("#navribbon").animate({marginTop: '1000%'});
+					is_ribbon = false;
+				}
+				if(window.screen.width <= 425 && window.screen.width >= 376)
+				{
+					is_visible = true;
+					$("#navbarcontrols").animate({marginLeft: '-56%'});
+					$("#navribbon").animate({marginTop: '1000%'});
+					is_ribbon = false;
+				}
+				if(window.screen.width <= 768 && window.screen.width >= 426)
+				{
+					is_visible = true;
+					$("#navbarcontrols").animate({marginLeft: '-10%'});
+					$("#navribbon").animate({marginTop: '1000%'});
+					is_ribbon = false;
+				}
+			}
+			else
+			{	
+				
+				$("#navbarcontrols").animate({marginLeft: '200%'});
+				$("#navribbon").animate({marginTop: '0%'});
+				is_visible = false;
+				is_ribbon = true;
+			}
+		});
+
+		$('#navskillbutton').click(function() {
+
+			if(is_visible == false)
+			{
+				is_visible = true;
+				$("#navbarcontrols").animate({marginLeft: '0%'});
+
+			}
+			else
+			{					
+				$("#navbarcontrols").animate({marginLeft: '-100%'});
+				is_visible = false;
+			}
+		});
+
+		$('#navexperiencebutton').on('click', function() {
+        	if(is_visible == false)
+			{
+				is_visible = true;
+				$("#navbarcontrols").animate({marginLeft: '0%'});
+
+			}
+			else
+			{					
+				$("#navbarcontrols").animate({marginLeft: '-100%'});
+				is_visible = false;
+			}
+	        $('#experiencesection1').show();
+			$('#experiencesection2').show();
+			$('#experiencesection3').show();
+			$('#experiencesection4').show();
+			$('#playsection').show();
+			// window.location.href = $('#hiddenxpbutton').attr('href');
+			$('html, body').animate({
+				scrollTop: $("#experiencesection1").offset().top
+			});
+	    });
+
+	    $('#experiencebutton').click(function() {
+
+			$('#experiencesection1').show();
+			$('#experiencesection2').show();
+			$('#experiencesection3').show();
+			$('#experiencesection4').show();
+			$('#playsection').show();
+			// window.location.href = $('#hiddenxpbutton').attr('href');
+			$('html, body').animate({
+				scrollTop: $("#experiencesection1").offset().top
+			});
+		});
+
+
+
+	    $('#navcontactbutton').click(function() {	
+	    	if(is_visible == false)
+			{
+				is_visible = true;
+				$("#navbarcontrols").animate({marginLeft: '0%'});
+
+			}
+			else
+			{					
+				$("#navbarcontrols").animate({marginLeft: '-100%'});
+				is_visible = false;
+			}
+
+			$('#contactsection').show();
+			$('html, body').animate({
+				scrollTop: $("#contactsection").offset().top
+			});
+
 			
+		});
+
+		$('#contactbutton').click(function() {	
+
+			$('#contactsection').show();
+			$('html, body').animate({
+				scrollTop: $("#contactsection").offset().top
+			});
+
+			
+		});
+
+		$(window).on('scroll', function() {
+		
 			if(is_ribbon==false)
 			{
 				$("#navribbon").animate({marginTop: '0%'});
@@ -1138,69 +1268,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-	   var is_visible = false;
-	   var is_ribbon = true;
-		$('#navbartoggler').click(function() {
-			
-			if(is_visible == false)
-			{
-				// $("#navbarcontrols").show();
-				is_visible = true;
-				$("#navbarcontrols").animate({marginLeft: '0%'});
-				$("#navribbon").animate({marginTop: '1000%'});
-				is_ribbon = false;
-			}
-			else
-			{	
-				
-				$("#navbarcontrols").animate({marginLeft: '200%'});
-				$("#navribbon").animate({marginTop: '0%'});
-				is_visible = false;
-				is_ribbon = true;
-			}
-		});
-
-		$('#navskillbutton').click(function() {			
-			if(is_visible == false)
-			{
-				is_visible = true;
-				$("#navbarcontrols").animate({marginLeft: '0%'});
-
-			}
-			else
-			{					
-				$("#navbarcontrols").animate({marginLeft: '-100%'});
-				is_visible = false;
-			}
-		});
-
-		$('#navexperiencebutton').click(function() {			
-			if(is_visible == false)
-			{
-				is_visible = true;
-				$("#navbarcontrols").animate({marginLeft: '0%'});
-
-			}
-			else
-			{					
-				$("#navbarcontrols").animate({marginLeft: '-100%'});
-				is_visible = false;
-			}
-		});
-
-		$('#navcontactbutton').click(function() {			
-			if(is_visible == false)
-			{
-				is_visible = true;
-				$("#navbarcontrols").animate({marginLeft: '0%'});
-
-			}
-			else
-			{					
-				$("#navbarcontrols").animate({marginLeft: '-100%'});
-				is_visible = false;
-			}
-		});
+	   
 
 
 		var is_tapped = false;
