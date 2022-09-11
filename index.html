@@ -95,6 +95,10 @@ body::-webkit-scrollbar-thumb {
 </script>
 <body class="position-relative hold-transition layout-top-nav dark-mode" style="background-color: #7d4949;" >
 
+	<div class="preloader flex-column justify-content-center align-items-center">
+		<img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+	</div>
+
 	<!-- design on default of 425 resolution -->
 	<div id="navbarcontrols" class="position-fixed vh-100 text-center" style="width:848px;z-index: 4; margin-left: 200%;background-image: url('images/buster.png'); background-repeat: no-repeat;background-position: left 5%;">
 		<div class=""  style="margin:9%">
@@ -765,7 +769,7 @@ body::-webkit-scrollbar-thumb {
 							<div class="postcard__bar"></div>
 							<div class="postcard__preview-txt">
 
-								Developed certain modules that focused on ERP system such as relating to Purchase, Sales, HR and Many More! Also customized existing modules and implement new features or functions which is based on the client requirements and assist, fixed or troubleshoot client raised issue as soon on possible.
+								Developed certain modules that focused on ERP systems such as relating to Purchase, Sales, HR, and Many More! Also customized existing modules and implement new features or functions which is based on the client's requirements and assisted, fixed, or troubleshoot client-raised issues as soon as possible.
 
 							</div>
 							<ul class="postcard__tagbox">
@@ -788,7 +792,7 @@ body::-webkit-scrollbar-thumb {
 							<div class="postcard__bar"></div>
 							<div class="postcard__preview-txt">
 
-								Create lesson plan and activities that follows the modular curriculum of the given subject such as Computer Programming then Teach and Guide the students basic computer fundamentals, introduction on creating website and computer softwares and hardwares. 
+								Create lesson plans and activities that follow the modular curriculum of the given subject such as Computer Programming then Teach and Guide the students' basic computer fundamentals, introduction on creating a website and computer software and hardwares.  
 
 							</div>
 							<ul class="postcard__tagbox">
@@ -1081,7 +1085,7 @@ body::-webkit-scrollbar-thumb {
 		});
 
 		$('#navexperiencebutton').on('click', function() {
-        	if(is_visible == false)
+			if(is_visible == false)
 			{
 				is_visible = true;
 				$("#navbarcontrols").animate({marginLeft: '0%'});
@@ -1092,7 +1096,7 @@ body::-webkit-scrollbar-thumb {
 				$("#navbarcontrols").animate({marginLeft: '-100%'});
 				is_visible = false;
 			}
-	        $('#experiencesection1').show();
+			$('#experiencesection1').show();
 			$('#experiencesection2').show();
 			$('#experiencesection3').show();
 			$('#experiencesection4').show();
@@ -1101,9 +1105,9 @@ body::-webkit-scrollbar-thumb {
 			$('html, body').animate({
 				scrollTop: $("#experiencesection1").offset().top
 			});
-	    });
+		});
 
-	    $('#experiencebutton').click(function() {
+		$('#experiencebutton').click(function() {
 
 			$('#experiencesection1').show();
 			$('#experiencesection2').show();
@@ -1118,8 +1122,8 @@ body::-webkit-scrollbar-thumb {
 
 
 
-	    $('#navcontactbutton').click(function() {	
-	    	if(is_visible == false)
+		$('#navcontactbutton').click(function() {	
+			if(is_visible == false)
 			{
 				is_visible = true;
 				$("#navbarcontrols").animate({marginLeft: '0%'});
@@ -1197,8 +1201,8 @@ body::-webkit-scrollbar-thumb {
 				$('#speechballoon1').show().css('borderSpacing', 1).animate({borderSpacing: 1.3},{ 
 					step: function(now,fx) {
 						$(this).css('transform','scale('+1+')');  
-				    },
-				    duration:100
+					},
+					duration:100
 				});
 
 				is_talked = true
@@ -1212,8 +1216,8 @@ body::-webkit-scrollbar-thumb {
 			$('#speechballoon2').show().css('borderSpacing', 1).animate({borderSpacing: 1.3},{ 
 				step: function(now,fx) {
 					$(this).css('transform','scale('+1+')');  
-			    },
-			    duration:100
+				},
+				duration:100
 			});
 			
 		});
@@ -1223,8 +1227,8 @@ body::-webkit-scrollbar-thumb {
 			$('#speechballoon3').show().css('borderSpacing', 1).animate({borderSpacing: 1.3},{ 
 				step: function(now,fx) {
 					$(this).css('transform','scale('+1+')');  
-			    },
-			    duration:100
+				},
+				duration:100
 			});
 			
 		});
@@ -1234,8 +1238,8 @@ body::-webkit-scrollbar-thumb {
 			$('#speechballoon4').show().css('borderSpacing', 1).animate({borderSpacing: 1.3},{ 
 				step: function(now,fx) {
 					$(this).css('transform','scale('+1+')');  
-			    },
-			    duration:100
+				},
+				duration:100
 			});
 			
 		});
@@ -1245,8 +1249,8 @@ body::-webkit-scrollbar-thumb {
 			$('#speechballoon5').show().css('borderSpacing', 1).animate({borderSpacing: 1.3},{ 
 				step: function(now,fx) {
 					$(this).css('transform','scale('+1+')');  
-			    },
-			    duration:100
+				},
+				duration:100
 			});
 			
 		});
