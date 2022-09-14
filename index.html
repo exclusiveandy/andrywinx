@@ -123,8 +123,8 @@ body::-webkit-scrollbar-thumb {
 
 	</div>
 
-	<nav class="navbar fixed-top navbar-expand-lg scrolling-navbar" id="navbar"	style="transition: top 0.3s;"> 
-		<div class="container">
+	<nav class="navbar fixed-top navbar-expand-lg scrolling-navbar vw-100" id="navbar"	style="transition: top 0.3s;"> 
+		<!-- <div class="container"> -->
 
 			<div id="navbartoggler" class="navbartoggler" style="transition: all .2s ease; position: absolute; top:0;right:2%;">
 				<img src="images/navribbon.png" style="width:40%;float: right;margin-top: 0%" id="navribbon">
@@ -168,7 +168,7 @@ body::-webkit-scrollbar-thumb {
 
 		  </div>
 
-		</div>
+		<!-- </div>  -->
 	  </nav>
 	  <!-- data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500" data-aos="fade-up" data-aos-duration="3000"  -->
 
@@ -177,7 +177,7 @@ body::-webkit-scrollbar-thumb {
 		
 			
 		<div style="margin-top: -150px;" >
-			<h2 class="andymainfont">Andrywin Maquinto</h2>
+			<h2 class="andymainfont" id="mainandy">Andrywin Maquinto</h2>
 			<h5 class="andysecondfont" id="andytyping"><span class="typed"></span></h5>			
 			<div class="andylinks" style="padding-top:10px;">
 				<a href="https://www.facebook.com" target="_blank" title="Facebook" style="color:blue;" class="hvr-grow-rotate">
@@ -963,6 +963,7 @@ body::-webkit-scrollbar-thumb {
 		$('#contactsection').hide();
 		$('#coffeeoval').hide();
 
+		// $('#mainandy').html(window.screen.width)
 
 		$("#flipper1").flip();
 		$("#flipper1").css("perspective", "");
@@ -1025,6 +1026,7 @@ body::-webkit-scrollbar-thumb {
 		var is_ribbon = true;
 		$('#navbartoggler').click(function() {
 			console.log(window.screen.width);
+
 			if(is_visible == false)
 			{
 				if(window.screen.width <= 320 && window.screen.width >= 100)
@@ -1067,7 +1069,7 @@ body::-webkit-scrollbar-thumb {
 		});
 
 		$('#navskillbutton').click(function() {
-
+			console.log(is_visible);			
 			if(is_visible == false)
 			{
 				is_visible = true;
@@ -1082,6 +1084,7 @@ body::-webkit-scrollbar-thumb {
 		});
 
 		$('#navexperiencebutton').on('click', function() {
+			console.log(is_visible);
 			if(is_visible == false)
 			{
 				is_visible = true;
@@ -1093,6 +1096,7 @@ body::-webkit-scrollbar-thumb {
 				$("#navbarcontrols").animate({marginLeft: '-100%'});
 				is_visible = false;
 			}
+
 			$('#experiencesection1').show();
 			$('#experiencesection2').show();
 			$('#experiencesection3').show();

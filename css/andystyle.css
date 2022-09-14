@@ -167,7 +167,7 @@
 	.speech-balloon { width: 35%;bottom:2%;right:5%; }
 }
 
-
+/* RED CP 393*/
 @media all and (min-width: 375px) and (max-width:424px)   {
   /* For phones: */
 	.andymainfont { margin-left: 0%; margin-top: -11%}
@@ -209,6 +209,7 @@
 	.speech-balloon { width: 35%;bottom:2%;right:5%; }
 }
 
+/* IPHONE 13 PRO 428*/ 
 @media all and (min-width: 425px) and (max-width:767px)    {
    /*For big phones:  like iphone 13pro max */
 	.andymainfont { margin-left: 0%; margin-top: -11%}
