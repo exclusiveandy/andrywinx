@@ -1,0 +1,333 @@
+<section class="position-relative container-fluid text-center" style="background-image: linear-gradient(#044c62,#044c62);  display: flex; align-items: center; justify-content: center;"  id="experiencesection3">
+
+
+		<div class="d-flex flex-column">
+			<style>
+				#saxicon {					
+					animation: loading 3s linear infinite;					
+				}
+				@keyframes loading {
+					0% {
+						transform: rotate(0); 
+					}
+					100% { 
+						transform: rotate(360deg);
+					}
+				}
+			</style>
+			<div class="text-center justify-content-center position-relative" style="margin: 5% 5% 12% 5%;">
+				<img src="images/sax.png" style="width:10%;" id="saxicon" class="saxicon position-relative"/> 
+				
+				<div class="position-absolute" style="bottom: 35%;width:100%;z-index: 1;" >
+					<img src="https://readme-typing-svg.herokuapp.com?font=Permanent+Marker&size=32&duration=3000&pause=1000&center=true&vCenter=true&width=435&lines=Saxophone+Hero;I+love+music"/>
+				</div>
+			</div>
+			
+			<div class="text-center ">
+				<h1 class="skilltext" >Here are the Company Projects that I have contributions</h1>
+			</div>	
+			<br>
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<div class="row">
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper1" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'   > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/paramount.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<!-- <div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.odoo.com/customers/paramount-carpet-sales-and-services-limited-3589205" target="_blank" style="color:white">Paramount Sales and Services ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											An international company that has an ERP system. I customized certain reports and implement new functions in their modules.
+										</div>
+									</div>
+								</div>  -->
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper2" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'   > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/jng.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<!-- <div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.joynostalgmanila.com/" target="_blank" style="color:white">JNG ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											In Joy Nostalg, I helped in certain reports implement customized accounting views and monitor the development issue logs.
+										</div>
+									</div>
+								</div>  -->
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper3" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'  > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/mwts.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<!-- <div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://vymaps.com/PH/Manila-Water-Total-Solutions-mwts-Corp-2151545495162914/" target="_blank" style="color:white">MWTS / MPC ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											Manila Water Total Solutions / Maris Pure Corp. has an ERP system that focuses on Sales. I customized certain Sales and Inventory Reports.
+										</div>
+									</div>
+								</div> --> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper4" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'  > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/isteel.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<!-- <div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.isteel.ph/" target="_blank" style="color:white">iSteel Inc. ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											In their ERP system, I implemented a Customized Coil and Warehouse request module. It is like a purchase requisition request but has different Inventory locations.
+
+										</div>
+									</div>
+								</div> --> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper5" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'  > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/dlsz.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<!-- <div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.dlszobel.edu.ph/" target="_blank" style="color:white">DLSZ ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											We implement an ERP system and I develop and customized their Request for Payment and Journal Voucher Module. I also create certain reports related to Purchases.
+										</div>
+									</div>
+								</div> --> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper6" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'   > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/advani.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<!-- <div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.odoo.com/customers/advani-apparel-inc-3193530" target="_blank" style="color:white">Advani ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											Customized their Product and Operations modules in their existing ERP system. Also helped create certain reports and help with technical support.
+										</div>
+									</div>
+								</div> --> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper7" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'  > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/paref.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<!-- <div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://paref.edu.ph/" target="_blank" style="color:white">Paref Central ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											In Paref Central ERP system, I develop their initial Petty Cash Module, also develop certain reports, and helped in data migrations.
+										</div>
+									</div>
+								</div> --> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper8" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'   > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/avsc.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<!-- <div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://avscorp.com.ph/" target="_blank" style="color:white">AVSC ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											In their ERP system, I develop a Cash Advance module and create certain views that are related to Product Inventory. I also helped with some data migrations.
+										</div>
+									</div>
+								</div> --> 
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper9" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'   > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/waterkonsult.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<!-- <div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://waterkonsult.com/" target="_blank" style="color:white">Waterkonsult ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											I implement new fields in their Employee module and create certain employee reports.
+										</div>
+									</div>
+								</div>  -->
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper10" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'  > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/asj.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<!-- <div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.academyofsaintjohn.edu.ph/" target="_blank" style="color:white">ASJ Grade Management System</a>
+										</div>
+										<div class="card-body project-body-text">
+											In the Academy of Saint John ERP, I helped customize or update their grading reports.
+										</div>
+									</div>
+								</div>  -->
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper11" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'   > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/megabasic.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<!-- <div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://lifelineshirt.ph/" target="_blank" style="color:white">Megabasic ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											Megabasic Lifeline Shirt Inc. also has an ERP system that focuses on Sales, I did some data migration and I also develop a customized Request for Payment module.
+										</div>
+									</div>
+								</div>  -->
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper12" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'  > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/asiawide.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<!-- <div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://asiawideland.com/" target="_blank" style="color:white">WRLD Capital ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											We build an integrated ERP and CRM system that focuses on business management. I develop certain modules such as Purchase, Purchase Requisition, Request for Payment, Custom Accounting, Custom Budgeting, and Many More! I also mainly handle technical support related to the Purchase module.
+										</div>
+									</div>
+								</div>  -->
+							</div>
+						</div>
+						<div class="col-md-3 col-6" style="padding-top: 7.5px;padding-bottom: 7.5px;">
+							<div id="flipper13" class="text-center" style="width:100%; height:100%;" data-animate-scroll='{"alpha": "0","y":"50","duration": "0.5","scaleX": "0","scaleY": "0","ease": "Elastic.easeIn"}'  > 
+								<div class="front"> 
+									<div class="card project-card">							
+										<div class="card-body text-center position-relative" style="display: flex; align-items: center; justify-content: center;">
+											<img src="images/company/vinland.png" class="andyskillicon" style="width:100%;"/> 
+										</div>
+									</div>
+								</div> 
+								<!-- <div class="back"> 
+									<div class="card project-card">
+										<div class="card-header project-body-title">
+											<a href="https://www.yellow-pages.ph/business/vinland-intl-incorporated" target="_blank" style="color:white">Vinland ERP</a>
+										</div>
+										<div class="card-body project-body-text">
+											In Vinland ERP system. I develop and customized their Product Approval flow, create certain reports related to Inventory and create custom access rights for the users.
+										</div>
+									</div>
+								</div>  -->
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+
+			<div class="d-flex justify-content-center text-center" style="margin: 5% 5% 10% 5%;">
+				<!-- <button id="flipall" style="border-color: skyblue; padding: 12px 35px 12px 35px;border-radius: 25px; background-color: #2a6877;color:white;"><i class="fa-brands fa-flipboard mr-2"></i> Flip All</button> -->
+			</div>
+
+
+
+	
+			
+	
+	
+			
+			
+		</div>
+
+
+
+
+
+
+	</section>

@@ -215,6 +215,15 @@
  .postcard .postcard__tagbox .blue.play:hover {
    background: #0076bd;
 }
+
+.black .postcard__bar {
+  background-color: #000;
+}
+
+.pelago .postcard__bar {
+  background-color: #03a890;
+}
+
  .blue .postcard__title:hover {
    color: #0076bd;
 }
